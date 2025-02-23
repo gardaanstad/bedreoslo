@@ -45,11 +45,20 @@ async function getPost(id: string): Promise<PostData> {
   };
 }
 
-type Props = {
-  params: { id: string }
+export async function generateStaticParams() {
+  const postsDirectory = path.join(process.cwd(), 'posts');
+  const filenames = fs.readdirSync(postsDirectory);
+  
+  return filenames.map((filename) => ({
+    id: filename.replace(/\.md$/, ''),
+  }));
 }
 
-export default async function Post({ params }: Props) {
+export default async function Page({
+  params,
+}: {
+  params: { id: string };
+}) {
   const post = await getPost(params.id);
   
   return (
