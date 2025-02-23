@@ -45,12 +45,11 @@ async function getPost(id: string): Promise<PostData> {
   };
 }
 
-interface PageProps {
-  params: { id: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
+type Props = {
+  params: { id: string }
 }
 
-export default async function Post({ params }: PageProps) {
+export default async function Post({ params }: Props) {
   const post = await getPost(params.id);
   
   return (
