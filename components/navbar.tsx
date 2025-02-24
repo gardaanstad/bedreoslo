@@ -83,7 +83,7 @@ export default function Navbar() {
           <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
 
           {/* Main Navbar Content */}
-          <div className="relative px-6 sm:px-8 py-4 flex items-center justify-between">
+          <div className="relative px-6 py-4 flex items-center justify-between">
             <Link 
               href="/" 
               className="font-serif text-white text-xl tracking-tight hover:underline"
@@ -99,11 +99,9 @@ export default function Navbar() {
                   href={item.href}
                   className={`
                     relative px-4 py-2 text-sm font-medium tracking-wide
-                    ${item.highlight 
-                      ? 'bg-white text-[#1a472a] hover:inset-shadow-lg' 
-                      : pathname === item.href
-                        ? 'bg-white/20 text-white'
-                        : 'text-white hover:bg-white/20 hover:text-white'
+                    ${pathname === item.href
+                      ? 'bg-white/20 text-white'
+                      : 'text-white hover:bg-white hover:text-[#1a472a]'
                     }
                   `}
                 >
@@ -128,7 +126,7 @@ export default function Navbar() {
                   onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
                   className="p-2 hover:@media(hover:hover):bg-white/20 text-white"
                   aria-label="Toggle theme"
-                  // whileHover={supportsHover ? { scale: 1.05 } : undefined}
+                  whileHover={supportsHover ? { scale: 1.15 } : undefined}
                   whileTap={{ scale: 0.95 }}
                 >
                   <motion.div
