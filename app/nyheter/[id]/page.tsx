@@ -54,12 +54,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const post = await getPost(params.id);
+type Props = {
+  params: Promise<{ id: string }>
+}
+
+export default async function Page({ params }: Props) {
+  const { id } = await params;
+  const post = await getPost(id);
   
   return (
     <main 
