@@ -80,7 +80,7 @@ export default async function Home() {
           {/* Nyheter og innlegg */}
           <div className="lg:col-span-2 h-full">
             <div className="h-full border border-[#1a472a]/10 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20">
-              <Link href="/nyheter" className={`text-3xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-8 block hover:underline ${playfair.className}`}>
+              <Link href="/nyheter" className={`text-3xl font-bold text-[#1a472a] dark:text-[#f5f1e8] block hover:underline ${playfair.className}`}>
                 Nyheter og innlegg
               </Link>
               <div className="divide-y divide-[#1a472a]/10 dark:divide-[#f5f1e8]/10">
