@@ -74,7 +74,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full fixed top-0 z-50 flex justify-center p-6">
+    <div className="w-full fixed top-0 z-50 flex justify-center px-4 py-6">
       <nav className="relative w-full max-w-7xl">
         <motion.div 
           className="relative w-full bg-[#1a472a] dark:bg-[#1a472a] border border-[#1a472a] dark:border-[#f5f1e8]/10 shadow-lg"
@@ -273,7 +273,7 @@ export default function Navbar() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="px-4 py-3 space-y-1">
+                  <div className="px-4 pb-4 pt-3 space-y-1">
                     {menuItems.map((item) => (
                       <motion.div
                         key={item.name}

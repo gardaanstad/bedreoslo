@@ -64,9 +64,9 @@ export default async function Home() {
       {/* Hero Section */}
       <section className="relative w-full px-4 pt-8">
         <div className="max-w-7xl mx-auto">
-          <div className="relative overflow-hidden border border-[#1a472a]/10 dark:border-[#f5f1e8]/10 p-16 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
+          <div className="relative overflow-hidden border border-[#1a472a]/10 dark:border-[#f5f1e8]/10 p-6 sm:p-16 bg-white/5 dark:bg-black/20">
             <div className="relative">
-              <h1 className={`${playfair.className} text-6xl sm:text-8xl font-bold tracking-tight leading-[1.1] text-center gradient-text`}>
+              <h1 className={`${playfair.className} text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight leading-[1.1] text-center gradient-text`}>
                 For en by med<br />plass til alle
               </h1>
             </div>
@@ -77,72 +77,75 @@ export default async function Home() {
       {/* Main Content Grid */}
       <section className="relative w-full px-4 mt-8 pb-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Latest News */}
+          {/* Nyheter og innlegg */}
           <div className="lg:col-span-2 h-full">
-            <div className="h-full border border-[#1a472a]/10 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
+            <div className="h-full border border-[#1a472a]/10 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20">
               <Link href="/nyheter" className={`text-3xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-8 block hover:underline ${playfair.className}`}>
                 Nyheter og innlegg
               </Link>
-              <div className="space-y-8">
-                {(await getRecentPosts()).map((post) => (
-                  <article key={post.id} className="border-b border-[#1a472a]/10 dark:border-[#f5f1e8]/10 pb-8 last:border-0">
-                    <Link href={`/nyheter/${post.id}`}>
-                      <h3 className={`text-xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-2 hover:underline ${playfair.className}`}>
-                        {post.title}
-                      </h3>
-                    </Link>
-                    <p className="text-[#2c5545] dark:text-[#a3b8b0] mb-3">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center gap-3 text-sm text-[#2c5545] dark:text-[#a3b8b0]">
-                      <span>{post.author}</span>
-                      <span>•</span>
-                      <time>{new Date(post.date).toLocaleDateString('nb-NO', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                      })}</time>
+              <div className="divide-y divide-[#1a472a]/10 dark:divide-[#f5f1e8]/10">
+                <div>
+                  {(await getRecentPosts()).map((post, index, array) => (
+                    <div key={post.id}>
+                      <Link href={`/nyheter/${post.id}`}>
+                        <article className="py-8 group">
+                          <time className="block text-sm text-[#2c5545] dark:text-[#a3b8b0] mb-2">{new Date(post.date).toLocaleDateString('nb-NO', {
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric'
+                            })}</time>
+                          <h3 className={`text-xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-2 hover:underline ${playfair.className} group-hover:underline`}>
+                            {post.title}
+                          </h3>
+                          <p className="text-[#2c5545] dark:text-[#a3b8b0]">
+                            {post.excerpt}
+                          </p>
+                        </article>
+                      </Link>
+                      {index < array.length - 1 && (
+                        <hr className="border-[#1a472a] dark:border-[#f5f1e8] opacity-10" />
+                      )}
                     </div>
-                  </article>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
 
           {/* Right Column */}
           <div className="lg:col-span-1 space-y-8">
-            {/* Our Story */}
-            <div>
+            {/* Ofte stilte spørsmål */}
+            <div className="relative group">
               <Link
                 href="/historie"
-                className="block h-full border border-[#1a472a]/10 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm group"
+                className="block h-full border border-[#1a472a]/10 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20"
               >
-                <span className="block text-sm text-[#2c5545] dark:text-[#a3b8b0] mb-4 uppercase tracking-widest">
-                  Vår historie
+                <span className="block text-sm text-[#2c5545] dark:text-[#f5f1e8] mb-4 uppercase tracking-widest">
+                  Argumentene
                 </span>
-                <h2 className={`text-2xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-4 ${playfair.className} group-hover:underline`}>
-                  Boligkrisen i Oslo
+                <h2 className={`text-2xl font-bold text-[#2c5545] dark:text-[#f5f1e8] mb-4 ${playfair.className} group-hover:underline`}>
+                  Hvorfor YIMBY?
                 </h2>
-                <p className="text-[#2c5545] dark:text-[#a3b8b0]">
-                  Les om hvordan boligmangelen påvirker Oslo og hvordan vi kan løse krisen sammen.
+                <p className="text-[#2c5545] dark:text-[#f5f1e8]">
+                  Argumentene for YIMBY og hvordan det kan løse boligmangelen i Oslo.
                 </p>
               </Link>
             </div>
 
-            {/* About Us */}
-            <div>
+            {/* Om oss */}
+            <div className="relative group">
               <Link
                 href="/om"
-                className="block h-full border border-[#1a472a]/10 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm group"
+                className="block h-full border border-[#1a472a]/10 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20"
               >
-                <span className="block text-sm text-[#2c5545] dark:text-[#a3b8b0] mb-4 uppercase tracking-widest">
+                <span className="block text-sm text-[#2c5545] dark:text-[#f5f1e8] mb-4 uppercase tracking-widest">
                   Om oss
                 </span>
-                <h2 className={`text-2xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-4 ${playfair.className} group-hover:underline`}>
-                  Hvem er YIMBY Oslo?
+                <h2 className={`text-2xl font-bold text-[#2c5545] dark:text-[#f5f1e8] mb-4 ${playfair.className} group-hover:underline`}>
+                  Hvem er Oslo YIMBY?
                 </h2>
-                <p className="text-[#2c5545] dark:text-[#a3b8b0]">
-                  Vi er en grasrotbevegelse som jobber for en mer inkluderende byutvikling i Oslo.
+                <p className="text-[#2c5545] dark:text-[#f5f1e8]">
+                  Les om bevegelsen som vil løse boligkrisen i Oslo med beviste metoder.
                 </p>
               </Link>
             </div>
@@ -151,7 +154,7 @@ export default async function Home() {
             <div className="relative group">
               <Link
                 href="/bli-medlem"
-                className="block h-full border border-[#1a472a]/10 dark:border-[#f5f1e8]/10 p-8 bg-[#1a472a] backdrop-blur-sm"
+                className="block h-full border border-[#1a472a]/10 dark:border-[#f5f1e8]/10 p-8 bg-[#1a472a]"
               >
                 <span className="block text-sm text-[#f5f1e8]/80 mb-4 uppercase tracking-widest">
                   Bli medlem
