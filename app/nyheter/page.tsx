@@ -90,7 +90,7 @@ export default async function NewsPage() {
               className="block group"
             >
               <article 
-                className="border border-[#1a472a]/10 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-8 relative"
+                className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-8 relative"
               >
                 <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
                 <div className="relative z-10">
