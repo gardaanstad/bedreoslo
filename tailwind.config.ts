@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import typography from '@tailwindcss/typography';
+import plugin from 'tailwindcss/plugin';
 
 export default {
   content: [
@@ -32,7 +33,23 @@ export default {
       },
     },
   },
-  plugins: [typography],
+  plugins: [
+    typography,
+    plugin(function({ addBase }) {
+      addBase({
+        // Custom hover underline styles that scale with text size
+        '.hover\\:underline, .group-hover\\:underline': {
+          textDecorationThickness: '1px',
+          textUnderlineOffset: '2px',
+          '@media (min-width: 640px)': {
+            '&.text-xl, &.text-2xl, &.text-3xl, &.text-4xl, &.text-5xl, &.text-6xl, &.text-7xl, &.text-8xl': {
+              textDecorationThickness: '2px',
+            },
+          },
+        },
+      });
+    }),
+  ],
   future: {
     hoverOnlyWhenSupported: true,
   },

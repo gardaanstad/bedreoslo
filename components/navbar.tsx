@@ -47,7 +47,7 @@ export default function Navbar() {
   const menuItems = [
     { name: "Om oss", href: "/om" },
     { name: "Nyheter", href: "/nyheter" },
-    { name: "Bli medlem", href: "/sign-in", highlight: true }
+    { name: "Bli medlem", href: "/sign-in" }
   ];
 
   const itemVariants = {
@@ -284,11 +284,9 @@ export default function Navbar() {
                           className={`
                             relative px-4 py-2 text-sm font-medium tracking-wide
                             transition-all duration-300 block
-                            ${item.highlight 
-                              ? 'bg-white text-[#1a472a] hover:@media(hover:hover):brightness-110' 
-                              : pathname === item.href
-                                ? 'bg-white/20 text-white'
-                                : 'text-white hover:@media(hover:hover):bg-white/20 hover:@media(hover:hover):text-white'
+                            ${pathname === item.href
+                              ? 'bg-white/20 text-white'
+                              : 'text-white hover:@media(hover:hover):bg-white/20 hover:@media(hover:hover):text-white'
                             }
                           `}
                         >

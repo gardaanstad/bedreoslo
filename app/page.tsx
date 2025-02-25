@@ -81,111 +81,153 @@ export default async function Home() {
       <section className="relative w-full px-4 mt-8 pb-16">
         <div className="max-w-7xl mx-auto">
           {/* Desktop Layout */}
-          <div className="hidden md:grid md:grid-cols-3 gap-6">
-            {/* Left/Center 2x2 Grid (2/3 width) */}
-            <div className="col-span-2 grid grid-cols-2 gap-6">
-              
-              {/* Argumentene Tile */}
-              <div className="relative group h-full">
-                <Link
-                  href="/historie"
-                  className="block h-full border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 flex flex-col"
-                >
-                  <span className="block text-sm text-[#2c5545] dark:text-[#f5f1e8] mb-4 uppercase tracking-widest">
-                    Argumentene
-                  </span>
-                  <h2 className={`text-2xl font-bold text-[#2c5545] dark:text-[#f5f1e8] mb-4 ${playfair.className} group-hover:underline`}>
-                    Hvorfor YIMBY?
-                  </h2>
-                  <p className="text-[#2c5545] dark:text-[#f5f1e8] mt-auto">
-                    Hvordan YIMBY kan løse boligkrisen i Oslo.
-                  </p>
-                </Link>
-              </div>
-
-              {/* Bli Medlem Tile */}
-              <div className="relative group h-full">
-                <Link
-                  href="/bli-medlem"
-                  className="block h-full border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-[#1a472a] flex flex-col"
-                >
-                  <span className="block text-sm text-[#f5f1e8]/80 mb-4 uppercase tracking-widest">
-                    Bli medlem
-                  </span>
-                  <h2 className={`text-2xl font-bold text-[#f5f1e8] mb-4 ${playfair.className} group-hover:underline`}>
-                    Bli med i kampen
-                  </h2>
-                  <p className="text-[#f5f1e8]/90 mt-auto">
-                    Din stemme teller. Sammen kan vi skape en by med plass til alle.
-                  </p>
-                </Link>
-              </div>
-              
-              {/* Om oss Tile */}
-              <div className="relative group h-full">
-                <Link
-                  href="/om"
-                  className="block h-full border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 flex flex-col"
-                >
-                  <span className="block text-sm text-[#2c5545] dark:text-[#f5f1e8] mb-4 uppercase tracking-widest">
-                    Om oss
-                  </span>
-                  <h2 className={`text-2xl font-bold text-[#2c5545] dark:text-[#f5f1e8] mb-4 ${playfair.className} group-hover:underline`}>
-                    Hvem er Oslo YIMBY?
-                  </h2>
-                  <p className="text-[#2c5545] dark:text-[#f5f1e8] mt-auto">
-                    Les om bevegelsen som vil løse boligkrisen i Oslo med vitenskapelig beviste metoder.
-                  </p>
-                </Link>
-              </div>
-              
-              {/* Kontakt Tile */}
-              <div className="relative group h-full">
-                <Link
-                  href="/kontakt"
-                  className="block h-full border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 flex flex-col"
-                >
-                  <span className="block text-sm text-[#2c5545] dark:text-[#f5f1e8] mb-4 uppercase tracking-widest">
-                    Kontakt
-                  </span>
-                  <h2 className={`text-2xl font-bold text-[#2c5545] dark:text-[#f5f1e8] mb-4 ${playfair.className} group-hover:underline`}>
-                    Ta kontakt med oss
-                  </h2>
-                  <p className="text-[#2c5545] dark:text-[#f5f1e8] mt-auto">
-                    Har du spørsmål eller vil du bidra? Ta kontakt med Oslo YIMBY.
-                  </p>
-                </Link>
+          <div className="hidden md:block">
+            {/* Desktop YIMBY Introduction */}
+            <div className="mb-10">
+              <div className="prose prose-lg dark:prose-invert max-w-4xl mx-auto">
+                <p className={`text-[#2c5545] dark:text-[#f5f1e8]/90 text-lg leading-relaxed text-center`}>
+                  <span className="font-semibold">YIMBY</span> står for &ldquo;Yes In My Back Yard&rdquo; — vi som ønsker 
+                  mer og tettere byutvikling i Oslo for å skape en mer bærekraftig, mangfoldig, og 
+                  rimelig by.
+                </p>
               </div>
             </div>
-
-            {/* News Column - Right (1/3 width) */}
-            <div className="relative h-full col-span-1">
-              <div className="h-full border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 flex flex-col">
-                <Link href="/nyheter" className={`flex items-center justify-between text-2xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-6 ${playfair.className} hover:underline`}>
-                  Nyheter og innlegg
-                </Link>
+            
+            {/* Main Grid - Redesigned newspaper-style layout */}
+            <div className="grid grid-cols-12 gap-6">
+              {/* Left Column - Main content and feature */}
+              <div className="col-span-8">
+                {/* Featured Article - Main coverage */}
+                <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 p-6 mb-6">
+                  <div className="flex gap-8">
+                    {/* Left - Title and intro */}
+                    <Link 
+                        href="/argument" 
+                        className="w-1/2 group"
+                      >
+                        <span className="text-sm text-[#1a472a] dark:text-[#f5f1e8]/70 font-medium uppercase tracking-wider">Hovedsak</span>
+                        <h2 className={`${playfair.className} text-3xl md:text-4xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mt-2 mb-4 leading-tight group-hover:underline`}>
+                          Hvorfor trenger Oslo YIMBY?
+                        </h2>
+                        <p className="text-[#2c5545] dark:text-[#f5f1e8]/80 text-base leading-relaxed mb-4">
+                          Boligprisene i Oslo har steget med 110% siden 2010, mens lønningene bare har økt med 32%. 
+                          Boligkrisen rammer særlig unge og marginaliserte grupper. YIMBY fokuserer på forskningsbaserte løsninger for å øke boligtilbudet.
+                        </p>
+                    </Link>
+                    
+                    {/* Right - Highlight box */}
+                    <div className="w-1/2 bg-[#1a472a]/10 dark:bg-[#1a472a]/20 p-6 flex flex-col justify-between">
+                      <div>
+                        <h3 className={`${playfair.className} text-xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-4`}>Grunnlaget vårt</h3>
+                        <ul className="space-y-3 text-[#2c5545] dark:text-[#f5f1e8]/80">
+                          <li className="flex items-start">
+                            <span className="inline-block w-6 h-6 bg-[#1a472a] text-white flex-shrink-0 flex items-center justify-center mr-2">1</span>
+                            <span>Økt boligbygging gjør eksisterende boliger <strong>billigere</strong></span>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="inline-block w-6 h-6 bg-[#1a472a] text-white flex-shrink-0 flex items-center justify-center mr-2">2</span>
+                            <span>Tettere byutvikling <strong>reduserer</strong> klimagassutslipp</span>
+                          </li>
+                          <li className="flex items-start">
+                            <span className="inline-block w-6 h-6 bg-[#1a472a] text-white flex-shrink-0 flex items-center justify-center mr-2">3</span>
+                            <span>Unge og lavinntektsgrupper blir rammet <strong>hardest</strong> av boligkrisen</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 
-                <div className="divide-y divide-[#1a472a]/20 dark:divide-[#f5f1e8]/10 flex-1">
-                  {recentPosts.slice(0, 2).map((post, index) => (
-                    <div key={post.id}>
-                      <Link href={`/nyheter/${post.id}`}>
-                        <article className={`${index === 0 ? 'pb-5' : 'pt-5'} group`}>
-                          <time className="block text-sm text-[#2c5545] dark:text-[#a3b8b0]">
-                            {new Date(post.date).toLocaleDateString('nb-NO', {
-                              year: 'numeric',
-                              month: 'long',
-                              day: 'numeric'
-                            })}
-                          </time>
-                          <h3 className={`text-lg font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-1 hover:underline ${playfair.className} group-hover:underline`}>
-                            {post.title}
-                          </h3>
-                          <p className="text-[#2c5545] dark:text-[#a3b8b0] text-sm">
-                            {post.excerpt}
-                          </p>
-                        </article>
+                {/* Action Links - Incorporating functionality from the removed tiles */}
+                <div className="grid grid-cols-2 gap-6 mb-6">
+                  {/* Bli Medlem */}
+                  <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 g-white/5 dark:bg-black/20 p-6">
+                    <Link
+                      href="/bli-medlem"
+                      className="group flex flex-col h-full"
+                    >
+                      <span className="block text-sm text-[#f5f1e8]/70 uppercase tracking-wider mb-2 font-medium">
+                        Bli medlem
+                      </span>
+                      <h3 className={`text-xl font-bold text-[#f5f1e8] mb-2 leading-tight ${playfair.className} group-hover:underline`}>
+                        Bli med i kampen
+                      </h3>
+                      <p className="text-[#f5f1e8]/90 text-sm mb-auto">
+                        Din stemme teller. Sammen kan vi skape en by med plass til alle.
+                      </p>
+                      <span className="inline-flex items-center text-[#f5f1e8] text-sm font-medium mt-4">
+                        Meld deg inn
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </span>
+                    </Link>
+                  </div>
+                  
+                  {/* Contact and About Links */}
+                  <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 p-6 flex flex-col justify-between">
+                    <Link
+                      href="/om"
+                      className="group mb-6"
+                    >
+                      <span className="block text-sm text-[#2c5545] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
+                        Om oss
+                      </span>
+                      <h3 className={`text-lg font-bold text-[#2c5545] dark:text-[#f5f1e8] mb-1 leading-tight ${playfair.className} group-hover:underline`}>
+                        Hvem er Oslo YIMBY?
+                      </h3>
+                    </Link>
+                    
+                    <div className="border-t border-[#1a472a]/20 dark:border-[#f5f1e8]/10 pt-6">
+                      <Link
+                        href="/kontakt"
+                        className="group"
+                      >
+                        <span className="block text-sm text-[#2c5545] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
+                          Kontakt
+                        </span>
+                        <h3 className={`text-lg font-bold text-[#2c5545] dark:text-[#f5f1e8] mb-1 leading-tight ${playfair.className} group-hover:underline`}>
+                          Ta kontakt med oss
+                        </h3>
                       </Link>
                     </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* News Column - Right Side */}
+              <div className="col-span-4 border-l border-[#1a472a]/20 dark:border-[#f5f1e8]/10 pl-6">
+                <div className="mb-4 pb-4 border-b border-[#1a472a]/20 dark:border-[#f5f1e8]/10">
+                  <Link 
+                    href="/nyheter" 
+                    className={`flex items-center justify-between text-xl font-bold text-[#1a472a] dark:text-[#f5f1e8] ${playfair.className} hover:underline`}
+                  >
+                    Nyheter og innlegg
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
+                </div>
+                
+                <div className="space-y-6">
+                  {recentPosts.slice(0, 4).map((post) => (
+                    <Link key={post.id} href={`/nyheter/${post.id}`} className="block group">
+                      <article>
+                        <time className="text-xs text-[#2c5545] dark:text-[#a3b8b0] font-medium uppercase tracking-wider">
+                          {new Date(post.date).toLocaleDateString('nb-NO', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                          })}
+                        </time>
+                        <h3 className={`text-lg font-bold text-[#1a472a] dark:text-[#f5f1e8] mt-1 mb-2 leading-tight ${playfair.className} group-hover:underline`}>
+                          {post.title}
+                        </h3>
+                        <p className="text-[#2c5545] dark:text-[#a3b8b0] text-sm line-clamp-2">
+                          {post.excerpt}
+                        </p>
+                      </article>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -235,15 +277,6 @@ export default async function Home() {
                 </svg>
               </Link>
             </div>
-            
-            {/* Simple fact or statistic element */}
-            {/* <div className="py-2">
-              <div className="border-l-4 border-[#1a472a]/40 dark:border-[#1a472a]/60 pl-4 py-1">
-                <p className="text-[#2c5545] dark:text-[#f5f1e8]/80 text-base italic">
-                  Oslo trenger <span className="font-semibold">25 000</span> nye boliger innen 2030 for å møte etterspørselen.
-                </p>
-              </div>
-            </div> */}
             
             {/* News Carousel for mobile - now constrained to navbar width */}
             <div className="mt-2">
