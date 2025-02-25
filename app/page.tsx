@@ -84,23 +84,6 @@ export default async function Home() {
           <div className="hidden md:grid md:grid-cols-3 gap-6">
             {/* Left/Center 2x2 Grid (2/3 width) */}
             <div className="col-span-2 grid grid-cols-2 gap-6">
-              {/* Bli Medlem Tile */}
-              <div className="relative group h-full">
-                <Link
-                  href="/bli-medlem"
-                  className="block h-full border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-[#1a472a] flex flex-col"
-                >
-                  <span className="block text-sm text-[#f5f1e8]/80 mb-4 uppercase tracking-widest">
-                    Bli medlem
-                  </span>
-                  <h2 className={`text-2xl font-bold text-[#f5f1e8] mb-4 ${playfair.className} group-hover:underline`}>
-                    Bli med i kampen
-                  </h2>
-                  <p className="text-[#f5f1e8]/90 mt-auto">
-                    Din stemme teller. Sammen kan vi skape en by med plass til alle.
-                  </p>
-                </Link>
-              </div>
               
               {/* Argumentene Tile */}
               <div className="relative group h-full">
@@ -116,6 +99,24 @@ export default async function Home() {
                   </h2>
                   <p className="text-[#2c5545] dark:text-[#f5f1e8] mt-auto">
                     Hvordan YIMBY kan løse boligkrisen i Oslo.
+                  </p>
+                </Link>
+              </div>
+
+              {/* Bli Medlem Tile */}
+              <div className="relative group h-full">
+                <Link
+                  href="/bli-medlem"
+                  className="block h-full border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-[#1a472a] flex flex-col"
+                >
+                  <span className="block text-sm text-[#f5f1e8]/80 mb-4 uppercase tracking-widest">
+                    Bli medlem
+                  </span>
+                  <h2 className={`text-2xl font-bold text-[#f5f1e8] mb-4 ${playfair.className} group-hover:underline`}>
+                    Bli med i kampen
+                  </h2>
+                  <p className="text-[#f5f1e8]/90 mt-auto">
+                    Din stemme teller. Sammen kan vi skape en by med plass til alle.
                   </p>
                 </Link>
               </div>
@@ -158,10 +159,10 @@ export default async function Home() {
             </div>
 
             {/* News Column - Right (1/3 width) */}
-            <div className="relative group h-full col-span-1">
+            <div className="relative h-full col-span-1">
               <div className="h-full border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 flex flex-col">
-                <Link href="/nyheter" className={`flex items-center justify-between text-2xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-6 group ${playfair.className}`}>
-                  <span className="group-hover:underline">Nyheter og innlegg</span>
+                <Link href="/nyheter" className={`flex items-center justify-between text-2xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-6 ${playfair.className} hover:underline`}>
+                  Nyheter og innlegg
                 </Link>
                 
                 <div className="divide-y divide-[#1a472a]/20 dark:divide-[#f5f1e8]/10 flex-1">
