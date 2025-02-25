@@ -225,7 +225,7 @@ export default async function Home() {
                       Hvorfor trenger Oslo YIMBY?
                     </h3>
                     <p className="text-[#2c5545] dark:text-[#f5f1e8]/80 text-base">
-                      Les våre forskningsbaserte løsninger på boligkrisen og klimakrisen.
+                      Se våre forskningsbaserte løsninger på boligkrisen.
                     </p>
                   </div>
                 </div>
