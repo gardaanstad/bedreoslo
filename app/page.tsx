@@ -146,16 +146,16 @@ export default async function Home() {
                       href="/bli-medlem"
                       className="group flex flex-col h-full"
                     >
-                      <span className="block text-sm text-[#f5f1e8]/70 uppercase tracking-wider mb-2 font-medium">
+                      <span className="block text-sm text-[#2c5545] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-2 font-medium">
                         Bli medlem
                       </span>
-                      <h3 className={`text-xl font-bold text-[#f5f1e8] mb-2 leading-tight ${playfair.className} group-hover:underline`}>
+                      <h3 className={`text-xl font-bold text-[#2c5545] dark:text-[#f5f1e8] mb-2 leading-tight ${playfair.className} group-hover:underline`}>
                         Bli med i kampen
                       </h3>
-                      <p className="text-[#f5f1e8]/90 text-sm mb-auto">
+                      <p className="text-[#2c5545] dark:text-[#f5f1e8]/80 text-sm mb-auto">
                         Din stemme teller. Sammen kan vi skape en by med plass til alle.
                       </p>
-                      <span className="inline-flex items-center text-[#f5f1e8] text-sm font-medium mt-4">
+                      <span className="inline-flex items-center text-[#2c5545] dark:text-[#f5f1e8] text-sm font-medium mt-4">
                         Meld deg inn
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
