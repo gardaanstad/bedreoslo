@@ -250,7 +250,7 @@ export default async function Home() {
             {/* Emphasized Argumentene Card - improved with subtle clickable indicators */}
             <div>
               <Link
-                href="/historie"
+                href="/argument"
                 className="block w-full border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-[#1a472a]/10 dark:bg-[#1a472a]/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1a472a] relative overflow-hidden group transition-all duration-200 hover:bg-[#1a472a]/20 dark:hover:bg-[#1a472a]/30 hover:border-[#1a472a]/40 dark:hover:border-[#f5f1e8]/20 hover:shadow-sm"
               >
                 <div className="flex items-start gap-4">
