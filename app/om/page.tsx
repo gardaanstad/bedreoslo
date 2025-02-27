@@ -26,21 +26,43 @@ export default function AboutPage() {
       <div className="max-w-5xl mx-auto px-4 pb-16">
         {/* Page Header - Styled like /nyheter */}
         <header className="mb-16">
-          <h1 className={`${playfair.className} text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
-            Om Oslo YIMBY
-          </h1>
-          <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-6" />
-          <p className="text-xl text-[#2b2b2b]/80 dark:text-[#a3b8b0] max-w-2xl">
-          Oslo YIMBY er en grasrotbevegelse for alle som ønsker seg en mer inkluderende, 
-                bærekraftig og mangfoldig by. Vi ønsker oss en by hvor det er plass til alle, 
-                uavhengig av hvor lenge de har bodd her eller hvor mye penger de har.
-                <br />
-                <br />
-                Vi er en samling av mennesker som bor og lever i Oslo, og som ønsker oss en by 
-                med flere gode nabolag, rimelige boliger, og bærekraftig byutvikling. 
-                YIMBY står for &ldquo;Yes In My Back Yard&rdquo; — som en motvekt mot NIMBY-holdninger 
-                (&ldquo;Not In My Back Yard&rdquo;) som ofte bremser byutvikling.
-          </p>
+          {/* Mobile Header */}
+          <div className="md:hidden">
+            <h1 className={`${playfair.className} text-4xl font-bold tracking-tight leading-[1.1] text-[#2b2b2b] dark:text-[#f5f1e8] mb-4`}>
+              Om Oslo YIMBY
+            </h1>
+            <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-4" />
+            <p className="text-sm text-[#2b2b2b]/80 dark:text-[#a3b8b0] leading-relaxed">
+              Oslo YIMBY er en grasrotbevegelse for alle som ønsker seg en mer inkluderende, 
+              bærekraftig og mangfoldig by. Vi ønsker oss en by hvor det er plass til alle, 
+              uavhengig av hvor lenge de har bodd her eller hvor mye penger de har.
+              <br />
+              <br />
+              Vi er en samling av mennesker som bor og lever i Oslo, og som ønsker oss en by 
+              med flere gode nabolag, rimelige boliger, og bærekraftig byutvikling. 
+              YIMBY står for &ldquo;Yes In My Back Yard&rdquo; — som en motvekt mot NIMBY-holdninger 
+              (&ldquo;Not In My Back Yard&rdquo;) som ofte bremser byutvikling.
+            </p>
+          </div>
+
+          {/* Desktop Header */}
+          <div className="hidden md:block">
+            <h1 className={`${playfair.className} text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+              Om Oslo YIMBY
+            </h1>
+            <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-6" />
+            <p className="text-xl text-[#2b2b2b]/80 dark:text-[#a3b8b0] max-w-1xl">
+              Oslo YIMBY er en grasrotbevegelse for alle som ønsker seg en mer inkluderende, 
+              bærekraftig og mangfoldig by. Vi ønsker oss en by hvor det er plass til alle, 
+              uavhengig av hvor lenge de har bodd her eller hvor mye penger de har.
+              <br />
+              <br />
+              Vi er en samling av mennesker som bor og lever i Oslo, og som ønsker oss en by 
+              med flere gode nabolag, rimelige boliger, og bærekraftig byutvikling. 
+              YIMBY står for &ldquo;Yes In My Back Yard&rdquo; — som en motvekt mot NIMBY-holdninger 
+              (&ldquo;Not In My Back Yard&rdquo;) som ofte bremser byutvikling.
+            </p>
+          </div>
         </header>
         
         {/* Principles Section */}
