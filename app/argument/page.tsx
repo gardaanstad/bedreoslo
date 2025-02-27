@@ -342,53 +342,6 @@ export default function Argument() {
                   <Footnote id={14} />
                 </p>
               </div>
-              
-              {/* "What We Can Do" Section - Sidebar Version */}
-              <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
-                <h3 className={`text-xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-4 ${playfair.className}`}>
-                  Hva kan vi gjøre?
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <span className="w-8 h-8 bg-[#1a472a] text-white flex items-center justify-center rounded-full mr-3 flex-shrink-0 text-lg">
-                      1
-                    </span>
-                    <div>
-                      <h4 className="font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-1">Bygg tettere, høyere, smartere</h4>
-                      <p className="text-sm text-[#2c5545] dark:text-[#a3b8b0]">
-                        Vi må bygge tettere der folk vil bo. Småhusplanen innenfor Ring 3 må oppdateres for å tillate flere leiligheter og rekkehus.
-                        <Footnote id={15} />
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <span className="w-8 h-8 bg-[#1a472a] text-white flex items-center justify-center rounded-full mr-3 flex-shrink-0 text-lg">
-                      2
-                    </span>
-                    <div>
-                      <h4 className="font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-1">Fjern byråkratiske hindringer</h4>
-                      <p className="text-sm text-[#2c5545] dark:text-[#a3b8b0]">
-                        Dagens reguleringsprosess tar ofte 7-10 år fra idé til første spadetak. Dette må forenkles drastisk.
-                        <Footnote id={16} />
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <span className="w-8 h-8 bg-[#1a472a] text-white flex items-center justify-center rounded-full mr-3 flex-shrink-0 text-lg">
-                      3
-                    </span>
-                    <div>
-                      <h4 className="font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-1">Byutvikling rundt kollektivknutepunkter</h4>
-                      <p className="text-sm text-[#2c5545] dark:text-[#a3b8b0]">
-                        Hver T-banestasjon bør ha høy tetthet av boliger. Dette reduserer transportbehov og skaper levende lokalmiljøer.
-                        <Footnote id={17} />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           
