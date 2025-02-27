@@ -66,17 +66,17 @@ export default async function NewsPage() {
       {/* Fixed Background Elements */}
       <div className="fixed inset-0 bg-[url('/noise.png')] opacity-[0.15] dark:opacity-[0.08] -z-10" />
       <div 
-        className="fixed inset-0 bg-gradient-to-b from-[#1a472a] to-transparent dark:from-black/40 dark:to-transparent opacity-[0.08] -z-10"
+        className="fixed inset-0 bg-gradient-to-b from-[#2b2b2b] to-transparent dark:from-black/40 dark:to-transparent opacity-[0.08] -z-10"
       />
 
       <div className="max-w-5xl mx-auto px-4 pb-16">
         {/* Page Header */}
         <header className="mb-16">
-          <h1 className={`${playfair.className} text-4xl sm:text-6xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-6`}>
+          <h1 className={`${playfair.className} text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
             Nyheter og innlegg
           </h1>
-          <div className="h-px bg-[#1a472a]/20 dark:bg-[#f5f1e8]/20 w-full my-6" />
-          <p className="text-xl text-[#2c5545] dark:text-[#a3b8b0] max-w-2xl">
+          <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-6" />
+          <p className="text-xl text-[#2b2b2b]/70 dark:text-[#a3b8b0] max-w-2xl">
             Følg med på det siste innen byutvikling og boligpolitikk i Oslo
           </p>
         </header>
@@ -90,22 +90,22 @@ export default async function NewsPage() {
               className="block group"
             >
               <article 
-                className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-8 relative"
+                className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-8 relative"
               >
                 <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
                 <div className="relative z-10">
-                  <time className="block text-lg text-[#2c5545] dark:text-[#a3b8b0] mb-4">
+                  <time className="block text-lg text-[#2b2b2b]/70 dark:text-[#a3b8b0] mb-4">
                     {new Date(post.date).toLocaleDateString('nb-NO', {
                       year: 'numeric',
                       month: 'long',
                       day: 'numeric'
                     })}
                   </time>
-                  <h2 className={`${playfair.className} text-2xl sm:text-3xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-4 group-hover:underline`}>
+                  <h2 className={`${playfair.className} text-2xl sm:text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 group-hover:underline`}>
                     {post.title}
                   </h2>
                   {post.excerpt && (
-                    <p className="text-lg text-[#2c5545] dark:text-[#a3b8b0]">
+                    <p className="text-lg text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
                       {post.excerpt}
                     </p>
                   )}

@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Oslo YIMBY",
-  description: "Oslo YIMBY",
+  description: "Vi kjemper for en by med plass til alle",
 };
 
 export default function RootLayout({

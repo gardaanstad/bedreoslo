@@ -57,7 +57,7 @@ export default async function Home() {
   
   return (
     <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#0a0a0a] pt-24`}
+      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#0a0a0a] pt-28`}
     >
       <div 
         className="fixed inset-0 bg-gradient-to-b from-[#2b2b2b] to-transparent dark:from-black/40 dark:to-transparent opacity-[0.08] -z-10"
@@ -88,7 +88,7 @@ export default async function Home() {
               <h1 className={`${playfair.className} text-7xl md:text-8xl font-bold tracking-tight leading-[1.1] text-left gradient-text`}>
                 For en by med plass til alle
               </h1>
-              <div className="mt-6 mb-6 max-w-3xl">
+              <div className="mt-6 mb-2 max-w-3xl">
                 <p className={`text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-lg leading-relaxed`}>
                   <span className="font-semibold">YIMBY</span> står for &ldquo;Yes In My Back Yard&rdquo; — vi som ønsker 
                   mer og tettere byutvikling i Oslo for å skape en mer bærekraftig, mangfoldig, og 
