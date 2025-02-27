@@ -86,21 +86,15 @@ export default function Carousel({
     }
   }, [currentIndex]);
 
-  // Memoize resetAutoplay to avoid recreating it on every render
-  const resetAutoplay = useCallback(() => {
+  // Clear any existing autoplay timeout
+  const clearAutoplayTimeout = useCallback(() => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
     }
-    
-    if (autoPlay) {
-      timeoutRef.current = setTimeout(() => {
-        const nextIndex = (currentIndex + 1) % posts.length;
-        scrollToSlide(nextIndex);
-      }, autoPlayInterval);
-    }
-  }, [autoPlay, autoPlayInterval, currentIndex, posts.length]);
+  }, []);
 
-  // Scroll to a specific slide
+  // Scroll to a specific slide and handle autoplay
   const scrollToSlide = useCallback((index: number) => {
     if (!scrollContainerRef.current) return;
     
@@ -111,8 +105,16 @@ export default function Carousel({
     });
     
     setCurrentIndex(index);
-    resetAutoplay();
-  }, [resetAutoplay]);
+    
+    // Handle autoplay
+    clearAutoplayTimeout();
+    if (autoPlay) {
+      timeoutRef.current = setTimeout(() => {
+        const nextIndex = (index + 1) % posts.length;
+        scrollToSlide(nextIndex);
+      }, autoPlayInterval);
+    }
+  }, [autoPlay, autoPlayInterval, clearAutoplayTimeout, posts.length]);
 
   // Setup scroll event listener and autoplay
   useEffect(() => {
@@ -121,7 +123,12 @@ export default function Carousel({
       scrollContainer.addEventListener('scroll', handleScroll);
     }
 
-    resetAutoplay();
+    // Initial autoplay setup
+    if (autoPlay) {
+      timeoutRef.current = setTimeout(() => {
+        scrollToSlide((currentIndex + 1) % posts.length);
+      }, autoPlayInterval);
+    }
     
     // Listen for messages to scroll to a specific slide
     const handleMessage = (e: MessageEvent) => {
@@ -136,12 +143,10 @@ export default function Carousel({
       if (scrollContainer) {
         scrollContainer.removeEventListener('scroll', handleScroll);
       }
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
+      clearAutoplayTimeout();
       window.removeEventListener('message', handleMessage);
     };
-  }, [currentIndex, posts.length, autoPlay, autoPlayInterval, handleScroll, resetAutoplay, scrollToSlide]);
+  }, [currentIndex, posts.length, autoPlay, autoPlayInterval, handleScroll, scrollToSlide, clearAutoplayTimeout]);
 
   return (
     <div className="mb-4 relative mx-[-1rem] w-[100vw] overflow-hidden">
