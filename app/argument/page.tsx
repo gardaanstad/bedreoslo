@@ -50,12 +50,9 @@ export default function Argument() {
     <main 
       className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#0a0a0a] pt-24`}
     >
-      {/* Fixed Background Elements */}
-      <div className="fixed inset-0 bg-[url('/noise.png')] opacity-[0.15] dark:opacity-[0.08] -z-10" />
       <div 
         className="fixed inset-0 bg-gradient-to-b from-[#1a472a] to-transparent dark:from-black/40 dark:to-transparent opacity-[0.08] -z-10"
       />
-      <div className="fixed inset-0 bg-[url('/noise.png')] opacity-[0.1] dark:opacity-[0.05] -z-10 scale-150 mix-blend-overlay" />
 
       {/* Hero Section */}
       <section className="relative w-full px-4 pt-6 pb-12">
@@ -86,7 +83,6 @@ export default function Argument() {
               {/* Introduction with Problem Statement */}
               <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 sm:p-12 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
                 <div className="relative">
-                  <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
                   <div className="relative">
                     <h2 className={`text-2xl sm:text-3xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-6 ${playfair.className}`}>
                       Oslo i tall: Krisen forverres hver dag
@@ -112,7 +108,6 @@ export default function Argument() {
               {/* Graph Section - Housing Gap */}
               <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
                 <div className="relative">
-                  <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
                   <div className="relative">
                     <h2 className={`text-2xl sm:text-3xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-6 ${playfair.className}`}>
                       Gapet øker: Boligbehov vs. boligtilbud
@@ -229,7 +224,6 @@ export default function Argument() {
                 {/* Principle 1 - Full width highlight */}
                 <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-[#1a472a]/10 dark:bg-[#1a472a]/20 backdrop-blur-sm mb-6">
                   <div className="relative">
-                    <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
                     <div className="relative flex flex-col md:flex-row gap-8">
                       <div className="md:w-16 flex-shrink-0">
                         <span className="flex items-center justify-center w-12 h-12 bg-[#1a472a] text-white font-bold text-xl rounded-full">
@@ -264,7 +258,6 @@ export default function Argument() {
                   {/* Principle 2 */}
                   <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
                     <div className="relative h-full">
-                      <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
                       <div className="relative h-full flex flex-col">
                         <div className="flex items-center mb-6">
                           <span className="flex-shrink-0 flex items-center justify-center w-12 h-12 bg-[#1a472a] text-white font-bold text-xl rounded-full mr-4">
@@ -291,7 +284,6 @@ export default function Argument() {
                   {/* Principle 3 */}
                   <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
                     <div className="relative h-full">
-                      <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
                       <div className="relative h-full flex flex-col">
                         <div className="flex items-center mb-6">
                           <span className="flex-shrink-0 flex items-center justify-center w-12 h-12 bg-[#1a472a] text-white font-bold text-xl rounded-full mr-4">
