@@ -131,17 +131,17 @@ export default async function Home() {
                     <div className="w-1/2 bg-[#1a472a] dark:bg-[#1a472a] p-6 flex flex-col justify-between">
                       <div>
                         <h3 className={`${playfair.className} text-xl font-bold text-white dark:text-[#f5f1e8] mb-4`}>Grunnlaget vårt</h3>
-                        <ul className="space-y-3 text-white dark:text-[#f5f1e8]/80">
+                        <ul className="space-y-3 text-white dark:text-[#f5f1e8]/95">
                           <li className="flex items-start">
-                            <span className="inline-block w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">1</span>
+                            <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">1</span>
                             <span>Økt boligbygging gjør eksisterende boliger billigere</span>
                           </li>
                           <li className="flex items-start">
-                            <span className="inline-block w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">2</span>
+                            <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">2</span>
                             <span>Tettere byutvikling reduserer klimagassutslipp</span>
                           </li>
                           <li className="flex items-start">
-                            <span className="inline-block w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">3</span>
+                            <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">3</span>
                             <span>Unge og lavinntektsgrupper blir rammet hardest av boligkrisen</span>
                           </li>
                         </ul>
