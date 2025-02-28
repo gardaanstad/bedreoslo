@@ -17,52 +17,22 @@ export default function AboutPage() {
     <main 
       className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#0a0a0a] pt-40`}
     >
-      {/* Fixed Background Elements */}
-      <div className="fixed inset-0 bg-[url('/noise.png')] opacity-[0.15] dark:opacity-[0.08] -z-10" />
       <div 
         className="fixed inset-0 bg-gradient-to-b from-[#2b2b2b] to-transparent dark:from-black/40 dark:to-transparent opacity-[0.08] -z-10"
       />
 
       <div className="max-w-5xl mx-auto px-4 pb-16">
-        {/* Page Header - Styled like /nyheter */}
+        {/* Page Header */}
         <header className="mb-16">
-          {/* Mobile Header */}
-          <div className="md:hidden">
-            <h1 className={`${playfair.className} text-4xl font-bold tracking-tight leading-[1.1] text-[#2b2b2b] dark:text-[#f5f1e8] mb-4`}>
-              Om Oslo YIMBY
-            </h1>
-            <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-4" />
-            <p className="text-sm text-[#2b2b2b]/80 dark:text-[#a3b8b0] leading-relaxed">
-              Oslo YIMBY er en grasrotbevegelse for alle som ønsker seg en mer inkluderende, 
-              bærekraftig og mangfoldig by. Vi ønsker oss en by hvor det er plass til alle, 
-              uavhengig av hvor lenge de har bodd her eller hvor mye penger de har.
-              <br />
-              <br />
-              Vi er en samling av mennesker som bor og lever i Oslo, og som ønsker oss en by 
-              med flere gode nabolag, rimelige boliger, og bærekraftig byutvikling. 
-              YIMBY står for &ldquo;Yes In My Back Yard&rdquo; — som en motvekt mot NIMBY-holdninger 
-              (&ldquo;Not In My Back Yard&rdquo;) som ofte bremser byutvikling.
-            </p>
-          </div>
-
-          {/* Desktop Header */}
-          <div className="hidden md:block">
-            <h1 className={`${playfair.className} text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
-              Om Oslo YIMBY
-            </h1>
-            <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-6" />
-            <p className="text-xl text-[#2b2b2b]/80 dark:text-[#a3b8b0] max-w-1xl">
-              Oslo YIMBY er en grasrotbevegelse for alle som ønsker seg en mer inkluderende, 
-              bærekraftig og mangfoldig by. Vi ønsker oss en by hvor det er plass til alle, 
-              uavhengig av hvor lenge de har bodd her eller hvor mye penger de har.
-              <br />
-              <br />
-              Vi er en samling av mennesker som bor og lever i Oslo, og som ønsker oss en by 
-              med flere gode nabolag, rimelige boliger, og bærekraftig byutvikling. 
-              YIMBY står for &ldquo;Yes In My Back Yard&rdquo; — som en motvekt mot NIMBY-holdninger 
-              (&ldquo;Not In My Back Yard&rdquo;) som ofte bremser byutvikling.
-            </p>
-          </div>
+          <h1 className={`${playfair.className} text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+            Om Oslo YIMBY
+          </h1>
+          <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-6" />
+          <p className="text-xl text-[#2b2b2b]/80 dark:text-[#a3b8b0] max-w-1xl">
+            Oslo YIMBY er en grasrotbevegelse for alle som ønsker seg en mer inkluderende, 
+            bærekraftig og mangfoldig by. Vi ønsker oss en by hvor det er plass til alle, 
+            uavhengig av hvor lenge de har bodd her eller hvor mye penger de har.
+          </p>
         </header>
         
         {/* Principles Section */}
@@ -75,26 +45,26 @@ export default function AboutPage() {
           <div className="bg-[#1a472a] dark:bg-[#1a472a] p-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
             <div className="relative z-10">
-              <ul className="space-y-6 text-white dark:text-[#f5f1e8]/90">
+              <ul className="space-y-6 text-[#f7f4ef] dark:text-[#f5f1e8]/90">
                 <li className="flex items-start">
-                  <span className="w-8 h-8 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-4">1</span>
+                  <span className="w-8 h-8 bg-[#f7f4ef] text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-4">1</span>
                   <div>
-                    <h4 className="text-lg text-white mb-2">Inkludering fremfor ekskludering</h4>
-                    <p className="text-white/95">Vi ønsker velkommen en Oslo-region som har plass til flere, istedenfor å hegne om våre egne privilegier og interesser.</p>
+                    <h4 className="text-lg text-[#f7f4ef] mb-2">Inkludering fremfor ekskludering</h4>
+                    <p className="text-[#f7f4ef]/95">Vi ønsker velkommen en Oslo-region som har plass til flere, istedenfor å hegne om våre egne privilegier og interesser.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <span className=" w-8 h-8 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-4">2</span>
+                  <span className=" w-8 h-8 bg-[#f7f4ef] text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-4">2</span>
                   <div>
-                    <h4 className="text-lg text-white mb-2">Forskningsbasert tilnærming</h4>
-                    <p className="text-white/95">Vi tror på at byutvikling og boligpolitikk bør baseres på den beste tilgjengelige forskningen, ikke følelser eller særinteresser.</p>
+                    <h4 className="text-lg text-[#f7f4ef] mb-2">Forskningsbasert tilnærming</h4>
+                    <p className="text-[#f7f4ef]/95">Vi tror på at byutvikling og boligpolitikk bør baseres på den beste tilgjengelige forskningen, ikke følelser eller særinteresser.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-8 h-8 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-4">3</span>
+                  <span className="w-8 h-8 bg-[#f7f4ef] text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-4">3</span>
                   <div>
-                    <h4 className="text-lg text-white mb-2">Bærekraftig byutvikling</h4>
-                    <p className="text-white/95">Tette, mangfoldige byer med god kollektivtransport er nødvendig for å redusere klimagassutslipp og fossilavhengighet.</p>
+                    <h4 className="text-lg text-[#f7f4ef] mb-2">Bærekraftig byutvikling</h4>
+                    <p className="text-[#f7f4ef]/95">Tette, mangfoldige byer med god kollektivtransport er nødvendig for å redusere klimagassutslipp og fossilavhengighet.</p>
                   </div>
                 </li>
               </ul>
@@ -168,34 +138,6 @@ export default function AboutPage() {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-        
-        {/* Join Us Box - Styled consistently */}
-        <div className="mb-16 border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-8 relative">
-          <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
-          <div className="relative z-10">
-            <Link
-              href="/bli-medlem"
-              className="group block"
-            >
-              <span className="block text-sm text-[#2b2b2b]/70 dark:text-[#a3b8b0] uppercase tracking-wider mb-2 font-medium">
-                Bli medlem
-              </span>
-              <h3 className={`text-2xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 leading-tight ${playfair.className} group-hover:underline`}>
-                Bli med i kampen for en bedre by
-              </h3>
-              <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] mb-4">
-                Vi er alltid på utkikk etter flere som vil bidra til en mer inkluderende og bærekraftig by. 
-                Enten du vil engasjere deg aktivt eller bare støtte arbeidet vårt, er du hjertelig velkommen!
-              </p>
-              <span className="inline-flex items-center text-[#2b2b2b] dark:text-[#f5f1e8] text-sm font-medium">
-                Meld deg inn
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </span>
-            </Link>
           </div>
         </div>
           

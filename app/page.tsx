@@ -63,17 +63,17 @@ export default async function Home() {
         className="fixed inset-0 bg-gradient-to-b from-[#2b2b2b] to-transparent dark:from-black/40 dark:to-transparent opacity-[0.08] -z-10"
       />
 
-      {/* Hero Section - Modified for desktop with integrated introduction */}
-      <section className="relative w-full px-4 pt-4">
+      {/* Hero Section */}
+      <section className="relative w-full px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Mobile Hero - More compact and space efficient */}
-          <div className="md:hidden relative overflow-hidden p-3">
+          {/* Mobile Hero */}
+          <div className="md:hidden relative overflow-hidden">
             <div className="relative">
-              <h1 className={`${playfair.className} text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-left gradient-text`}>
+              <h1 className={`${playfair.className} text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-left gradient-text mb-4 pt-4`}>
                 For en by med plass til alle
               </h1>
-              <div className="mt-3 mb-2">
-                <p className={`text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-sm leading-relaxed text-left max-w-[95%]`}>
+              <div className="mb-6">
+                <p className={`text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-base leading-relaxed text-left max-w-[95%]`}>
                   <span className="font-semibold">YIMBY</span> står for &ldquo;Yes In My Back Yard&rdquo; — vi som ønsker 
                   mer og tettere byutvikling i Oslo for å skape en mer bærekraftig, mangfoldig, og 
                   rimelig by.
@@ -82,10 +82,10 @@ export default async function Home() {
             </div>
           </div>
 
-          {/* Desktop Hero - Unchanged */}
+          {/* Desktop Hero */}
           <div className="hidden md:block relative">
             <div className="flex flex-col">
-              <h1 className={`${playfair.className} text-7xl md:text-8xl font-bold tracking-tight leading-[1.1] text-left gradient-text`}>
+              <h1 className={`${playfair.className} text-7xl md:text-8xl font-bold tracking-tight leading-[1.1] text-left gradient-text  pt-12`}>
                 For en by med plass til alle
               </h1>
               <div className="mt-6 mb-2 max-w-3xl">

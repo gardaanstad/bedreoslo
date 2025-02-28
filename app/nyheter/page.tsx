@@ -82,7 +82,7 @@ export default async function NewsPage() {
         </header>
 
         {/* Articles Grid */}
-        <div className="grid gap-8">
+        <div className="grid gap-4 sm:gap-8">
           {allPosts.map((post) => (
             <Link 
               key={post.id}
@@ -90,22 +90,22 @@ export default async function NewsPage() {
               className="block group"
             >
               <article 
-                className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-8 relative"
+                className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-4 sm:p-8 relative"
               >
                 <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
                 <div className="relative z-10">
-                  <time className="block text-lg text-[#2b2b2b]/70 dark:text-[#a3b8b0] mb-4">
+                  <time className="block text-base sm:text-lg text-[#2b2b2b]/70 dark:text-[#a3b8b0] mb-2 sm:mb-4">
                     {new Date(post.date).toLocaleDateString('nb-NO', {
                       year: 'numeric',
                       month: 'long',
                       day: 'numeric'
                     })}
                   </time>
-                  <h2 className={`${playfair.className} text-2xl sm:text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 group-hover:underline`}>
+                  <h2 className={`${playfair.className} text-xl sm:text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-2 sm:mb-4 group-hover:underline`}>
                     {post.title}
                   </h2>
                   {post.excerpt && (
-                    <p className="text-lg text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
+                    <p className="text-base sm:text-lg text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
                       {post.excerpt}
                     </p>
                   )}
