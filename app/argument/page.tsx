@@ -142,31 +142,13 @@ export default function Argument() {
                     For hver 10% økning i boligmasse, synker boligprisene med 5-7%.<Footnote id={6} /> Nye studier fra både USA og Europa viser at bygging av nye boliger skaper en &ldquo;filtering&rdquo;-effekt som gjør at prisene synker i alle segmenter av markedet.<Footnote id={7} />
                   </p>
                   
-                  <div className="bg-[#1a472a] dark:bg-[#1a472a] p-6 my-8">
-                    <h3 className={`${playfair.className} text-xl font-bold text-white dark:text-[#f5f1e8] mb-4`}>Helsinki-eksempelet</h3>
-                    <div className="space-y-4 text-white dark:text-[#f5f1e8]/95">
-                      <div className="flex items-start">
-                        <span className="w-6 h-6 bg-white text-[#2b2b2b] flex-shrink-0 flex items-center justify-center mr-3 font-medium">1</span>
-                        <span>I Helsinki bygde man over 7000 boliger årlig mellom 2016 og 2019<Footnote id={8} /></span>
-                      </div>
-                      <div className="flex items-start">
-                        <span className="w-6 h-6 bg-white text-[#2b2b2b] flex-shrink-0 flex items-center justify-center mr-3 font-medium">2</span>
-                        <span>Dette førte til at boligprisene faktisk <em>falt</em> i reelle termer</span>
-                      </div>
-                      <div className="flex items-start">
-                        <span className="w-6 h-6 bg-white text-[#2b2b2b] flex-shrink-0 flex items-center justify-center mr-3 font-medium">3</span>
-                        <span>Oslo bygde under 3000 boliger årlig i samme periode</span>
-                      </div>
-                    </div>
-                  </div>
-                  
                   <p>
                     Forskningen viser også at tettere byutvikling reduserer klimagassutslipp. En gjennomsnittlig familie som bor i en leilighet i Oslo sentrum har et 30-40% lavere klimaavtrykk enn den samme familien i en enebolig i Bærum eller Lillestrøm.<Footnote id={10} />
                   </p>
                 </div>
               </section>
-              
-              {/* Kapittel 4: Veien videre for Oslo */}
+
+              {/* Chapter 4: Veien videre for Oslo */}
               <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
                 <span className="inline-block px-3 py-1 bg-[#1a472a]/10 dark:bg-[#1a472a]/30 text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-sm font-medium rounded-sm mb-4">
                   Kapittel 4
@@ -219,9 +201,9 @@ export default function Argument() {
             </div>
             
             {/* Right Column - Sidebar */}
-            <div className="md:col-span-4 space-y-8">              
+            <div className="md:col-span-4">              
               {/* Sticky "Did You Know" Box */}
-              <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 backdrop-blur-sm sticky top-24">
+              <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 backdrop-blur-sm sticky top-24 mb-[450px]">
                 <h3 className={`text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 ${playfair.className}`}>
                   Visste du at...
                 </h3>
@@ -263,6 +245,35 @@ export default function Argument() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
+                </div>
+              </div>
+
+              {/* Success Stories Box */}
+              <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
+                <h3 className={`text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 ${playfair.className}`}>
+                  Suksesshistorier
+                </h3>
+                <div className="space-y-6 text-[#2b2b2b]/90 dark:text-[#a3b8b0]">
+                  <div className="pb-4 border-b border-[#1a472a]/10 dark:border-[#f5f1e8]/10">
+                    <h4 className="font-bold mb-2">Helsinki</h4>
+                    <p className="text-sm">
+                      Bygde over 7000 boliger årlig (2016-2019), som førte til at boligprisene faktisk falt i reelle termer. Oslo bygde under 3000 boliger årlig i samme periode.<Footnote id={8} />
+                    </p>
+                  </div>
+                  
+                  <div className="pb-4 border-b border-[#1a472a]/10 dark:border-[#f5f1e8]/10">
+                    <h4 className="font-bold mb-2">Austin</h4>
+                    <p className="text-sm">
+                      Økte boligbyggingen med 40% i perioden 2018-2022. Resultatet var at leieprisene falt med 11% i 2023, mens de økte i resten av USA.
+                    </p>
+                  </div>
+                  
+                  <div className="pb-4">
+                    <h4 className="font-bold mb-2">Minneapolis</h4>
+                    <p className="text-sm">
+                      Fjernet restriksjonene på flerbolighus i 2019. Tre år senere hadde byen den laveste prisveksten blant storbyene i USA.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -339,26 +350,37 @@ export default function Argument() {
                 <p>
                   For hver 10% økning i boligmasse, synker boligprisene med 5-7%.<Footnote id={6} />
                 </p>
-                
-                <div className="bg-[#1a472a] dark:bg-[#1a472a] p-6 my-8">
-                  <h3 className={`${playfair.className} text-xl font-bold text-white dark:text-[#f5f1e8] mb-4`}>Helsinki-eksempelet</h3>
-                  <div className="space-y-4 text-white dark:text-[#f5f1e8]/95">
-                    <div className="flex items-start">
-                      <span className="w-6 h-6 bg-white text-[#2b2b2b] flex-shrink-0 flex items-center justify-center mr-3 font-medium">1</span>
-                      <span>I Helsinki bygde man over 7000 boliger årlig mellom 2016 og 2019<Footnote id={8} /></span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="w-6 h-6 bg-white text-[#2b2b2b] flex-shrink-0 flex items-center justify-center mr-3 font-medium">2</span>
-                      <span>Dette førte til at boligprisene faktisk <em>falt</em> i reelle termer</span>
-                    </div>
-                    <div className="flex items-start">
-                      <span className="w-6 h-6 bg-white text-[#2b2b2b] flex-shrink-0 flex items-center justify-center mr-3 font-medium">3</span>
-                      <span>Oslo bygde under 3000 boliger årlig i samme periode</span>
-                    </div>
-                  </div>
-                </div>
               </div>
             </section>
+            
+            {/* Success Stories Box - Mobile */}
+            <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
+              <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 ${playfair.className}`}>
+                Suksesshistorier
+              </h3>
+              <div className="space-y-4 text-[#2b2b2b]/90 dark:text-[#a3b8b0]">
+                <div className="pb-4 border-b border-[#1a472a]/10 dark:border-[#f5f1e8]/10">
+                  <h4 className="font-bold mb-2">Helsinki</h4>
+                  <p className="text-sm">
+                    Bygde over 7000 boliger årlig (2016-2019), som førte til at boligprisene faktisk falt i reelle termer. Oslo bygde under 3000 boliger årlig i samme periode.<Footnote id={8} />
+                  </p>
+                </div>
+                
+                <div className="pb-4 border-b border-[#1a472a]/10 dark:border-[#f5f1e8]/10">
+                  <h4 className="font-bold mb-2">Austin</h4>
+                  <p className="text-sm">
+                    Økte boligbyggingen med 40% i perioden 2018-2022. Resultatet var at leieprisene falt med 11% i 2023, mens de økte i resten av USA.
+                  </p>
+                </div>
+                
+                <div className="pb-4">
+                  <h4 className="font-bold mb-2">Minneapolis</h4>
+                  <p className="text-sm">
+                    Fjernet restriksjonene på flerbolighus i 2019. Tre år senere hadde byen den laveste prisveksten blant storbyene i USA.
+                  </p>
+                </div>
+              </div>
+            </div>
             
             {/* Chapter 4: Call to Action - Mobile */}
             <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-[#1a472a] dark:bg-[#1a472a] backdrop-blur-sm">
