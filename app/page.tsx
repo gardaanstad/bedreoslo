@@ -74,9 +74,7 @@ export default async function Home() {
               </h1>
               <div className="mb-6">
                 <p className={`text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-base leading-relaxed text-left max-w-[95%]`}>
-                  <span className="font-semibold">YIMBY</span> står for &ldquo;Yes In My Back Yard&rdquo; — vi som ønsker 
-                  mer og tettere byutvikling i Oslo for å skape en mer bærekraftig, mangfoldig, og 
-                  rimelig by.
+                  <span className="font-semibold">Bedre Oslo</span> jobber for en mer inkluderende byutvikling i Oslo. Kort oppsummert: Flere boliger, tryggere gater og bedre kollektivt.
                 </p>
               </div>
             </div>
@@ -90,9 +88,7 @@ export default async function Home() {
               </h1>
               <div className="mt-6 mb-2 max-w-3xl">
                 <p className={`text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-lg leading-relaxed`}>
-                  <span className="font-semibold">YIMBY</span> står for &ldquo;Yes In My Back Yard&rdquo; — vi som ønsker 
-                  mer og tettere byutvikling i Oslo for å skape en mer bærekraftig, mangfoldig, og 
-                  rimelig by.
+                <span className="font-semibold">Bedre Oslo</span> jobber for en mer inkluderende byutvikling i Oslo.
                 </p>
               </div>
             </div>
@@ -114,16 +110,15 @@ export default async function Home() {
                   <div className="flex gap-8">
                     {/* Left - Title and intro */}
                     <Link 
-                        href="/argument" 
+                        href="/om" 
                         className="w-1/2 group"
                       >
-                        <span className="text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 font-medium uppercase tracking-wider">Hovedsak</span>
+                        <span className="text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 font-medium uppercase tracking-wider">Om oss</span>
                         <h2 className={`${playfair.className} text-3xl md:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mt-2 mb-4 leading-tight group-hover:underline`}>
-                          Hvorfor trenger Oslo YIMBY?
+                          Hva mener vi med &ldquo;Bedre Oslo&rdquo;?
                         </h2>
                         <p className="text-[#2b2b2b] dark:text-[#f5f1e8]/80 text-base leading-relaxed mb-4">
-                          Boligprisene i Oslo har steget med 110% siden 2010, mens lønningene bare har økt med 32%. 
-                          Boligkrisen rammer særlig unge og marginaliserte grupper. YIMBY fokuserer på forskningsbaserte løsninger for å øke boligtilbudet.
+                          Oslo er den beste byen i Norge, men vi mener det finnes visse områder som kan forbedres. Mer spesifikt: Boligmarkedet er ute av kontroll og bilkjøring skader mennesker og byliv. Hva kan vi gjøre?
                         </p>
                     </Link>
                     
@@ -134,15 +129,15 @@ export default async function Home() {
                         <ul className="space-y-3 text-white dark:text-[#f5f1e8]/95">
                           <li className="flex items-start">
                             <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">1</span>
-                            <span>Økt boligbygging gjør eksisterende boliger billigere</span>
+                            <span>Økt boligbygging og tettere byutvikling gjør boligmarkedet bedre for leietakere og førstegangskjøpere</span>
                           </li>
                           <li className="flex items-start">
                             <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">2</span>
-                            <span>Tettere byutvikling reduserer klimagassutslipp</span>
+                            <span>Tryggere gater og mindre biltrafikk får flere til å gå og sykle</span>
                           </li>
                           <li className="flex items-start">
                             <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">3</span>
-                            <span>Unge og lavinntektsgrupper blir rammet hardest av boligkrisen</span>
+                            <span>Bedre kollektivtilbud gjør at flere kan ta kollektivt</span>
                           </li>
                         </ul>
                       </div>
@@ -152,6 +147,37 @@ export default async function Home() {
                 
                 {/* Action Links - Incorporating functionality from the removed tiles */}
                 <div className="grid grid-cols-2 gap-6 mb-6">
+                  
+                  
+                  {/* Contact and About Links */}
+                  <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 p-6 flex flex-col justify-between">
+                    <Link
+                      href="/boligkrisen"
+                      className="group mb-6"
+                    >
+                      <span className="block text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
+                        Boligkrisen
+                      </span>
+                      <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1 leading-tight ${playfair.className} group-hover:underline`}>
+                        Hva er løsningen på boligkrisen i Oslo?
+                      </h3>
+                    </Link>
+                    
+                    <div className="border-t border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 pt-6">
+                      <Link
+                        href="/byrom"
+                        className="group"
+                      >
+                        <span className="block text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
+                          Byrom
+                        </span>
+                        <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1 leading-tight ${playfair.className} group-hover:underline`}>
+                          Hvordan får vi tryggere gater og mer byliv?
+                        </h3>
+                      </Link>
+                    </div>
+                  </div>
+
                   {/* Bli Medlem */}
                   <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 g-white/5 dark:bg-black/20 p-6">
                     <Link
@@ -174,35 +200,6 @@ export default async function Home() {
                         </svg>
                       </span>
                     </Link>
-                  </div>
-                  
-                  {/* Contact and About Links */}
-                  <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 p-6 flex flex-col justify-between">
-                    <Link
-                      href="/om"
-                      className="group mb-6"
-                    >
-                      <span className="block text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
-                        Om oss
-                      </span>
-                      <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1 leading-tight ${playfair.className} group-hover:underline`}>
-                        Hvem er Oslo YIMBY?
-                      </h3>
-                    </Link>
-                    
-                    <div className="border-t border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 pt-6">
-                      <Link
-                        href="/kontakt"
-                        className="group"
-                      >
-                        <span className="block text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
-                          Kontakt
-                        </span>
-                        <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1 leading-tight ${playfair.className} group-hover:underline`}>
-                          Ta kontakt med oss
-                        </h3>
-                      </Link>
-                    </div>
                   </div>
                 </div>
               </div>

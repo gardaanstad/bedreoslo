@@ -29,9 +29,9 @@ export default function Footer() {
     {
       title: 'Følg oss',
       links: [
-        { name: 'Twitter', href: 'https://twitter.com/osloyimby' },
-        { name: 'Facebook', href: 'https://facebook.com/osloyimby' },
-        { name: 'Instagram', href: 'https://instagram.com/osloyimby' },
+        { name: 'Twitter', href: 'https://twitter.com/bedreoslo' },
+        { name: 'Facebook', href: 'https://facebook.com/bedreoslo' },
+        { name: 'Instagram', href: 'https://instagram.com/bedreoslo' },
       ],
     },
   ];
@@ -49,10 +49,10 @@ export default function Footer() {
               href="/" 
               className={`${playfair.className} text-[#f5f1e8] text-xl tracking-tight transition-all duration-300 hover:opacity-80`}
             >
-              Oslo YIMBY
+              Bedre Oslo
             </Link>
             <p className="text-[#f5f1e8]/80 text-sm max-w-xs">
-              Vi jobber for en mer inkluderende byutvikling i Oslo, med plass til alle som ønsker å bo her.
+              Vi jobber for en mer inkluderende byutvikling i Oslo.
             </p>
           </div>
 

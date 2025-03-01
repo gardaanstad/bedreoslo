@@ -25,11 +25,11 @@ export default function AboutPage() {
         {/* Page Header */}
         <header className="mb-16">
           <h1 className={`${playfair.className} text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
-            Om Oslo YIMBY
+            Om Bedre Oslo
           </h1>
           <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-6" />
           <p className="text-xl text-[#2b2b2b]/80 dark:text-[#a3b8b0] max-w-1xl">
-            Oslo YIMBY er en grasrotbevegelse for alle som ønsker seg en mer inkluderende, 
+            Bedre Oslo er en grasrotbevegelse for alle som ønsker seg en mer inkluderende, 
             bærekraftig og mangfoldig by. Vi ønsker oss en by hvor det er plass til alle, 
             uavhengig av hvor lenge de har bodd her eller hvor mye penger de har.
           </p>
@@ -189,20 +189,6 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            
-            <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-8 relative">
-              <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
-              <div className="relative z-10">
-                <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
-                  Hva betyr YIMBY egentlig?
-                </h3>
-                <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                  YIMBY står for &ldquo;Yes In My Back Yard&rdquo; og er en motvekt til NIMBY (&ldquo;Not In My Back Yard&rdquo;). 
-                  Der NIMBY-holdninger ofte handler om å motsette seg endring og utvikling, handler YIMBY om å 
-                  omfavne positiv utvikling som kan gjøre byen bedre for alle.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
         
@@ -213,7 +199,7 @@ export default function AboutPage() {
           </h2>
           
           <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] mb-8 max-w-3xl">
-            Oslo YIMBY består av et nettverk av frivillige med ulik bakgrunn og kompetanse. Vi er studenter, 
+            Bedre Oslo består av et nettverk av frivillige med ulik bakgrunn og kompetanse. Vi er studenter, 
             arkitekter, økonomer, samfunnsplanleggere, og interesserte samfunnsborgere.
           </p>
           

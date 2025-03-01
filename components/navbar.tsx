@@ -88,7 +88,7 @@ export default function Navbar() {
               href="/" 
               className="font-serif text-white text-xl tracking-tight hover:underline"
             >
-              Oslo YIMBY
+              Bedre Oslo
             </Link>
             
             {/* Desktop Menu */}
