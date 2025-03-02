@@ -64,29 +64,30 @@ export default async function Page({ params }: Props) {
   
   return (
     <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#0a0a0a] pt-32`}
+      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#0a0a0a] pt-40`}
     >
       {/* Fixed Background Elements */}
       <div className="fixed inset-0 bg-[url('/noise.png')] opacity-[0.15] dark:opacity-[0.08] -z-10" />
       <div 
-        className="fixed inset-0 bg-gradient-to-b from-[#1a472a] to-transparent dark:from-black/40 dark:to-transparent opacity-[0.08] -z-10"
+        className="fixed inset-0 bg-gradient-to-b from-[#2b2b2b] to-transparent dark:from-black/40 dark:to-transparent opacity-[0.08] -z-10"
       />
 
-      <article className="max-w-3xl mx-auto px-4 pb-16">
+      <article className="max-w-5xl mx-auto px-4 pb-16">
         {/* Back Link */}
         <Link 
           href="/nyheter" 
-          className="text-[#2c5545] dark:text-[#a3b8b0] mb-12 block hover:underline text-lg"
+          className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] mb-8 block hover:underline text-lg"
         >
-          Tilbake til nyheter
+          ← Tilbake til nyheter
         </Link>
 
         {/* Article Header */}
-        <header className="mb-12">
-          <h1 className={`${playfair.className} text-4xl sm:text-5xl font-bold text-[#1a472a] dark:text-[#f5f1e8] mb-4`}>
+        <header className="mb-16">
+          <h1 className={`${playfair.className} text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
             {post.title}
           </h1>
-          <div className="flex items-center gap-2 text-lg text-[#2c5545] dark:text-[#a3b8b0] pb-4">
+          <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-6" />
+          <div className="flex items-center gap-3 text-xl text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
             <time>
               {new Date(post.date).toLocaleDateString('nb-NO', {
                 year: 'numeric',
@@ -105,14 +106,17 @@ export default async function Page({ params }: Props) {
 
         {/* Article Content */}
         <div 
-          className="prose prose-green dark:prose-invert max-w-none
-            prose-headings:font-playfair prose-headings:text-[#1a472a] dark:prose-headings:text-[#f5f1e8]
-            prose-p:text-[#2c5545] dark:prose-p:text-[#a3b8b0]
-            prose-a:text-[#1a472a] dark:prose-a:text-[#f5f1e8]
-            prose-strong:text-[#1a472a] dark:prose-strong:text-[#f5f1e8]"
+          className="prose prose-lg max-w-3xl
+            prose-headings:font-playfair prose-headings:text-[#2b2b2b] dark:prose-headings:text-[#f5f1e8]
+            prose-p:text-[#2b2b2b]/90 dark:prose-p:text-[#a3b8b0] prose-p:leading-relaxed
+            prose-a:text-[#2b2b2b] dark:prose-a:text-[#f5f1e8] prose-a:underline
+            prose-strong:text-[#2b2b2b] dark:prose-strong:text-[#f5f1e8]
+            prose-li:text-[#2b2b2b]/90 dark:prose-li:text-[#a3b8b0]
+            prose-blockquote:border-[#2b2b2b]/20 dark:prose-blockquote:border-[#f5f1e8]/20
+            prose-blockquote:text-[#2b2b2b]/70 dark:prose-blockquote:text-[#a3b8b0]"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
       </article>
     </main>
   );
-} 
+}
