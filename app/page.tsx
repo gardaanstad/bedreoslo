@@ -228,7 +228,7 @@ export default async function Home() {
               >
                 <span className="text-xs text-[#2b2b2b] dark:text-[#f5f1e8]/70 font-medium uppercase tracking-wider">Om oss</span>
                 <h2 className={`${playfair.className} text-2xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mt-2 mb-3 leading-tight group-hover:underline`}>
-                  Hva mener vi med "Bedre Oslo"?
+                  Hva mener vi med &ldquo;Bedre Oslo&rdquo;?
                 </h2>
                 <p className="text-[#2b2b2b] dark:text-[#f5f1e8]/80 text-sm leading-relaxed mb-4">
                   Oslo er den beste byen i Norge, men vi mener det finnes visse områder som kan forbedres. Mer spesifikt: Boligmarkedet er ute av kontroll og bilkjøring skader mennesker og byliv. Hva kan vi gjøre?
