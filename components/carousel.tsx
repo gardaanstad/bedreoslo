@@ -46,13 +46,13 @@ const NewsItem = ({ post }: { post: PostData }) => (
             {post.excerpt}
           </p>
           
-          {/* Simplified "Read more" link to match TileCarousel */}
+          {/* Updated "Read more" link to match main button */}
           <div className="mt-auto pt-3 flex items-center">
             <span className="text-sm font-medium text-[#2b2b2b] dark:text-[#f5f1e8]">
               Les mer
             </span>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 mt-0.5 text-[#2b2b2b] dark:text-[#f5f1e8]" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-0.5 translate-y-[1px] text-[#2b2b2b] dark:text-[#f5f1e8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </div>
         </article>

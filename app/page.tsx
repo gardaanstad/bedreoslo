@@ -172,7 +172,7 @@ export default async function Home() {
                         Ressurser
                       </span>
                       <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1 leading-tight ${playfair.className} group-hover:underline`}>
-                        Nyttige lenker og forskning
+                        Forskning og nyttige lenker
                       </h3>
                     </Link>
                   </div>
@@ -231,7 +231,9 @@ export default async function Home() {
                   Hva mener vi med &ldquo;Bedre Oslo&rdquo;?
                 </h2>
                 <p className="text-[#2b2b2b] dark:text-[#f5f1e8]/80 text-sm leading-relaxed mb-4">
-                  Oslo er den beste byen i Norge, men vi mener det finnes visse områder som kan forbedres. Mer spesifikt: Boligmarkedet er ute av kontroll og bilkjøring skader mennesker og byliv. Hva kan vi gjøre?
+                  Oslo er den beste byen i Norge, men vi mener det finnes visse områder som kan forbedres. Mer spesifikt: Boligmarkedet er ute av kontroll og bilkjøring skader mennesker og byliv. <span className="inline-flex items-center hover:underline">Les mer <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg></span>
                 </p>
               </Link>
               
