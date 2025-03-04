@@ -59,18 +59,18 @@ const research = [
     category: "Boligmarked og byutvikling",
     items: [
       {
-        title: "Housing supply and affordability: Evidence from Oslo",
-        authors: "Erling Røed Larsen, NMBU",
+        title: "Forskningsartikkel nr. 1",
+        authors: "Person, Sted",
         year: "2023",
-        url: "https://www.sciencedirect.com/science/article/pii/S0094119023000293",
-        description: "Analyse av sammenhengen mellom boligbygging og boligpriser i Oslo"
+        url: "google.com",
+        description: "Beskrivelse av artikkelen"
       },
       {
-        title: "The compact city of Oslo – a city built to last?",
-        authors: "Per Gunnar Røe, UiO",
+        title: "Forskningsartikkel nr. 2",
+        authors: "Person, Sted",
         year: "2021",
-        url: "https://www.tandfonline.com/doi/full/10.1080/02723638.2019.1694635",
-        description: "Studie av Oslos fortettingsstrategi og bærekraft"
+        url: "google.com",
+        description: "Beskrivelse av artikkelen"
       }
     ]
   },
@@ -78,11 +78,11 @@ const research = [
     category: "Transport og mobilitet",
     items: [
       {
-        title: "Urban form and travel behavior in Oslo",
-        authors: "Petter Næss, NMBU",
+        title: "Artikkel nr. 4",
+        authors: "Person, Sted",
         year: "2022",
-        url: "https://www.sciencedirect.com/science/article/pii/S0966692322000011",
-        description: "Hvordan byens form påvirker reisevaner"
+        url: "google.com",
+        description: "Beskrivelse av artikkelen"
       }
     ]
   }
