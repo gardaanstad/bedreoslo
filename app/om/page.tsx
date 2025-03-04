@@ -43,7 +43,6 @@ export default function AboutPage() {
           
           {/* Principles box */}
           <div className="bg-[#1a472a] dark:bg-[#1a472a] p-8 relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
             <div className="relative z-10">
               <ul className="space-y-6 text-[#f7f4ef] dark:text-[#f5f1e8]/90">
                 <li className="flex items-start">
@@ -70,6 +69,13 @@ export default function AboutPage() {
               </ul>
             </div>
           </div>
+          
+          <Link 
+            href="/politikk" 
+            className="inline-block mt-6 text-[#1a472a] dark:text-[#a3b8b0] hover:underline"
+          >
+            Les mer om politikken vår →
+          </Link>
         </div>
         
         {/* What We Do Section */}
@@ -80,7 +86,6 @@ export default function AboutPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-6 relative">
-              <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
               <div className="relative z-10">
                 <Link href="/aktiviteter/politisk" className="group block h-full">
                   <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
@@ -95,7 +100,6 @@ export default function AboutPage() {
             </div>
             
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-6 relative">
-              <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
               <div className="relative z-10">
                 <Link href="/aktiviteter/kunnskap" className="group block h-full">
                   <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
@@ -110,7 +114,6 @@ export default function AboutPage() {
             </div>
             
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-6 relative">
-              <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
               <div className="relative z-10">
                 <Link href="/aktiviteter/fellesskap" className="group block h-full">
                   <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
@@ -125,7 +128,6 @@ export default function AboutPage() {
             </div>
             
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-6 relative">
-              <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
               <div className="relative z-10">
                 <Link href="/aktiviteter/media" className="group block h-full">
                   <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
@@ -149,7 +151,6 @@ export default function AboutPage() {
           
           <div className="grid grid-cols-1 gap-6">
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-8 relative">
-              <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
               <div className="relative z-10">
                 <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
                   Er dere en politisk organisasjon?
@@ -163,7 +164,6 @@ export default function AboutPage() {
             </div>
             
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-8 relative">
-              <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
               <div className="relative z-10">
                 <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
                   Hvordan finansieres dere?
@@ -177,7 +177,6 @@ export default function AboutPage() {
             </div>
             
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-8 relative">
-              <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
               <div className="relative z-10">
                 <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
                   Kan jeg bidra uten å være medlem?
@@ -206,7 +205,6 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {/* Board member examples - placeholder images */}
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-5 relative">
-              <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
               <div className="relative z-10">
                 <div className="aspect-square w-full bg-gray-200 dark:bg-gray-800 mb-3 flex items-center justify-center">
                   <span className="text-[#2b2b2b] dark:text-[#f5f1e8]/50">Bilde</span>
@@ -224,7 +222,6 @@ export default function AboutPage() {
             </div>
             
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-5 relative">
-              <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
               <div className="relative z-10">
                 <div className="aspect-square w-full bg-gray-200 dark:bg-gray-800 mb-3 flex items-center justify-center">
                   <span className="text-[#2b2b2b] dark:text-[#f5f1e8]/50">Bilde</span>
@@ -242,7 +239,6 @@ export default function AboutPage() {
             </div>
             
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-5 relative">
-              <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
               <div className="relative z-10">
                 <div className="aspect-square w-full bg-gray-200 dark:bg-gray-800 mb-3 flex items-center justify-center">
                   <span className="text-[#2b2b2b] dark:text-[#f5f1e8]/50">Bilde</span>
@@ -260,7 +256,6 @@ export default function AboutPage() {
             </div>
             
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-5 relative">
-              <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
               <div className="relative z-10">
                 <div className="aspect-square w-full bg-gray-200 dark:bg-gray-800 mb-3 flex items-center justify-center">
                   <span className="text-[#2b2b2b] dark:text-[#f5f1e8]/50">Bilde</span>

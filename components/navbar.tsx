@@ -47,6 +47,7 @@ export default function Navbar() {
   const menuItems = [
     { name: "Om oss", href: "/om" },
     { name: "Nyheter", href: "/nyheter" },
+    { name: "Politikk", href: "/politikk" },
     { name: "Bli medlem", href: "/sign-in" }
   ];
 
@@ -79,9 +80,6 @@ export default function Navbar() {
         <motion.div 
           className="relative w-full bg-[#1a472a] dark:bg-[#1a472a] border border-[#1a472a] dark:border-[#f5f1e8]/10 shadow-lg"
         >
-          {/* Background noise overlay */}
-          <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
-
           {/* Main Navbar Content */}
           <div className="relative px-6 py-4 flex items-center justify-between">
             <Link 

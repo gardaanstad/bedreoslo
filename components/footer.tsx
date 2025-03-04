@@ -38,9 +38,6 @@ export default function Footer() {
 
   return (
     <footer className="relative w-full bg-[#1a472a] dark:bg-[#1a472a]">
-      {/* Background noise overlay */}
-      {/* <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[1] mix-blend-overlay pointer-events-none" /> */}
-
       <div className="relative w-full max-w-7xl mx-auto px-6 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
           {/* Brand section */}

@@ -125,19 +125,19 @@ export default async function Home() {
                     {/* Right - Highlight box */}
                     <div className="w-1/2 bg-[#1a472a] dark:bg-[#1a472a] p-6 flex flex-col justify-between">
                       <div>
-                        <h3 className={`${playfair.className} text-xl font-bold text-white dark:text-[#f5f1e8] mb-4`}>Grunnlaget vårt</h3>
+                        <h3 className={`${playfair.className} text-xl font-bold text-white dark:text-[#f5f1e8] mb-4`}>Kort oppsummert</h3>
                         <ul className="space-y-3 text-white dark:text-[#f5f1e8]/95">
                           <li className="flex items-start">
                             <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">1</span>
-                            <span>Økt boligbygging og tettere byutvikling gjør boligmarkedet bedre for leietakere og førstegangskjøpere</span>
+                            <span>Bygg flere boliger, private og sosiale, for å få ned boligprisene</span>
                           </li>
                           <li className="flex items-start">
                             <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">2</span>
-                            <span>Tryggere gater og mindre biltrafikk får flere til å gå og sykle</span>
+                            <span>Gjør gater tryggere for gående og syklende, så flere velger å gå og sykle</span>
                           </li>
                           <li className="flex items-start">
                             <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">3</span>
-                            <span>Bedre kollektivtilbud gjør at flere kan ta kollektivt</span>
+                            <span>Forbedre kollektivtilbudet med flere avganger og bedre dekning, slik at flere kan ta kollektivt og færre velger bilen</span>
                           </li>
                         </ul>
                       </div>
@@ -148,34 +148,30 @@ export default async function Home() {
                 {/* Action Links */}
                 <div className="grid grid-cols-2 gap-6 mb-6">
                   {/* Boligkrise & Byrom */}
-                  <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 p-6">
-                    <Link
-                      href="/boligkrisen"
-                      className="group"
-                    >
-                      <span className="block text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
-                        Boligkrise & byrom
-                      </span>
-                      <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1 leading-tight ${playfair.className} group-hover:underline`}>
-                        Hvordan kan vi gjøre Oslo billigere og få mer byliv samtidig?
-                      </h3>
-                    </Link>
-                  </div>
+                  <Link
+                    href="/politikk"
+                    className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 p-6 group block"
+                  >
+                    <span className="block text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
+                      Politikk
+                    </span>
+                    <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1 leading-tight ${playfair.className} group-hover:underline`}>
+                      Hvilke konkrete tiltak står vi for?
+                    </h3>
+                  </Link>
 
                   {/* Ressurser */}
-                  <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 p-6">
-                    <Link
-                      href="/ressurser"
-                      className="group"
-                    >
-                      <span className="block text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
-                        Ressurser
-                      </span>
-                      <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1 leading-tight ${playfair.className} group-hover:underline`}>
-                        Forskning og nyttige lenker
-                      </h3>
-                    </Link>
-                  </div>
+                  <Link
+                    href="/ressurser"
+                    className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 p-6 group block"
+                  >
+                    <span className="block text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
+                      Ressurser
+                    </span>
+                    <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1 leading-tight ${playfair.className} group-hover:underline`}>
+                      Forskning og nyttige lenker
+                    </h3>
+                  </Link>
                 </div>
               </div>
               
@@ -237,7 +233,7 @@ export default async function Home() {
                 </p>
               </Link>
               
-              {/* Grunnlaget box - Matching desktop version */}
+              {/* Grunnlaget box */}
               <div className="bg-[#1a472a] dark:bg-[#1a472a] p-4 mt-4">
                 <h3 className={`${playfair.className} text-base font-bold text-white dark:text-[#f5f1e8] mb-3`}>Grunnlaget vårt</h3>
                 <ul className="space-y-2 text-white dark:text-[#f5f1e8]/95 text-sm">
@@ -257,7 +253,7 @@ export default async function Home() {
               </div>
             </div>
             
-            {/* Action Links Grid - Matching desktop content */}
+            {/* Action Links Grid */}
             <div className="grid grid-cols-2 gap-4">
               {/* Boligkrise & Byrom */}
               <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 p-4">
@@ -266,10 +262,10 @@ export default async function Home() {
                   className="group"
                 >
                   <span className="block text-xs text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
-                    Boligkrise & byrom
+                    Politikk
                   </span>
                   <h3 className={`text-base font-bold text-[#2b2b2b] dark:text-[#f5f1e8] leading-tight ${playfair.className} group-hover:underline`}>
-                    Hvordan kan vi gjøre Oslo billigere og få mer byliv samtidig?
+                    Hvilke konkrete tiltak står vi for?
                   </h3>
                 </Link>
               </div>

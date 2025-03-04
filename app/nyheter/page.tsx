@@ -63,8 +63,6 @@ export default async function NewsPage() {
     <main 
       className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#0a0a0a] pt-40`}
     >
-      {/* Fixed Background Elements */}
-      <div className="fixed inset-0 bg-[url('/noise.png')] opacity-[0.15] dark:opacity-[0.08] -z-10" />
       <div 
         className="fixed inset-0 bg-gradient-to-b from-[#2b2b2b] to-transparent dark:from-black/40 dark:to-transparent opacity-[0.08] -z-10"
       />
@@ -92,7 +90,6 @@ export default async function NewsPage() {
               <article 
                 className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-4 sm:p-6 md:p-8 relative"
               >
-                <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.1] mix-blend-overlay" />
                 <div className="relative z-10">
                   <time className="block text-sm sm:text-base md:text-lg text-[#2b2b2b]/70 dark:text-[#a3b8b0] mb-2 sm:mb-4">
                     {new Date(post.date).toLocaleDateString('nb-NO', {
