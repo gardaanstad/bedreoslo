@@ -31,7 +31,7 @@ const NewsItem = ({ post }: { post: PostData }) => (
     {/* Match the content width */}
     <div className="h-full w-full max-w-7xl px-4">
       <Link href={`/nyheter/${post.id}`} className="block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1a472a] dark:focus-visible:ring-[#f5f1e8]">
-        <article className="group h-full border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 flex flex-col p-6">
+        <article className="group h-full border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 flex flex-col p-6 bg-[#efece5] dark:bg-black/20">
           <div className="flex-grow">
             <time className="block text-xs font-medium text-[#2b2b2b]/70 dark:text-[#a3b8b0] uppercase tracking-wider">
               {new Date(post.date).toLocaleDateString('nb-NO', {

@@ -202,7 +202,7 @@ export default async function Home() {
           {/* Mobile Layout */}
           <div className="md:hidden flex flex-col gap-6">
             {/* Mobile featured article */}
-            <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6">
+            <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 bg-[#efece5] dark:bg-black/20">
               {/* Mobile main content */}
               <Link 
                 href="/om" 
@@ -218,7 +218,7 @@ export default async function Home() {
               </Link>
               
               {/* Mobile highlight banner */}
-              <div className="relative -mx-10 bg-[#1a472a] dark:bg-[#1a472a] p-6">
+              <div className="relative -mx-[calc(2.5rem+1px)] bg-[#1a472a] dark:bg-[#1a472a] p-6">
                 {highlightContent}
               </div>
             </div>
@@ -228,7 +228,7 @@ export default async function Home() {
               {/* Politikk */}
               <Link
                 href="/politikk"
-                className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 group block"
+                className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 group block bg-[#efece5] dark:bg-black/20"
               >
                 <span className="block text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
                   Politikk
@@ -247,7 +247,7 @@ export default async function Home() {
               {/* Ressurser */}
               <Link
                 href="/ressurser"
-                className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 group block"
+                className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 group block bg-[#efece5] dark:bg-black/20"
               >
                 <span className="block text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
                   Ressurser
