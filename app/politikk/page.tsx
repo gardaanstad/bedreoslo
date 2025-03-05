@@ -16,7 +16,7 @@ const inter = Inter({
 export default function Policy() {
   return (
     <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#121212] pt-40`}
+      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#0b0b0b] pt-40`}
     >
 
       {/* Hero Section */}

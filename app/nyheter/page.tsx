@@ -61,7 +61,7 @@ export default async function NewsPage() {
   
   return (
     <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#121212] pt-40`}
+      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#0b0b0b] pt-40`}
     >
 
       <div className="max-w-5xl mx-auto px-4 pb-16">

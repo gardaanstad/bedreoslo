@@ -79,9 +79,7 @@ export default async function Home() {
     <main 
       className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#0b0b0b] pt-28`}
     >
-    
-
-
+      
       {/* Hero Section */}
       <section className="relative w-full px-4">
         <div className="max-w-7xl mx-auto">
