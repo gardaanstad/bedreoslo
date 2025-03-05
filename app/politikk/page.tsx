@@ -16,15 +16,12 @@ const inter = Inter({
 export default function Policy() {
   return (
     <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#0a0a0a] pt-40`}
+      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#121212] pt-40`}
     >
-      <div 
-        className="fixed inset-0 bg-gradient-to-b from-[#2b2b2b] to-transparent dark:from-black/40 dark:to-transparent opacity-[0.08] -z-10"
-      />
 
       {/* Hero Section */}
       <div className="max-w-5xl mx-auto px-4 pb-16">
-        <header className="mb-16">
+        <header className="mb-2 md:mb-16">
           <h1 className={`${playfair.className} text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
             Vår politikk
           </h1>

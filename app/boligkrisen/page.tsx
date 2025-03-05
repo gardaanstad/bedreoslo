@@ -29,7 +29,7 @@ const Footnote = ({ id }: { id: number }) => (
 export default function Argument() {
   return (
     <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#0a0a0a] pt-40`}
+      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#121212] pt-40`}
     >
       <div 
         className="fixed inset-0 bg-gradient-to-b from-[#2b2b2b] to-transparent dark:from-black/40 dark:to-transparent opacity-[0.08] -z-10"
@@ -60,7 +60,7 @@ export default function Argument() {
             <div className="md:col-span-8 space-y-10">
               
               {/* Chapter 1: The Problem */}
-              <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
+              <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 ">
                 <span className="inline-block px-3 py-1 bg-[#1a472a]/10 dark:bg-[#1a472a]/30 text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-sm font-medium rounded-sm mb-4">
                   Kapittel 1
                 </span>
@@ -92,7 +92,7 @@ export default function Argument() {
               </section>
               
               {/* Chapter 2: The Victims */}
-              <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
+              <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 ">
                 <span className="inline-block px-3 py-1 bg-[#1a472a]/10 dark:bg-[#1a472a]/30 text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-sm font-medium rounded-sm mb-4">
                   Kapittel 2
                 </span>
@@ -124,7 +124,7 @@ export default function Argument() {
               </section>
               
               {/* Chapter 3: The Solution */}
-              <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
+              <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 ">
                 <span className="inline-block px-3 py-1 bg-[#1a472a]/10 dark:bg-[#1a472a]/30 text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-sm font-medium rounded-sm mb-4">
                   Kapittel 3
                 </span>
@@ -147,7 +147,7 @@ export default function Argument() {
               </section>
 
               {/* Chapter 4: Veien videre for Oslo */}
-              <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
+              <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-8 bg-white/5 dark:bg-black/20 ">
                 <span className="inline-block px-3 py-1 bg-[#1a472a]/10 dark:bg-[#1a472a]/30 text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-sm font-medium rounded-sm mb-4">
                   Kapittel 4
                 </span>
@@ -201,7 +201,7 @@ export default function Argument() {
             {/* Right Column - Sidebar */}
             <div className="md:col-span-4">              
               {/* Sticky "Did You Know" Box */}
-              <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 backdrop-blur-sm sticky top-24 mb-[450px]">
+              <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20  sticky top-24 mb-[450px]">
                 <h3 className={`text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 ${playfair.className}`}>
                   Visste du at...
                 </h3>
@@ -247,7 +247,7 @@ export default function Argument() {
               </div>
 
               {/* Success Stories Box */}
-              <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
+              <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 ">
                 <h3 className={`text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 ${playfair.className}`}>
                   Suksesshistorier
                 </h3>
@@ -280,7 +280,7 @@ export default function Argument() {
           {/* Mobile Layout */}
           <div className="md:hidden space-y-8">
             {/* Chapter 1: The Problem - Mobile */}
-            <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
+            <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 ">
               <span className="inline-block px-2 py-1 bg-[#1a472a]/10 dark:bg-[#1a472a]/30 text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-xs font-medium rounded-sm mb-3">
                 Kapittel 1
               </span>
@@ -315,7 +315,7 @@ export default function Argument() {
             </section>
             
             {/* Mobile "Did You Know" Box */}
-            <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
+            <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 ">
               <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 ${playfair.className}`}>
                 Visste du at...
               </h3>
@@ -333,7 +333,7 @@ export default function Argument() {
             </div>
             
             {/* Chapter 3: The Solution - Mobile */}
-            <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
+            <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 ">
               <span className="inline-block px-2 py-1 bg-[#1a472a]/10 dark:bg-[#1a472a]/30 text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-xs font-medium rounded-sm mb-3">
                 Kapittel 3
               </span>
@@ -352,7 +352,7 @@ export default function Argument() {
             </section>
             
             {/* Success Stories Box - Mobile */}
-            <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
+            <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 ">
               <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 ${playfair.className}`}>
                 Suksesshistorier
               </h3>
@@ -381,7 +381,7 @@ export default function Argument() {
             </div>
             
             {/* Chapter 4: Call to Action - Mobile */}
-            <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-[#1a472a] dark:bg-[#1a472a] backdrop-blur-sm">
+            <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-[#1a472a] dark:bg-[#1a472a] ">
               <span className="inline-block px-2 py-1 bg-white/10 text-white text-xs font-medium rounded-sm mb-3">
                 Kapittel 4
               </span>

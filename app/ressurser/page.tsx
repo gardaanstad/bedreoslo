@@ -62,14 +62,14 @@ const research = [
         title: "Forskningsartikkel nr. 1",
         authors: "Person, Sted",
         year: "2023",
-        url: "google.com",
+        url: "bedreoslo.no",
         description: "Beskrivelse av artikkelen"
       },
       {
         title: "Forskningsartikkel nr. 2",
         authors: "Person, Sted",
         year: "2021",
-        url: "google.com",
+        url: "bedreoslo.no",
         description: "Beskrivelse av artikkelen"
       }
     ]
@@ -81,7 +81,7 @@ const research = [
         title: "Artikkel nr. 4",
         authors: "Person, Sted",
         year: "2022",
-        url: "google.com",
+        url: "bedreoslo.no",
         description: "Beskrivelse av artikkelen"
       }
     ]

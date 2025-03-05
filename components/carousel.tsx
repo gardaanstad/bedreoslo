@@ -31,28 +31,27 @@ const NewsItem = ({ post }: { post: PostData }) => (
     {/* Match the content width */}
     <div className="h-full w-full max-w-7xl px-4">
       <Link href={`/nyheter/${post.id}`} className="block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1a472a] dark:focus-visible:ring-[#f5f1e8]">
-        <article className="group h-full p-6 relative border border-[#1a472a]/20 dark:border-[#f5f1e8]/10">
-          <time className="block text-xs font-medium text-[#2b2b2b]/70 dark:text-[#a3b8b0] mb-3 uppercase tracking-wider">
-            {new Date(post.date).toLocaleDateString('nb-NO', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            })}
-          </time>
-          <h3 className={`text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 ${playfair.className} line-clamp-2`}>
-            {post.title}
-          </h3>
-          <p className="text-[#2b2b2b] dark:text-[#a3b8b0] text-sm line-clamp-2">
-            {post.excerpt}
-          </p>
+        <article className="group h-full border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 flex flex-col p-6">
+          <div className="flex-grow">
+            <time className="block text-xs font-medium text-[#2b2b2b]/70 dark:text-[#a3b8b0] uppercase tracking-wider">
+              {new Date(post.date).toLocaleDateString('nb-NO', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              })}
+            </time>
+            <h3 className={`text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] ${playfair.className} line-clamp-2 pt-2`}>
+              {post.title}
+            </h3>
+            <p className="text-[#2b2b2b] dark:text-[#a3b8b0] text-sm line-clamp-2 pt-2">
+              {post.excerpt}
+            </p>
+          </div>
           
-          {/* Updated "Read more" link to match main button */}
-          <div className="mt-auto pt-3 flex items-center">
-            <span className="text-sm font-medium text-[#2b2b2b] dark:text-[#f5f1e8]">
-              Les mer
-            </span>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-0.5 translate-y-[1px] text-[#2b2b2b] dark:text-[#f5f1e8]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          <div className="flex items-center pt-4 text-[#2b2b2b] dark:text-[#f5f1e8] opacity-70 group-hover:opacity-100">
+            <span className="text-sm">Les mer</span>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </div>
         </article>
