@@ -26,9 +26,8 @@ export default function AboutPage() {
           </h1>
           <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-6" />
           <p className="text-xl text-[#2b2b2b]/80 dark:text-[#a3b8b0] max-w-1xl">
-            Bedre Oslo er en grasrotbevegelse for alle som ønsker seg en mer inkluderende, 
-            bærekraftig og mangfoldig by. Vi ønsker oss en by hvor det er plass til alle, 
-            uavhengig av hvor lenge de har bodd her eller hvor mye penger de har.
+            Dette er en kort beskrivelse av Bedre Oslo. Her kan det stå mer informasjon om hva 
+            vi jobber med og står for. Denne siden er ikke helt ferdig enda!
           </p>
         </header>
         
@@ -45,22 +44,22 @@ export default function AboutPage() {
                 <li className="flex items-start">
                   <span className="w-8 h-8 bg-[#f7f4ef] text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-4">1</span>
                   <div>
-                    <h4 className="text-lg text-[#f7f4ef] mb-2">Inkludering fremfor ekskludering</h4>
-                    <p className="text-[#f7f4ef]/95">Vi ønsker velkommen en Oslo-region som har plass til flere, istedenfor å hegne om våre egne privilegier og interesser.</p>
+                    <h4 className="text-lg text-[#f7f4ef] mb-2">Prinsipp #1</h4>
+                    <p className="text-[#f7f4ef]/95">Beskrivelse av det første prinsippet.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <span className=" w-8 h-8 bg-[#f7f4ef] text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-4">2</span>
+                  <span className="w-8 h-8 bg-[#f7f4ef] text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-4">2</span>
                   <div>
-                    <h4 className="text-lg text-[#f7f4ef] mb-2">Forskningsbasert tilnærming</h4>
-                    <p className="text-[#f7f4ef]/95">Vi tror på at byutvikling og boligpolitikk bør baseres på den beste tilgjengelige forskningen, ikke følelser eller særinteresser.</p>
+                    <h4 className="text-lg text-[#f7f4ef] mb-2">Prinsipp #2</h4>
+                    <p className="text-[#f7f4ef]/95">Beskrivelse av det andre prinsippet.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="w-8 h-8 bg-[#f7f4ef] text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-4">3</span>
                   <div>
-                    <h4 className="text-lg text-[#f7f4ef] mb-2">Bærekraftig byutvikling</h4>
-                    <p className="text-[#f7f4ef]/95">Tette, mangfoldige byer med god kollektivtransport er nødvendig for å redusere klimagassutslipp og fossilavhengighet.</p>
+                    <h4 className="text-lg text-[#f7f4ef] mb-2">Prinsipp #3</h4>
+                    <p className="text-[#f7f4ef]/95">Beskrivelse av det tredje prinsippet.</p>
                   </div>
                 </li>
               </ul>
@@ -86,11 +85,10 @@ export default function AboutPage() {
               <div className="relative z-10">
                 <Link href="/aktiviteter/politisk" className="group block h-full">
                   <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
-                    Politisk påvirkning
+                    Aktivitet #1
                   </h3>
                   <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                    Vi engasjerer oss i høringer, deltar på folkemøter, skriver leserinnlegg, og 
-                    møter politikere for å fremme mer omfattende og inkluderende byutvikling.
+                    Beskrivelse av den første aktiviteten som Bedre Oslo driver med.
                   </p>
                 </Link>
               </div>
@@ -100,11 +98,10 @@ export default function AboutPage() {
               <div className="relative z-10">
                 <Link href="/aktiviteter/kunnskap" className="group block h-full">
                   <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
-                    Kunnskapsdeling
+                    Aktivitet #2
                   </h3>
                   <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                    Vi arrangerer seminarer, lager faktaark, og deler forskningsbasert kunnskap om 
-                    boligmarkedet, byutvikling, og løsninger på boligmangelen.
+                    Beskrivelse av den andre aktiviteten som Bedre Oslo driver med.
                   </p>
                 </Link>
               </div>
@@ -114,11 +111,10 @@ export default function AboutPage() {
               <div className="relative z-10">
                 <Link href="/aktiviteter/fellesskap" className="group block h-full">
                   <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
-                    Fellesskap
+                    Aktivitet #3
                   </h3>
                   <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                    Vi skaper et fellesskap for alle som ønsker seg en mer inkluderende by, og 
-                    samarbeider med andre organisasjoner med lignende mål.
+                    Beskrivelse av den tredje aktiviteten som Bedre Oslo driver med.
                   </p>
                 </Link>
               </div>
@@ -128,11 +124,10 @@ export default function AboutPage() {
               <div className="relative z-10">
                 <Link href="/aktiviteter/media" className="group block h-full">
                   <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
-                    Mediearbeid
+                    Aktivitet #4
                   </h3>
                   <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                    Vi skriver kronikker, stiller til intervjuer, og er aktive på sosiale medier for 
-                    å fremme en mer nyansert og kunnskapsbasert debatt om byutvikling.
+                    Beskrivelse av den fjerde aktiviteten som Bedre Oslo driver med.
                   </p>
                 </Link>
               </div>
@@ -150,12 +145,10 @@ export default function AboutPage() {
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-8 relative">
               <div className="relative z-10">
                 <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
-                  Er dere en politisk organisasjon?
+                  Spørsmål #1
                 </h3>
                 <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                  Vi er partipolitisk uavhengige, men jobber med politiske spørsmål knyttet til byutvikling, 
-                  boligpolitikk og arealplanlegging. Vi samarbeider med politikere fra hele det politiske spekteret 
-                  som deler vårt mål om en mer inkluderende by.
+                  Svar på det første spørsmålet som ofte blir stilt om Bedre Oslo.
                 </p>
               </div>
             </div>
@@ -163,12 +156,10 @@ export default function AboutPage() {
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-8 relative">
               <div className="relative z-10">
                 <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
-                  Hvordan finansieres dere?
+                  Spørsmål #2
                 </h3>
                 <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                  Vi finansieres gjennom medlemskontingenter og frivillige donasjoner. Vi mottar ingen støtte 
-                  fra utbyggere eller kommersielle aktører for å bevare vår uavhengighet og integritet i diskusjoner 
-                  om byutvikling.
+                  Svar på det andre spørsmålet som ofte blir stilt om Bedre Oslo.
                 </p>
               </div>
             </div>
@@ -176,12 +167,10 @@ export default function AboutPage() {
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-8 relative">
               <div className="relative z-10">
                 <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
-                  Kan jeg bidra uten å være medlem?
+                  Spørsmål #3
                 </h3>
                 <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                  Ja, vi tar gjerne imot bidrag fra ikke-medlemmer også. Du kan delta på åpne 
-                  arrangementer eller bidra med din kompetanse ved behov. Vi setter pris på alle som vil 
-                  støtte arbeidet for en bedre by.
+                  Svar på det tredje spørsmålet som ofte blir stilt om Bedre Oslo.
                 </p>
               </div>
             </div>
@@ -195,8 +184,7 @@ export default function AboutPage() {
           </h2>
           
           <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] mb-8 max-w-3xl">
-            Bedre Oslo består av et nettverk av frivillige med ulik bakgrunn og kompetanse. Vi er studenter, 
-            arkitekter, økonomer, samfunnsplanleggere, og interesserte samfunnsborgere.
+            Kort beskrivelse av menneskene som er involvert i Bedre Oslo.
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -207,13 +195,13 @@ export default function AboutPage() {
                   <span className="text-[#2b2b2b] dark:text-[#f5f1e8]/50">Bilde</span>
                 </div>
                 <h3 className={`${playfair.className} text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1`}>
-                  Mari Paulsen
+                  Person #1
                 </h3>
                 <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] text-sm mb-2">
-                  Leder
+                  Rolle #1
                 </p>
                 <p className="text-[#2b2b2b]/60 dark:text-[#a3b8b0]/60 text-xs">
-                  Samfunnsøkonom og byentusiast
+                  Beskrivelse av person #1
                 </p>
               </div>
             </div>
@@ -224,13 +212,13 @@ export default function AboutPage() {
                   <span className="text-[#2b2b2b] dark:text-[#f5f1e8]/50">Bilde</span>
                 </div>
                 <h3 className={`${playfair.className} text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1`}>
-                  Jonas Eriksen
+                  Person #2
                 </h3>
                 <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] text-sm mb-2">
-                  Nestleder
+                  Rolle #2
                 </p>
                 <p className="text-[#2b2b2b]/60 dark:text-[#a3b8b0]/60 text-xs">
-                  Arkitekt og urbanist
+                  Beskrivelse av person #2
                 </p>
               </div>
             </div>
@@ -241,13 +229,13 @@ export default function AboutPage() {
                   <span className="text-[#2b2b2b] dark:text-[#f5f1e8]/50">Bilde</span>
                 </div>
                 <h3 className={`${playfair.className} text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1`}>
-                  Sara Ahmed
+                  Person #3
                 </h3>
                 <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] text-sm mb-2">
-                  Styremedlem
+                  Rolle #3
                 </p>
                 <p className="text-[#2b2b2b]/60 dark:text-[#a3b8b0]/60 text-xs">
-                  Byplanlegger og sosiolog
+                  Beskrivelse av person #3
                 </p>
               </div>
             </div>
@@ -258,13 +246,13 @@ export default function AboutPage() {
                   <span className="text-[#2b2b2b] dark:text-[#f5f1e8]/50">Bilde</span>
                 </div>
                 <h3 className={`${playfair.className} text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1`}>
-                  Lars Johansen
+                  Person #4
                 </h3>
                 <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] text-sm mb-2">
-                  Styremedlem
+                  Rolle #4
                 </p>
                 <p className="text-[#2b2b2b]/60 dark:text-[#a3b8b0]/60 text-xs">
-                  Økonom og boligforsker
+                  Beskrivelse av person #4
                 </p>
               </div>
             </div>

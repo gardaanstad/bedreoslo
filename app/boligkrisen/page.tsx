@@ -44,7 +44,7 @@ export default function Argument() {
           </h1>
           <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-6" />
           <p className="text-xl text-[#2b2b2b]/70 dark:text-[#a3b8b0] max-w-3xl">
-            Dette er ikke bare tall og statistikk — det er historien om mennesker som skyves ut av byen de elsker.
+            Dette er ikke bare tall og statistikk — det er historien om mennesker som skyves ut av byen de elsker. Denne siden er ikke helt ferdig ennå!
           </p>
         </header>
       </div>
@@ -73,17 +73,17 @@ export default function Argument() {
                   </p>
                   <div className="grid grid-cols-2 gap-6 my-8">
                     <div className="p-6 bg-[#1a472a]/5 dark:bg-[#1a472a]/20 rounded-sm">
-                      <p className="text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-2">+110%</p>
-                      <p className="text-sm text-[#2b2b2b]/90 dark:text-[#a3b8b0]">Boligprisene i Oslo har steget med 110% siden 2010<Footnote id={1} /></p>
+                      <p className="text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-2">+X%</p>
+                      <p className="text-sm text-[#2b2b2b]/90 dark:text-[#a3b8b0]">Boligprisene i Oslo har steget med X% siden 2010<Footnote id={1} /></p>
                     </div>
                     <div className="p-6 bg-[#1a472a]/5 dark:bg-[#1a472a]/20 rounded-sm">
-                      <p className="text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-2">+32%</p>
-                      <p className="text-sm text-[#2b2b2b]/90 dark:text-[#a3b8b0]">Lønningene har kun økt med 32% i samme periode<Footnote id={1} /></p>
+                      <p className="text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-2">+X%</p>
+                      <p className="text-sm text-[#2b2b2b]/90 dark:text-[#a3b8b0]">Lønningene har kun økt med X% i samme periode<Footnote id={1} /></p>
                     </div>
                   </div>
                   <p>
-                    I dag står over 50 000 osloborgere i boligkø — flere enn hele befolkningen i Moss.
-                    <Footnote id={2} /> Og hvis trenden fortsetter, mangler Oslo 150 000 boliger innen 2030 — tilsvarende en ny by på størrelse med Trondheim.
+                    I dag står over X osloborgere i boligkø — flere enn hele befolkningen i Moss.
+                    <Footnote id={2} /> Og hvis trenden fortsetter, mangler Oslo X boliger innen 2030 — tilsvarende en ny by på størrelse med X.
                   </p>
                   <p>
                     Dette er ikke en naturkatastrofe. Det er resultatet av bevisste politiske valg gjennom flere tiår.

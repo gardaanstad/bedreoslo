@@ -62,14 +62,14 @@ const research = [
         title: "Forskningsartikkel nr. 1",
         authors: "Person, Sted",
         year: "2023",
-        url: "bedreoslo.no",
+        url: "example.com/1",
         description: "Beskrivelse av artikkelen"
       },
       {
         title: "Forskningsartikkel nr. 2",
         authors: "Person, Sted",
         year: "2021",
-        url: "bedreoslo.no",
+        url: "example.com/2",
         description: "Beskrivelse av artikkelen"
       }
     ]
@@ -78,10 +78,10 @@ const research = [
     category: "Transport og mobilitet",
     items: [
       {
-        title: "Artikkel nr. 4",
+        title: "Artikkel nr. 3",
         authors: "Person, Sted",
         year: "2022",
-        url: "bedreoslo.no",
+        url: "example.com/3",
         description: "Beskrivelse av artikkelen"
       }
     ]
@@ -91,7 +91,7 @@ const research = [
 export default function ResourcesPage() {
   return (
     <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#0a0a0a] pt-40`}
+      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#121212] pt-40`}
     >
       <div 
         className="fixed inset-0 bg-gradient-to-b from-[#2b2b2b] to-transparent dark:from-black/40 dark:to-transparent opacity-[0.08] -z-10"

@@ -85,7 +85,7 @@ export default async function NewsPage() {
               className="block group"
             >
               <article 
-                className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 backdrop-blur-sm p-4 sm:p-6 md:p-8 relative"
+                className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-[#efece5] dark:bg-black/20 backdrop-blur-sm p-4 sm:p-6 md:p-8 relative"
               >
                 <div className="relative z-10">
                   <time className="block text-sm sm:text-base md:text-lg text-[#2b2b2b]/70 dark:text-[#a3b8b0] mb-2 sm:mb-4">

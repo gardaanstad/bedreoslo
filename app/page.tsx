@@ -55,27 +55,39 @@ async function getRecentPosts(): Promise<PostData[]> {
 export default async function Home() {
   const recentPosts = await getRecentPosts();
   
+  const highlightContent = (
+    <>
+      <h3 className={`${playfair.className} text-xl font-bold text-white dark:text-[#f5f1e8] mb-4`}>Kort oppsummert</h3>
+      <ul className="space-y-3 text-white dark:text-[#f5f1e8]/95">
+        <li className="flex items-start">
+          <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">1</span>
+          <span>Bygg flere boliger, både private og sosiale, for å få ned boligprisene</span>
+        </li>
+        <li className="flex items-start">
+          <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">2</span>
+          <span>Gjør gater tryggere for gående og syklende, så flere velger å gå og sykle</span>
+        </li>
+        <li className="flex items-start">
+          <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">3</span>
+          <span>Forbedre kollektivtilbudet med flere avganger og bedre dekning, slik at flere kan ta kollektivt og færre velger bilen</span>
+        </li>
+      </ul>
+    </>
+  );
+
   return (
     <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#121212] pt-28`}
+      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#0b0b0b] pt-28`}
     >
+    
+
 
       {/* Hero Section */}
       <section className="relative w-full px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Mobile Hero */}
-          <div className="md:hidden relative overflow-hidden pt-4 pb-2">
-            <div className="relative">
-              <h1 className={`${playfair.className} text-5xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-center gradient-text`}>
-                For en by med plass til alle
-              </h1>
-            </div>
-          </div>
-
-          {/* Desktop Hero */}
-          <div className="hidden md:block relative pt-4 pb-4">
-            <div className="flex flex-col items-center">
-              <h1 className={`${playfair.className} text-7xl md:text-8xl font-bold tracking-tight leading-[1.1] text-center gradient-text`}>
+          <div className="relative pt-4 pb-2 md:pb-4">
+            <div className="md:flex md:flex-col md:items-center">
+              <h1 className={`${playfair.className} text-5xl md:text-8xl font-bold tracking-tight leading-[1.1] text-center gradient-text`}>
                 For en by med plass til alle
               </h1>
             </div>
@@ -93,7 +105,7 @@ export default async function Home() {
               {/* Left Column - Main content and feature */}
               <div className="col-span-8">
                 {/* Featured Article - Main coverage */}
-                <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 mb-6">
+                <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 mb-6 bg-[#efece5] dark:bg-black/20">
                   <div className="flex gap-8">
                     {/* Left - Title and intro */}
                     <Link 
@@ -112,32 +124,18 @@ export default async function Home() {
                     {/* Right - Highlight box */}
                     <div className="w-1/2 bg-[#1a472a] dark:bg-[#1a472a] p-6 flex flex-col justify-between">
                       <div>
-                        <h3 className={`${playfair.className} text-xl font-bold text-white dark:text-[#f5f1e8] mb-4`}>Kort oppsummert</h3>
-                        <ul className="space-y-3 text-white dark:text-[#f5f1e8]/95">
-                          <li className="flex items-start">
-                            <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">1</span>
-                            <span>Bygg flere boliger, private og sosiale, for å få ned boligprisene</span>
-                          </li>
-                          <li className="flex items-start">
-                            <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">2</span>
-                            <span>Gjør gater tryggere for gående og syklende, så flere velger å gå og sykle</span>
-                          </li>
-                          <li className="flex items-start">
-                            <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-2">3</span>
-                            <span>Forbedre kollektivtilbudet med flere avganger og bedre dekning, slik at flere kan ta kollektivt og færre velger bilen</span>
-                          </li>
-                        </ul>
+                        {highlightContent}
                       </div>
                     </div>
                   </div>
                 </div>
                 
                 {/* Action Links */}
-                <div className="grid grid-cols-2 gap-6 mb-6">
+                <div className="grid grid-cols-2 gap-6 mb-6 ">
                   {/* Boligkrise & Byrom */}
                   <Link
                     href="/politikk"
-                    className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 group block"
+                    className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 group block bg-[#efece5] dark:bg-black/20"
                   >
                     <span className="block text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
                       Politikk
@@ -150,7 +148,7 @@ export default async function Home() {
                   {/* Ressurser */}
                   <Link
                     href="/ressurser"
-                    className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 group block"
+                    className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 group block bg-[#efece5] dark:bg-black/20"
                   >
                     <span className="block text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
                       Ressurser
@@ -201,7 +199,7 @@ export default async function Home() {
             </div>
           </div>
 
-          {/* Mobile Layout - Improved to better align with desktop */}
+          {/* Mobile Layout */}
           <div className="md:hidden flex flex-col gap-6">
             {/* Mobile featured article */}
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6">
@@ -221,21 +219,7 @@ export default async function Home() {
               
               {/* Mobile highlight banner */}
               <div className="relative -mx-10 bg-[#1a472a] dark:bg-[#1a472a] p-6">
-                <h3 className={`${playfair.className} text-xl font-bold text-white dark:text-[#f5f1e8] mb-4`}>Kort oppsummert</h3>
-                <ul className="space-y-4 text-white dark:text-[#f5f1e8]/95">
-                  <li className="flex items-start gap-3">
-                    <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center">1</span>
-                    <span className="flex-1">Bygg flere boliger, private og sosiale, for å få ned boligprisene</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center">2</span>
-                    <span className="flex-1">Gjør gater tryggere for gående og syklende, så flere velger å gå og sykle</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-6 h-6 bg-white text-[#1a472a] flex-shrink-0 flex items-center justify-center">3</span>
-                    <span className="flex-1">Forbedre kollektivtilbudet med flere avganger og bedre dekning, slik at flere kan ta kollektivt og færre velger bilen</span>
-                  </li>
-                </ul>
+                {highlightContent}
               </div>
             </div>
             

@@ -48,7 +48,7 @@ export default function Policy() {
                 </p>
               </div>
               <div className="md:w-2/3 space-y-8">
-                <div className="p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm border border-[#1a472a]/20 dark:border-[#f5f1e8]/10">
+                <div className="p-8 bg-[#efece5] dark:bg-black/20 backdrop-blur-sm border border-[#1a472a]/20 dark:border-[#f5f1e8]/10">
                   <div className="text-lg text-[#2b2b2b]/90 dark:text-[#a3b8b0] leading-relaxed space-y-6">                    
                     <div className="space-y-4">
                       <div className="flex items-start">
@@ -97,7 +97,7 @@ export default function Policy() {
                 </p>
               </div>
               <div className="md:w-2/3 space-y-8">
-                <div className="p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm border border-[#1a472a]/20 dark:border-[#f5f1e8]/10">
+                <div className="p-8 bg-[#efece5] dark:bg-black/20 backdrop-blur-sm border border-[#1a472a]/20 dark:border-[#f5f1e8]/10">
                   <div className="text-lg text-[#2b2b2b]/90 dark:text-[#a3b8b0] leading-relaxed space-y-6">
                     <div className="space-y-4">
                       <div className="flex items-start">
@@ -152,7 +152,7 @@ export default function Policy() {
                 </p>
               </div>
               <div className="md:w-2/3 space-y-8">
-                <div className="p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm border border-[#1a472a]/20 dark:border-[#f5f1e8]/10">
+                <div className="p-8 bg-[#efece5] dark:bg-black/20 backdrop-blur-sm border border-[#1a472a]/20 dark:border-[#f5f1e8]/10">
                   <div className="text-lg text-[#2b2b2b]/90 dark:text-[#a3b8b0] leading-relaxed space-y-6">
                     <div className="space-y-4">
                       <div className="flex items-start">
@@ -198,7 +198,7 @@ export default function Policy() {
               <div className="grid md:grid-cols-3 gap-4 md:gap-6">
                 <Link 
                   href="/boligkrisen" 
-                  className="p-6 bg-white/5 dark:bg-black/20 backdrop-blur-sm border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 group"
+                  className="p-6 bg-[#efece5] dark:bg-black/20 backdrop-blur-sm border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 group"
                 >
                   <h3 className={`text-xl text-[#2b2b2b] dark:text-[#f5f1e8] group-hover:underline ${playfair.className}`}>
                     Boligkrisen i Oslo
@@ -210,7 +210,7 @@ export default function Policy() {
 
                 <Link 
                   href="/byrom" 
-                  className="p-6 bg-white/5 dark:bg-black/20 backdrop-blur-sm border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 group"
+                  className="p-6 bg-[#efece5] dark:bg-black/20 backdrop-blur-sm border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 group"
                 >
                   <h3 className={`text-xl text-[#2b2b2b] dark:text-[#f5f1e8] group-hover:underline ${playfair.className}`}>
                     Tryggere gater
@@ -222,7 +222,7 @@ export default function Policy() {
 
                 <Link 
                   href="/kollektiv" 
-                  className="p-6 bg-white/5 dark:bg-black/20 backdrop-blur-sm border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 group"
+                  className="p-6 bg-[#efece5] dark:bg-black/20 backdrop-blur-sm border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 group"
                 >
                   <h3 className={`text-xl text-[#2b2b2b] dark:text-[#f5f1e8] group-hover:underline ${playfair.className}`}>
                     Fremtidens kollektivtransport

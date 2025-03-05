@@ -46,8 +46,8 @@ export default function Navbar() {
 
   const menuItems = [
     { name: "Om oss", href: "/om" },
-    { name: "Nyheter", href: "/nyheter" },
     { name: "Politikk", href: "/politikk" },
+    { name: "Nyheter", href: "/nyheter" },
     { name: "Bli medlem", href: "/sign-in" }
   ];
 
