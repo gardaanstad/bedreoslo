@@ -100,11 +100,11 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto">
           {/* Desktop Layout */}
           <div className="hidden md:block">
-            {/* Main Grid - Redesigned newspaper-style layout */}
+            {/* Main Grid */}
             <div className="grid grid-cols-12 gap-6">
-              {/* Left Column - Main content and feature */}
+              {/* Left Column - Om oss, politikk, ressurser */}
               <div className="col-span-8">
-                {/* Featured Article - Main coverage */}
+                {/* Featured Article - Om oss */}
                 <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 mb-6 bg-[#efece5] dark:bg-black/20">
                   <div className="flex gap-8">
                     {/* Left - Title and intro */}
@@ -209,18 +209,33 @@ export default async function Home() {
                 className="block group"
               >
                 <span className="text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 font-medium uppercase tracking-wider">Om oss</span>
-                <h2 className={`${playfair.className} text-2xl sm:text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mt-2 mb-3 leading-tight group-hover:underline`}>
+                <h2 className={`${playfair.className} text-2xl sm:text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mt-2 mb-4 leading-tight group-hover:underline`}>
                   Hva mener vi med &ldquo;Bedre Oslo&rdquo;?
                 </h2>
-                <p className="text-[#2b2b2b] dark:text-[#f5f1e8]/80 text-base leading-relaxed mb-4">
-                  Oslo er den beste byen i Norge, men vi mener det finnes visse områder som kan forbedres. Mer spesifikt: Boligmarkedet er ute av kontroll og bilkjøring skader mennesker og byliv.
-                </p>
               </Link>
               
               {/* Mobile highlight banner */}
-              <div className="relative -mx-[calc(2.5rem+1px)] bg-[#1a472a] dark:bg-[#1a472a] p-6">
+              <div className="relative -mx-[calc(2.5rem+1px)] bg-[#1a472a] dark:bg-[#1a472a] p-6 shadow-[0_-12px_24px_-12px_rgba(0,0,0,0.3),0_12px_24px_-12px_rgba(0,0,0,0.3)]">
                 {highlightContent}
               </div>
+              
+              <p className="text-[#2b2b2b] dark:text-[#f5f1e8]/80 text-base leading-relaxed mt-4">
+                Oslo er den beste byen i Norge, men vi mener det finnes visse områder som kan forbedres. Mer spesifikt: Boligmarkedet er ute av kontroll og bilkjøring skader mennesker og byliv.
+              </p>
+              
+              <Link
+                href="/om" 
+                className="block group"
+              >
+                <div className="flex items-center mt-4 text-[#2b2b2b] dark:text-[#f5f1e8] opacity-70 group-hover:opacity-100">
+                  <span className="text-sm">Les mer om Bedre Oslo</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              </Link>
+              
+              
             </div>
             
             {/* Action Links Grid */}
