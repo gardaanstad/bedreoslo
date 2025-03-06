@@ -48,7 +48,7 @@ export default function Navbar() {
     { name: "Om oss", href: "/om" },
     { name: "Politikk", href: "/politikk" },
     { name: "Nyheter", href: "/nyheter" },
-    { name: "Bli medlem", href: "/sign-in" }
+    { name: "Bli medlem", href: "/medlem" }
   ];
 
   const itemVariants = {

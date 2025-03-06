@@ -13,8 +13,8 @@ export default function Footer() {
     {
       title: 'Om oss',
       links: [
-        { name: 'Vår historie', href: '/historie' },
-        { name: 'Hvem er vi', href: '/om' },
+        { name: 'Om oss', href: '/om' },
+        { name: 'Politikk', href: '/politikk' },
         { name: 'Kontakt', href: '/kontakt' },
       ],
     },
@@ -22,8 +22,8 @@ export default function Footer() {
       title: 'Ressurser',
       links: [
         { name: 'Nyheter', href: '/nyheter' },
-        { name: 'Bli medlem', href: '/sign-in' },
-        { name: 'Personvern', href: '/personvern' },
+        { name: 'Ressurser', href: '/ressurser' },
+        { name: 'Bli medlem', href: '/medlem' },
       ],
     },
     {

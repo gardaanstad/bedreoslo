@@ -77,17 +77,19 @@ export default async function Home() {
 
   return (
     <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#0b0b0b] pt-28`}
+      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#141414] pt-28`}
     >
       
       {/* Hero Section */}
       <section className="relative w-full px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="relative pt-4 pb-2 md:pb-4">
+          <div className="relative pt-4 md:pb-4">
             <div className="md:flex md:flex-col md:items-center">
-              <h1 className={`${playfair.className} text-5xl md:text-8xl font-bold tracking-tight leading-[1.1] text-center gradient-text`}>
-                For en by med plass til alle
-              </h1>
+              <div className="w-full">
+                <h1 className={`${playfair.className} text-5xl md:text-[min(7.2vw,7rem)] font-bold tracking-tight leading-[1.1] text-center gradient-text`}>
+                  For en by med plass til alle
+                </h1>
+              </div>
             </div>
           </div>
         </div>
@@ -115,7 +117,7 @@ export default async function Home() {
                           Hva mener vi med &ldquo;Bedre Oslo&rdquo;?
                         </h2>
                         <p className="text-[#2b2b2b] dark:text-[#f5f1e8]/80 text-base leading-relaxed mb-4">
-                          Oslo er den beste byen i Norge, men vi mener det finnes visse områder som kan forbedres. Mer spesifikt: Boligmarkedet er ute av kontroll og bilkjøring skader mennesker og byliv. Hva kan vi gjøre?
+                          Oslo er den beste byen i Norge, men det er likevel forbedringspotensial. Boligmarkedet er sinnsykt, bilkjøring skader mennesker og byliv, og kollektivtrafikken går ikke ofte nok.
                         </p>
                     </Link>
                     
