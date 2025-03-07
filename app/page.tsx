@@ -128,7 +128,7 @@ export default async function Home() {
                     </Link>
                     
                     {/* Right - Highlight box */}
-                    <div className="w-1/2 bg-[#1a472a]/5 dark:bg-[#1a472a]/10 border border-[#1a472a]/20 dark:border-[#1a472a]/80 p-8 flex flex-col justify-between">
+                    <div className="w-1/2 bg-[#f7f4ef] dark:bg-[#1a472a]/10 border border-[#1a472a]/20 dark:border-[#1a472a]/80 p-8 flex flex-col justify-between">
                       <div>
                         {highlightContent}
                       </div>
@@ -220,7 +220,7 @@ export default async function Home() {
               </Link>
               
               {/* Mobile highlight banner */}
-              <div className="relative -mx-[calc(2.5rem+1px)] my-5 bg-[#1a472a]/5 dark:bg-[#1a472a]/10 border-y border-[#1a472a]/20 dark:border-[#1a472a]/80 p-6 backdrop-blur-md shadow-[0_-12px_24px_-12px_rgba(0,0,0,0.15),0_12px_24px_-12px_rgba(0,0,0,0.15)]">
+              <div className="relative -mx-[calc(2.5rem+1px)] my-5 bg-[#f7f4ef] dark:bg-[#141414] border-y border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 shadow-[0_1px_3px_rgba(0,0,0,0.1)]">
                 {highlightContent}
               </div>
               
