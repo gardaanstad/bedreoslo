@@ -10,11 +10,15 @@ import CarouselNavigation from '@/components/carousel-navigation';
 const playfair = Playfair_Display({ 
   subsets: ['latin'],
   weight: ['400', '600', '700', '800'],
+  display: 'swap',
+  preload: true,
 });
 
 const inter = Inter({ 
   subsets: ['latin'],
   weight: ['400', '500'],
+  display: 'swap',
+  preload: true,
 });
 
 interface PostData {
