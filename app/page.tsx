@@ -275,24 +275,24 @@ export default async function Home() {
             </div>
             
             {/* News Section */}
-            <div className="mt-2 mb-8">
-              <div className="border-b border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 mb-4 pb-4">
+            <div>
+              <div className="mt-6 mb-4">
                 <Link 
                   href="/nyheter"
                   className={`flex items-center justify-between text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] ${playfair.className} hover:underline`}>
                     Nyheter og innlegg
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 opacity-70 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                 </Link>
               </div>
 
               {/* The carousel section */}
-              <div className="w-full h-full flex flex-col gap-3">
+              <div className="w-full h-full flex flex-col gap-0">
                 <div className="flex-grow min-h-0">
                   <Carousel posts={recentPosts} />
                 </div>
-                <div className="md:hidden flex justify-center items-center gap-3 px-4">
+                <div className="flex justify-center items-center">
                   <CarouselNavigation totalSlides={recentPosts.length} />
                 </div>
               </div>

@@ -27,7 +27,7 @@ export default function CarouselNavigation({ totalSlides }: CarouselNavigationPr
   };
   
   return (
-    <>
+    <div className="flex items-center gap-2">
       <button
         onClick={() => scrollToSlide(Math.max(0, currentIndex - 1))}
         className={`h-8 w-8 flex items-center justify-center border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/30 dark:bg-black/20 focus:outline-none ${
@@ -43,17 +43,17 @@ export default function CarouselNavigation({ totalSlides }: CarouselNavigationPr
         </svg>
       </button>
       
-      <div className="flex items-center gap-1.5">
+      <div className="flex items-center gap-1.5 min-w-[120px] justify-center">
         {Array.from({ length: totalSlides }).map((_, index) => (
-          <button
+          <div
             key={index}
-            onClick={() => scrollToSlide(index)}
             className={`transition-all duration-200 ${
               index === currentIndex
-                ? 'bg-[#1a472a] dark:bg-[#f5f1e8] w-6 h-2'
-                : 'bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-2 h-2'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
+                ? 'bg-[#1a472a] dark:bg-[#f5f1e8] w-6'
+                : 'bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-2'
+            } h-2`}
+            aria-label={`Slide ${index + 1} ${index === currentIndex ? '(current)' : ''}`}
+            role="status"
           />
         ))}
       </div>
@@ -72,6 +72,6 @@ export default function CarouselNavigation({ totalSlides }: CarouselNavigationPr
           <path d="M9 18l6-6-6-6" />
         </svg>
       </button>
-    </>
+    </div>
   );
 } 
