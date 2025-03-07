@@ -57,3 +57,24 @@ body {
     display: none;
   }
 }
+
+/* Selection styling */
+::selection {
+  background-color: rgba(26, 71, 42, 0.2); /* #1a472a with 20% opacity for light mode */
+  color: inherit;
+}
+
+::-moz-selection {
+  background-color: rgba(26, 71, 42, 0.2); /* #1a472a with 20% opacity for light mode */
+  color: inherit;
+}
+
+.dark ::selection {
+  background-color: rgba(92, 190, 128, 0.2); /* #2c7a48 (lighter green) with 50% opacity for dark mode */
+  color: inherit;
+}
+
+.dark ::-moz-selection {
+  background-color: rgba(92, 190, 128, 0.2); /* #2c7a48 (lighter green) with 50% opacity for dark mode */
+  color: inherit;
+}
