@@ -79,7 +79,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-[#f5f1e8]/10">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="text-[#f5f1e8]/80 text-sm text-center sm:text-left">
-              © {currentYear} Oslo YIMBY. Alle rettigheter reservert.
+              © {currentYear} Bedre Oslo. Alle rettigheter reservert.
             </div>
             <Link
               href="https://github.com/gardaanstad/bedreoslo"
