@@ -216,13 +216,9 @@ export default async function Home() {
               </Link>
               
               {/* Mobile highlight banner */}
-              <div className="relative -mx-[calc(2.5rem+1px)] my-5 bg-[#1a472a]/5 dark:bg-[#1a472a]/10 border-y border-[#1a472a]/20 dark:border-[#1a472a]/80 p-6 backdrop-blur-md">
+              <div className="relative -mx-[calc(2.5rem+1px)] my-5 bg-[#1a472a]/5 dark:bg-[#1a472a]/10 border-y border-[#1a472a]/20 dark:border-[#1a472a]/80 p-6 backdrop-blur-md shadow-[0_-12px_24px_-12px_rgba(0,0,0,0.15),0_12px_24px_-12px_rgba(0,0,0,0.15)]">
                 {highlightContent}
               </div>
-              
-              <p className="text-[#2b2b2b] dark:text-[#f5f1e8]/80 text-base leading-relaxed">
-                Oslo er den beste byen i Norge, men det er likevel forbedringspotensial. Boligmarkedet er sinnsykt, bilkjøring skader mennesker og byliv, og kollektivtrafikken går ikke ofte nok.
-              </p>
               
               <Link
                 href="/om" 
