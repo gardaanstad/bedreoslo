@@ -82,14 +82,12 @@ export default async function Home() {
   );
 
   return (
-    <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#141414] pt-28`}
-    >
+    <main className={`relative ${inter.className} min-h-screen overflow-x-hidden`}>
       
       {/* Hero Section */}
       <section className="relative w-full px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="relative pt-8 md:pt-12 md:pb-8">
+          <div className="relative md:pb-8">
             <div className="md:flex md:flex-col md:items-center">
               <div className="w-full">
                 <h1 className={`${playfair.className} text-5xl md:text-[min(7.2vw,7rem)] font-bold tracking-tight leading-[1.1] text-center gradient-text`}>

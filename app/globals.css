@@ -5,14 +5,14 @@
 /* Remove custom scrollbar styling */
 
 :root {
-  --background: #f5f1e8;
+  --background: #f7f4ef;
   --foreground: #1a472a;
   /* Add scrollbar-gutter property to prevent layout shifts */
   scrollbar-gutter: stable;
 }
 
 .dark {
-  --background: #0a0a0a;
+  --background: #141414;
   --foreground: #f5f1e8;
 }
 
@@ -22,6 +22,7 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   /* Ensure the scrollbar-gutter property is applied to the body as well */
   scrollbar-gutter: stable;
+  padding-top: 10rem; /* This is equivalent to pt-20 */
 }
 
 @layer components {

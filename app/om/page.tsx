@@ -15,7 +15,7 @@ const inter = Inter({
 export default function AboutPage() {
   return (
     <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#141414] pt-40`}
+      className={`relative ${inter.className} min-h-screen overflow-x-hidden`}
     >
 
       <div className="max-w-5xl mx-auto px-4 pb-16">

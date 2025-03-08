@@ -64,7 +64,7 @@ export default async function Page({ params }: Props) {
   
   return (
     <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden bg-[#f7f4ef] dark:bg-[#0a0a0a] pt-40`}
+      className={`relative ${inter.className} min-h-screen overflow-x-hidden`}
     >
       <div 
         className="fixed inset-0 bg-gradient-to-b from-[#2b2b2b] to-transparent dark:from-black/40 dark:to-transparent opacity-[0.08] -z-10"
