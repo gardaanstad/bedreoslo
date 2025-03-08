@@ -6,7 +6,7 @@
 
 :root {
   --background: #f7f4ef;
-  --foreground: #1a472a;
+  --foreground: #2b2b2b;
   /* Add scrollbar-gutter property to prevent layout shifts */
   scrollbar-gutter: stable;
 }

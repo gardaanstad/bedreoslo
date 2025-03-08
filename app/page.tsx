@@ -1,4 +1,4 @@
-import { Playfair_Display, Inter } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import './styles/gradients.css';
 import fs from 'fs';
@@ -6,13 +6,11 @@ import path from 'path';
 import matter from 'gray-matter';
 import Carousel from '@/components/carousel';
 import CarouselNavigation from '@/components/carousel-navigation';
-
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
-  display: 'swap',
-  preload: true,
-});
+import SeriffHeader from '@/components/SeriffHeader';
+import ReadMoreLink from '@/components/ReadMoreLink';
+import TileTitle from '@/components/TileTitle';
+import Tile from '@/components/Tile';
+import HeroHeader from '@/components/HeroHeader';
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -59,28 +57,6 @@ async function getRecentPosts(): Promise<PostData[]> {
 export default async function Home() {
   const recentPosts = await getRecentPosts();
   
-  const highlightContent = (
-    <>
-      <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
-        Kort oppsummert
-      </h3>
-      <ul className="space-y-6 text-[#2b2b2b] dark:text-[#f5f1e8]">
-        <li className="flex items-start gap-4">
-          <span className={`${playfair.className} text-2xl font-medium text-[#2b2b2b] dark:text-[#f5f1e8] flex-shrink-0 -mt-1`}>1</span>
-          <span className="leading-tight">Bygg flere boliger, både private og sosiale</span>
-        </li>
-        <li className="flex items-start gap-4">
-          <span className={`${playfair.className} text-2xl font-medium text-[#2b2b2b] dark:text-[#f5f1e8] flex-shrink-0 -mt-1`}>2</span>
-          <span className="leading-tight">Gjør gater tryggere for gående og syklende</span>
-        </li>
-        <li className="flex items-start gap-4">
-          <span className={`${playfair.className} text-2xl font-medium text-[#2b2b2b] dark:text-[#f5f1e8] flex-shrink-0 -mt-1`}>3</span>
-          <span className="leading-tight">Forbedre kollektivtilbudet med flere avganger og bedre dekning</span>
-        </li>
-      </ul>
-    </>
-  );
-
   return (
     <main className={`relative ${inter.className} min-h-screen overflow-x-hidden`}>
       
@@ -90,9 +66,9 @@ export default async function Home() {
           <div className="relative md:pb-8">
             <div className="md:flex md:flex-col md:items-center">
               <div className="w-full">
-                <h1 className={`${playfair.className} text-5xl md:text-[min(7.2vw,7rem)] font-bold tracking-tight leading-[1.1] text-center gradient-text`}>
+                <HeroHeader>
                   For en by med plass til alle
-                </h1>
+                </HeroHeader>
               </div>
             </div>
           </div>
@@ -108,59 +84,68 @@ export default async function Home() {
             <div className="grid grid-cols-12 gap-8">
               {/* Left Column - Om oss, politikk, ressurser */}
               <div className="col-span-8">
-                {/* Featured Article - Om oss */}
-                <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-8 mb-8 bg-[#efece5] dark:bg-black/20">
-                  <div className="flex gap-10">
-                    {/* Left - Title and intro */}
-                    <Link 
-                        href="/om" 
-                        className="w-1/2 group"
-                      >
-                        <span className="text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 font-medium uppercase tracking-wider">Om oss</span>
-                        <h2 className={`${playfair.className} text-3xl md:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mt-2 mb-4 leading-tight group-hover:underline`}>
-                          Hva mener vi med &ldquo;Bedre Oslo&rdquo;?
-                        </h2>
-                        <p className="text-[#2b2b2b] dark:text-[#f5f1e8]/80 text-base leading-relaxed mb-4">
-                          Oslo er den beste byen i Norge, men det er likevel forbedringspotensial. Boligmarkedet er ute av kontroll, bilkjøring skader mennesker og byliv, og kapasiteten på kollektivt er sprengt.
-                        </p>
+                {/* Featured Article - Combined Om oss and Politikk */}
+                <Tile size="large" className="mb-8" isGroup={false}>
+                  <div className="flex relative">
+                    {/* Left - Om oss */}
+                    <Link href="/om" className="block group w-1/2 pr-8">
+                      <TileTitle>Om oss</TileTitle>
+                      <SeriffHeader size="xl" className="mb-4 group-hover:underline">
+                        Hva er Bedre Oslo?
+                      </SeriffHeader>
+                      <p className="text-[#2b2b2b] dark:text-[#f5f1e8]/80 text-base leading-relaxed mb-4">
+                        Vi er en organisasjon som jobber for at Oslo blir en bedre by for alle, ved hjelp av forskningsbaserte løsninger og politisk påvirkning.
+                      </p>
                     </Link>
                     
-                    {/* Right - Highlight box */}
-                    <div className="w-1/2 bg-[#f7f4ef] dark:bg-[#1a472a]/10 border border-[#1a472a]/20 dark:border-[#1a472a]/80 p-8 flex flex-col justify-between">
-                      <div>
-                        {highlightContent}
-                      </div>
-                    </div>
+                    {/* Center divider */}
+                    <div className="absolute left-1/2 -translate-x-px h-full w-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/10" />
+                    
+                    {/* Right - Politikk highlights */}
+                    <Link href="/politikk" className="block group w-1/2 pl-8">
+                      <TileTitle>Politikk</TileTitle>
+                      <SeriffHeader size="xl" className="mb-6 group-hover:underline">
+                        Våre kjernesaker
+                      </SeriffHeader>
+                      <ul className="space-y-6 text-[#2b2b2b] dark:text-[#f5f1e8]">
+                        <li className="flex items-start gap-4">
+                          <span className="text-2xl font-medium text-[#2b2b2b] dark:text-[#f5f1e8] flex-shrink-0 -mt-1">1</span>
+                          <span className="leading-tight">Bygg flere boliger, både private og sosiale</span>
+                        </li>
+                        <li className="flex items-start gap-4">
+                          <span className="text-2xl font-medium text-[#2b2b2b] dark:text-[#f5f1e8] flex-shrink-0 -mt-1">2</span>
+                          <span className="leading-tight">Gjør gater tryggere for gående og syklende</span>
+                        </li>
+                        <li className="flex items-start gap-4">
+                          <span className="text-2xl font-medium text-[#2b2b2b] dark:text-[#f5f1e8] flex-shrink-0 -mt-1">3</span>
+                          <span className="leading-tight">Forbedre kollektivtilbudet med flere avganger og bedre dekning</span>
+                        </li>
+                      </ul>
+                    </Link>
                   </div>
-                </div>
+                </Tile>
                 
                 {/* Action Links */}
                 <div className="grid grid-cols-2 gap-8 mb-6">
-                  {/* Boligkrise & Byrom */}
-                  <Link
-                    href="/politikk"
-                    className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-8 group block bg-[#efece5] dark:bg-black/20"
-                  >
-                    <span className="block text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
-                      Politikk
-                    </span>
-                    <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1 leading-tight ${playfair.className} group-hover:underline`}>
-                      Hvilke konkrete tiltak står vi for?
-                    </h3>
-                  </Link>
+                  {/* Boligkrise */}
+                  <Tile href="/boligkrisen" className="h-full">
+                    <div className="h-full flex flex-col">
+                      <TileTitle>Fremhevet sak</TileTitle>
+                      <SeriffHeader size="sm" className="mb-1 group-hover:underline">
+                        Boligkrisen i Oslo
+                      </SeriffHeader>
+                    </div>
+                  </Tile>
 
                   {/* Ressurser */}
-                  <Link
-                    href="/ressurser"
-                    className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-8 group block bg-[#efece5] dark:bg-black/20"
-                  >
-                    <span className="block text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
-                      Ressurser
-                    </span>
-                    <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1 leading-tight ${playfair.className} group-hover:underline`}>
-                      Forskning og nyttige lenker
-                    </h3>
-                  </Link>
+                  <Tile href="/ressurser" className="h-full">
+                    <div className="h-full flex flex-col">
+                      <TileTitle>Ressurser</TileTitle>
+                      <SeriffHeader size="sm" className="mb-1 group-hover:underline">
+                        Forskning og nyttige lenker
+                      </SeriffHeader>
+                    </div>
+                  </Tile>
                 </div>
               </div>
               
@@ -169,17 +154,19 @@ export default async function Home() {
                 <div className="mb-6 pb-6 border-b border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10">
                   <Link 
                     href="/nyheter" 
-                    className={`flex items-center justify-between text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] ${playfair.className} hover:underline`}
+                    className="flex items-center justify-between group"
                   >
-                    Nyheter og innlegg
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <SeriffHeader size="lg" className="group-hover:underline">
+                      Nyheter og innlegg
+                    </SeriffHeader>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 opacity-70 mt-1" fill="none" viewBox="0 0 24 24" stroke="#2b2b2b">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </Link>
                 </div>
                 
                 <div className="space-y-8">
-                  {recentPosts.slice(0, 4).map((post) => (
+                  {recentPosts.slice(0, 3).map((post) => (
                     <Link key={post.id} href={`/nyheter/${post.id}`} className="block group">
                       <article>
                         <time className="text-xs text-[#2b2b2b] dark:text-[#a3b8b0] font-medium uppercase tracking-wider">
@@ -189,9 +176,9 @@ export default async function Home() {
                             day: 'numeric'
                           })}
                         </time>
-                        <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mt-1 mb-2 leading-tight ${playfair.className} group-hover:underline`}>
+                        <SeriffHeader size="sm" className="mt-1 mb-2 group-hover:underline">
                           {post.title}
-                        </h3>
+                        </SeriffHeader>
                         <p className="text-[#2b2b2b] dark:text-[#a3b8b0] text-sm line-clamp-2">
                           {post.excerpt}
                         </p>
@@ -205,91 +192,55 @@ export default async function Home() {
 
           {/* Mobile Layout */}
           <div className="md:hidden flex flex-col gap-6">
-            {/* Mobile featured article */}
-            <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 bg-[#efece5] dark:bg-black/20">
-              {/* Mobile main content */}
-              <Link 
-                href="/om" 
-                className="block group"
-              >
-                <h2 className={`${playfair.className} text-2xl sm:text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] leading-tight group-hover:underline`}>
-                  Hva mener vi med &ldquo;Bedre Oslo&rdquo;?
-                </h2>
-              </Link>
-              
-              {/* Mobile highlight banner */}
-              <div className="relative -mx-[calc(2.5rem+1px)] my-5 bg-[#f7f4ef] dark:bg-[#141414] border-y border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 shadow-[0_1px_3px_rgba(0,0,0,0.1)]">
-                {highlightContent}
-              </div>
-              
-              <Link
-                href="/om" 
-                className="block group"
-              >
-                <div className="flex items-center mt-4 text-[#2b2b2b] dark:text-[#f5f1e8] opacity-70 group-hover:opacity-100">
-                  <span className="text-sm">Les mer om Bedre Oslo</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
-              </Link>
-            </div>
-            
-            {/* Action Links Grid */}
-            <div className="flex flex-col gap-6">
-              {/* Politikk */}
-              <Link
-                href="/politikk"
-                className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 group block bg-[#efece5] dark:bg-black/20"
-              >
-                <span className="block text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
-                  Politikk
-                </span>
-                <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1 leading-tight ${playfair.className} group-hover:underline`}>
-                  Hvilke konkrete tiltak står vi for?
-                </h3>
-                <div className="flex items-center mt-4 text-[#2b2b2b] dark:text-[#f5f1e8] opacity-70 group-hover:opacity-100">
-                  <span className="text-sm">Les mer</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
-              </Link>
 
-              {/* Ressurser */}
-              <Link
-                href="/ressurser"
-                className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 p-6 group block bg-[#efece5] dark:bg-black/20"
-              >
-                <span className="block text-sm text-[#2b2b2b] dark:text-[#f5f1e8]/70 uppercase tracking-wider mb-1 font-medium">
-                  Ressurser
-                </span>
-                <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1 leading-tight ${playfair.className} group-hover:underline`}>
-                  Forskning og nyttige lenker
-                </h3>
-                <div className="flex items-center mt-4 text-[#2b2b2b] dark:text-[#f5f1e8] opacity-70 group-hover:opacity-100">
-                  <span className="text-sm">Les mer</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
-              </Link>
-            </div>
-            
-            {/* News Section */}
+            {/* [Mobile] Politikk tile */}
+            <Tile href="/politikk">
+              <TileTitle>Politikk</TileTitle>
+              <SeriffHeader size="sm" className="mb-4 group-hover:underline">
+                Våre kjernesaker
+              </SeriffHeader>
+              <ul className="space-y-4 text-[#2b2b2b] dark:text-[#f5f1e8] text-sm mb-4">
+                <li className="flex items-start gap-3">
+                  <span className="text-lg font-medium text-[#2b2b2b] dark:text-[#f5f1e8] flex-shrink-0 -mt-1">1</span>
+                  <span className="leading-tight">Bygg flere boliger, både private og sosiale</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-lg font-medium text-[#2b2b2b] dark:text-[#f5f1e8] flex-shrink-0 -mt-1">2</span>
+                  <span className="leading-tight">Gjør gater tryggere for gående og syklende</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-lg font-medium text-[#2b2b2b] dark:text-[#f5f1e8] flex-shrink-0 -mt-1">3</span>
+                  <span className="leading-tight">Forbedre kollektivtilbudet med flere avganger og bedre dekning</span>
+                </li>
+              </ul>
+              <ReadMoreLink text="Les mer om politikken vår" />
+            </Tile>
+
+            {/* [Mobile] Om oss tile */}
+            <Tile href="/om">
+              <TileTitle>Om oss</TileTitle>
+              <SeriffHeader size="sm" className="mb-1 group-hover:underline">
+                Hva er Bedre Oslo?
+              </SeriffHeader>
+              <ReadMoreLink text="Les mer om Bedre Oslo" className="mt-4" />
+            </Tile>
+
+            {/* [Mobile] News Section */}
             <div>
               <div className="mt-6 mb-4">
                 <Link 
                   href="/nyheter"
-                  className={`flex items-center justify-between text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] ${playfair.className} hover:underline`}>
-                    Nyheter og innlegg
+                  className="flex items-center justify-between group">
+                    <SeriffHeader size="lg" className="group-hover:underline">
+                      Nyheter og innlegg
+                    </SeriffHeader>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 opacity-70 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                 </Link>
               </div>
 
-              {/* The carousel section */}
+              {/* [Mobile] News carousel */}
               <div className="w-full h-full flex flex-col gap-0">
                 <div className="flex-grow min-h-0">
                   <Carousel posts={recentPosts} />
@@ -298,6 +249,28 @@ export default async function Home() {
                   <CarouselNavigation totalSlides={recentPosts.length} />
                 </div>
               </div>
+            </div>
+            
+            {/* [Mobile] Action Links Grid */}
+            <div className="flex flex-col gap-6">
+
+              {/* Boligkrise */}
+              <Tile href="/boligkrisen">
+                <TileTitle>Fremhevet sak</TileTitle>
+                <SeriffHeader size="sm" className="mb-1 group-hover:underline">
+                  Boligkrisen i Oslo
+                </SeriffHeader>
+                <ReadMoreLink className="mt-4" />
+              </Tile>
+
+              {/* Ressurser */}
+              <Tile href="/ressurser">
+                <TileTitle>Ressurser</TileTitle>
+                <SeriffHeader size="sm" className="mb-1 group-hover:underline">
+                  Forskning og nyttige lenker
+                </SeriffHeader>
+                <ReadMoreLink className="mt-4" />
+              </Tile>
             </div>
           </div>
         </div>
