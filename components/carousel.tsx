@@ -1,13 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { Playfair_Display } from 'next/font/google';
 import Link from 'next/link';
-
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
-});
 
 interface PostData {
   id: string;
@@ -40,7 +34,7 @@ const NewsItem = ({ post }: { post: PostData }) => (
                 day: 'numeric'
               })}
             </time>
-            <h3 className={`text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] ${playfair.className} line-clamp-2 pt-2`}>
+            <h3 className={`text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] font-serif line-clamp-2 pt-2`}>
               {post.title}
             </h3>
             <p className="text-[#2b2b2b] dark:text-[#a3b8b0] text-sm line-clamp-2 pt-2">

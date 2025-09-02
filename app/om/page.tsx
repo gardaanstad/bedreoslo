@@ -1,27 +1,16 @@
-import { Playfair_Display, Inter } from 'next/font/google';
 import Link from 'next/link';
 import '../styles/gradients.css';
-
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
-});
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  weight: ['400', '500'],
-});
 
 export default function AboutPage() {
   return (
     <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden`}
+      className={`relative min-h-screen overflow-x-hidden`}
     >
 
       <div className="max-w-5xl mx-auto px-4 pb-16">
         {/* Page Header */}
         <header className="mb-16">
-          <h1 className={`${playfair.className} text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+          <h1 className={`font-serif text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
             Om Bedre Oslo
           </h1>
           <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-6" />
@@ -33,7 +22,7 @@ export default function AboutPage() {
         
         {/* Principles Section */}
         <div className="mb-16">
-          <h2 className={`${playfair.className} text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+          <h2 className={`font-serif text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
             Våre prinsipper
           </h2>
           
@@ -76,7 +65,7 @@ export default function AboutPage() {
         
         {/* What We Do Section */}
         <div className="mb-16">
-          <h2 className={`${playfair.className} text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+          <h2 className={`font-serif text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
             Hva vi gjør
           </h2>
           
@@ -84,7 +73,7 @@ export default function AboutPage() {
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-6 relative">
               <div className="relative z-10">
                 <Link href="/aktiviteter/politisk" className="group block h-full">
-                  <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
+                  <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
                     Aktivitet #1
                   </h3>
                   <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
@@ -97,7 +86,7 @@ export default function AboutPage() {
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-6 relative">
               <div className="relative z-10">
                 <Link href="/aktiviteter/kunnskap" className="group block h-full">
-                  <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
+                  <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
                     Aktivitet #2
                   </h3>
                   <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
@@ -110,7 +99,7 @@ export default function AboutPage() {
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-6 relative">
               <div className="relative z-10">
                 <Link href="/aktiviteter/fellesskap" className="group block h-full">
-                  <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
+                  <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
                     Aktivitet #3
                   </h3>
                   <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
@@ -123,7 +112,7 @@ export default function AboutPage() {
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-6 relative">
               <div className="relative z-10">
                 <Link href="/aktiviteter/media" className="group block h-full">
-                  <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
+                  <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
                     Aktivitet #4
                   </h3>
                   <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
@@ -137,14 +126,14 @@ export default function AboutPage() {
           
         {/* FAQ Section */}
         <div className="mb-16">
-          <h2 className={`${playfair.className} text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-8`}>
+          <h2 className={`font-serif text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-8`}>
             Ofte stilte spørsmål
           </h2>
           
           <div className="grid grid-cols-1 gap-6">
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-8 relative">
               <div className="relative z-10">
-                <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
+                <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
                   Spørsmål #1
                 </h3>
                 <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
@@ -155,7 +144,7 @@ export default function AboutPage() {
             
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-8 relative">
               <div className="relative z-10">
-                <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
+                <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
                   Spørsmål #2
                 </h3>
                 <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
@@ -166,7 +155,7 @@ export default function AboutPage() {
             
             <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-8 relative">
               <div className="relative z-10">
-                <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
+                <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
                   Spørsmål #3
                 </h3>
                 <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
@@ -179,7 +168,7 @@ export default function AboutPage() {
         
         {/* Our People Section */}
         <div>
-          <h2 className={`${playfair.className} text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+          <h2 className={`font-serif text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
             Våre folk
           </h2>
           
@@ -194,7 +183,7 @@ export default function AboutPage() {
                 <div className="aspect-square w-full bg-gray-200 dark:bg-gray-800 mb-3 flex items-center justify-center">
                   <span className="text-[#2b2b2b] dark:text-[#f5f1e8]/50">Bilde</span>
                 </div>
-                <h3 className={`${playfair.className} text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1`}>
+                <h3 className={`font-serif text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1`}>
                   Person #1
                 </h3>
                 <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] text-sm mb-2">
@@ -211,7 +200,7 @@ export default function AboutPage() {
                 <div className="aspect-square w-full bg-gray-200 dark:bg-gray-800 mb-3 flex items-center justify-center">
                   <span className="text-[#2b2b2b] dark:text-[#f5f1e8]/50">Bilde</span>
                 </div>
-                <h3 className={`${playfair.className} text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1`}>
+                <h3 className={`font-serif text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1`}>
                   Person #2
                 </h3>
                 <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] text-sm mb-2">
@@ -228,7 +217,7 @@ export default function AboutPage() {
                 <div className="aspect-square w-full bg-gray-200 dark:bg-gray-800 mb-3 flex items-center justify-center">
                   <span className="text-[#2b2b2b] dark:text-[#f5f1e8]/50">Bilde</span>
                 </div>
-                <h3 className={`${playfair.className} text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1`}>
+                <h3 className={`font-serif text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1`}>
                   Person #3
                 </h3>
                 <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] text-sm mb-2">
@@ -245,7 +234,7 @@ export default function AboutPage() {
                 <div className="aspect-square w-full bg-gray-200 dark:bg-gray-800 mb-3 flex items-center justify-center">
                   <span className="text-[#2b2b2b] dark:text-[#f5f1e8]/50">Bilde</span>
                 </div>
-                <h3 className={`${playfair.className} text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1`}>
+                <h3 className={`font-serif text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1`}>
                   Person #4
                 </h3>
                 <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] text-sm mb-2">

@@ -1,17 +1,6 @@
 'use client';
 
-import { Playfair_Display, Inter } from 'next/font/google';
 import Link from 'next/link';
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
-});
-
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-});
 
 // Custom footnote component
 const Footnote = ({ id }: { id: number }) => (
@@ -29,7 +18,7 @@ const Footnote = ({ id }: { id: number }) => (
 export default function Argument() {
   return (
     <main
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden`}
+      className={`relative min-h-screen overflow-x-hidden`}
     >
       <div
         className="fixed inset-0 bg-gradient-to-b from-[#2b2b2b] to-transparent dark:from-black/40 dark:to-transparent opacity-[0.08] -z-10"
@@ -39,7 +28,7 @@ export default function Argument() {
       <div className="max-w-5xl mx-auto px-4 pb-16">
         {/* Page Header */}
         <header className="mb-4">
-          <h1 className={`${playfair.className} text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+          <h1 className={`font-serif text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
             Oslo har faktisk ganske trygge gater
           </h1>
           <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-6" />
@@ -58,7 +47,7 @@ export default function Argument() {
             
             {/* First box */}
             <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-4 md:p-8 bg-white/5 dark:bg-black/20">
-              <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 md:mb-6 ${playfair.className}`}>
+              <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 md:mb-6 font-serif`}>
                 Biltrafikk dominerer fortsatt bybildet
               </h2>
               <div className="text-base md:text-lg text-[#2b2b2b]/90 dark:text-[#a3b8b0] leading-relaxed space-y-4 md:space-y-6">
@@ -87,7 +76,7 @@ export default function Argument() {
 
             {/* Second box */}
             <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-4 md:p-8 bg-white/5 dark:bg-black/20">
-              <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 md:mb-6 ${playfair.className}`}>
+              <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 md:mb-6 font-serif`}>
                 Hvordan påvirker dette bylivet?
               </h2>
               <div className="text-base md:text-lg text-[#2b2b2b]/90 dark:text-[#a3b8b0] leading-relaxed space-y-4 md:space-y-6">
@@ -116,7 +105,7 @@ export default function Argument() {
 
             {/* 3 - Sykkelinfrastruktur lønner seg */}
             <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-4 md:p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
-              <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 md:mb-6 ${playfair.className}`}>
+              <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 md:mb-6 font-serif`}>
                 Sykkelinfrastruktur lønner seg
               </h2>
               <div className="text-base md:text-lg text-[#2b2b2b]/90 dark:text-[#a3b8b0] leading-relaxed space-y-4 md:space-y-6">
@@ -136,7 +125,7 @@ export default function Argument() {
 
             {/* 4 - Tettere byutvikling fører til mer gåing og sykling */}
             <section className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-4 md:p-8 bg-white/5 dark:bg-black/20 backdrop-blur-sm">
-              <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 md:mb-6 ${playfair.className}`}>
+              <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 md:mb-6 font-serif`}>
                 Tettere byutvikling fører til mer gåing og sykling
               </h2>
               <div className="text-base md:text-lg text-[#2b2b2b]/90 dark:text-[#a3b8b0] leading-relaxed space-y-4 md:space-y-6">

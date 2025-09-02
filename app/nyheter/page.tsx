@@ -1,19 +1,8 @@
-import { Playfair_Display, Inter } from 'next/font/google';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import Image from 'next/image';
-
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
-});
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  weight: ['400', '500'],
-});
 
 interface PostData {
   id: string;
@@ -62,13 +51,13 @@ export default async function NewsPage() {
   
   return (
     <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden`}
+      className={`relative min-h-screen overflow-x-hidden`}
     >
 
       <div className="max-w-7xl mx-auto px-4 pb-16">
         {/* Page Header */}
         <header className="mb-8 md:mb-16">
-          <h1 className={`${playfair.className} text-3xl sm:text-4xl md:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 md:mb-6`}>
+          <h1 className={`font-serif text-3xl sm:text-4xl md:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 md:mb-6`}>
             Nyheter og innlegg
           </h1>
           <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-4 md:my-6" />
@@ -105,7 +94,7 @@ export default async function NewsPage() {
                     day: 'numeric'
                   })}
                 </time>
-                <h2 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] group-hover:underline`}>
+                <h2 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] group-hover:underline`}>
                   {post.title}
                 </h2>
               </div>

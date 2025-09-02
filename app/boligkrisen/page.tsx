@@ -1,17 +1,6 @@
 'use client';
 
-import { Playfair_Display, Inter } from 'next/font/google';
 import Link from 'next/link';
-
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
-});
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  weight: ['400', '500'],
-});
 
 // Custom footnote component
 const Footnote = ({ id }: { id: number }) => (
@@ -29,7 +18,7 @@ const Footnote = ({ id }: { id: number }) => (
 export default function Argument() {
   return (
     <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden`}
+      className={`relative min-h-screen overflow-x-hidden`}
     >
       <div 
         className="fixed inset-0 bg-gradient-to-b from-[#2b2b2b] to-transparent dark:from-black/40 dark:to-transparent opacity-[0.08] -z-10"
@@ -39,7 +28,7 @@ export default function Argument() {
       <div className="max-w-5xl mx-auto px-4 pb-16">
         {/* Page Header */}
         <header className="mb-16">
-          <h1 className={`${playfair.className} text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+          <h1 className={`font-serif text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
             Oslo har en boligkrise. Her er historien.
           </h1>
           <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-6" />
@@ -64,7 +53,7 @@ export default function Argument() {
                 <span className="inline-block px-3 py-1 bg-[#1a472a]/10 dark:bg-[#1a472a]/30 text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-sm font-medium rounded-sm mb-4">
                   Kapittel 1
                 </span>
-                <h2 className={`text-3xl sm:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6 ${playfair.className}`}>
+                <h2 className={`text-3xl sm:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6 font-serif`}>
                   Det var en gang en by hvor alle kunne bo
                 </h2>
                 <div className="text-lg text-[#2b2b2b]/90 dark:text-[#a3b8b0] leading-relaxed space-y-6">
@@ -96,7 +85,7 @@ export default function Argument() {
                 <span className="inline-block px-3 py-1 bg-[#1a472a]/10 dark:bg-[#1a472a]/30 text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-sm font-medium rounded-sm mb-4">
                   Kapittel 2
                 </span>
-                <h2 className={`text-3xl sm:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6 ${playfair.className}`}>
+                <h2 className={`text-3xl sm:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6 font-serif`}>
                   Hvem rammer dette hardest?
                 </h2>
                 <div className="text-lg text-[#2b2b2b]/90 dark:text-[#a3b8b0] leading-relaxed space-y-6">
@@ -128,7 +117,7 @@ export default function Argument() {
                 <span className="inline-block px-3 py-1 bg-[#1a472a]/10 dark:bg-[#1a472a]/30 text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-sm font-medium rounded-sm mb-4">
                   Kapittel 3
                 </span>
-                <h2 className={`text-3xl sm:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6 ${playfair.className}`}>
+                <h2 className={`text-3xl sm:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6 font-serif`}>
                   Hva forskningen forteller oss
                 </h2>
                 <div className="text-lg text-[#2b2b2b]/90 dark:text-[#a3b8b0] leading-relaxed space-y-6">
@@ -151,7 +140,7 @@ export default function Argument() {
                 <span className="inline-block px-3 py-1 bg-[#1a472a]/10 dark:bg-[#1a472a]/30 text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-sm font-medium rounded-sm mb-4">
                   Kapittel 4
                 </span>
-                <h2 className={`text-3xl sm:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6 ${playfair.className}`}>
+                <h2 className={`text-3xl sm:text-4xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6 font-serif`}>
                   Veien videre for Oslo
                 </h2>
                 <div className="text-lg text-[#2b2b2b]/90 dark:text-[#a3b8b0] leading-relaxed space-y-6">
@@ -202,7 +191,7 @@ export default function Argument() {
             <div className="md:col-span-4">              
               {/* Sticky "Did You Know" Box */}
               <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20  sticky top-24 mb-[450px]">
-                <h3 className={`text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 ${playfair.className}`}>
+                <h3 className={`text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 font-serif`}>
                   Visste du at...
                 </h3>
                 <div className="space-y-6 text-[#2b2b2b]/90 dark:text-[#a3b8b0]">
@@ -248,7 +237,7 @@ export default function Argument() {
 
               {/* Success Stories Box */}
               <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 ">
-                <h3 className={`text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 ${playfair.className}`}>
+                <h3 className={`text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 font-serif`}>
                   Suksesshistorier
                 </h3>
                 <div className="space-y-6 text-[#2b2b2b]/90 dark:text-[#a3b8b0]">
@@ -284,7 +273,7 @@ export default function Argument() {
               <span className="inline-block px-2 py-1 bg-[#1a472a]/10 dark:bg-[#1a472a]/30 text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-xs font-medium rounded-sm mb-3">
                 Kapittel 1
               </span>
-              <h2 className={`text-2xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 ${playfair.className}`}>
+              <h2 className={`text-2xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 font-serif`}>
                 Det var en gang en by hvor alle kunne bo
               </h2>
               <div className="text-[#2b2b2b]/90 dark:text-[#a3b8b0] leading-relaxed space-y-4">
@@ -316,7 +305,7 @@ export default function Argument() {
             
             {/* Mobile "Did You Know" Box */}
             <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 ">
-              <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 ${playfair.className}`}>
+              <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 font-serif`}>
                 Visste du at...
               </h3>
               <div className="space-y-4 text-[#2b2b2b]/90 dark:text-[#a3b8b0]">
@@ -337,7 +326,7 @@ export default function Argument() {
               <span className="inline-block px-2 py-1 bg-[#1a472a]/10 dark:bg-[#1a472a]/30 text-[#2b2b2b] dark:text-[#f5f1e8]/90 text-xs font-medium rounded-sm mb-3">
                 Kapittel 3
               </span>
-              <h2 className={`text-2xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 ${playfair.className}`}>
+              <h2 className={`text-2xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 font-serif`}>
                 Hva forskningen forteller oss
               </h2>
               <div className="text-[#2b2b2b]/90 dark:text-[#a3b8b0] leading-relaxed space-y-4">
@@ -353,7 +342,7 @@ export default function Argument() {
             
             {/* Success Stories Box - Mobile */}
             <div className="border border-[#1a472a]/20 dark:border-[#f5f1e8]/10 p-6 bg-white/5 dark:bg-black/20 ">
-              <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 ${playfair.className}`}>
+              <h3 className={`text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 font-serif`}>
                 Suksesshistorier
               </h3>
               <div className="space-y-4 text-[#2b2b2b]/90 dark:text-[#a3b8b0]">
@@ -385,7 +374,7 @@ export default function Argument() {
               <span className="inline-block px-2 py-1 bg-white/10 text-white text-xs font-medium rounded-sm mb-3">
                 Kapittel 4
               </span>
-              <h2 className={`text-2xl font-bold text-white dark:text-[#f5f1e8] mb-4 ${playfair.className}`}>
+              <h2 className={`text-2xl font-bold text-white dark:text-[#f5f1e8] mb-4 font-serif`}>
                 Veien videre for Oslo
               </h2>
               <div className="text-white dark:text-[#f5f1e8]/95 leading-relaxed space-y-4">

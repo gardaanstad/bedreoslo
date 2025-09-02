@@ -1,12 +1,3 @@
-import { Playfair_Display } from 'next/font/google';
-
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
-  display: 'swap',
-  preload: true,
-});
-
 interface SeriffHeaderProps {
   children: React.ReactNode;
   className?: string;
@@ -23,7 +14,7 @@ export default function SeriffHeader({ children, className = '', size = 'md' }: 
   };
 
   return (
-    <h1 className={`${playfair.className} font-bold leading-tight text-[#2b2b2b] dark:text-[#f5f1e8] ${sizeClasses[size]} ${className}`}>
+    <h1 className={`font-serif font-bold leading-tight text-[#2b2b2b] dark:text-[#f5f1e8] ${sizeClasses[size]} ${className}`}>
       {children}
     </h1>
   );

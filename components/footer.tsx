@@ -1,10 +1,4 @@
 import Link from 'next/link';
-import { Playfair_Display } from 'next/font/google';
-
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
-});
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -44,7 +38,7 @@ export default function Footer() {
           <div className="col-span-2 sm:col-span-2 md:col-span-1 space-y-4">
             <Link 
               href="/" 
-              className={`${playfair.className} text-[#f5f1e8] text-2xl tracking-tight hover:underline`}
+              className={`font-serif text-[#f5f1e8] text-2xl tracking-tight hover:underline`}
             >
               Bedre Oslo
             </Link>
@@ -56,7 +50,7 @@ export default function Footer() {
           {/* Navigation sections */}
           {sections.map((section) => (
             <div key={section.title} className="space-y-4">
-              <h3 className={`${playfair.className} text-[#f5f1e8] text-2xl tracking-tight`}>
+              <h3 className={`font-serif text-[#f5f1e8] text-2xl tracking-tight`}>
                 {section.title}
               </h3>
               <ul className="space-y-2.5">

@@ -1,15 +1,4 @@
-import { Playfair_Display, Inter } from 'next/font/google';
 import Link from 'next/link';
-
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
-});
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  weight: ['400', '500'],
-});
 
 const links = [
   {
@@ -90,12 +79,12 @@ const research = [
 
 export default function ResourcesPage() {
   return (
-    <main className={`relative ${inter.className} min-h-screen overflow-x-hidden`}>
+    <main className={`relative min-h-screen overflow-x-hidden`}>
 
       <div className="max-w-5xl mx-auto px-4 pb-16">
         {/* Page Header */}
         <header className="mb-8 md:mb-16">
-          <h1 className={`${playfair.className} text-3xl sm:text-4xl md:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 md:mb-6`}>
+          <h1 className={`font-serif text-3xl sm:text-4xl md:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 md:mb-6`}>
             Ressurser
           </h1>
           <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-4 md:my-6" />
@@ -106,7 +95,7 @@ export default function ResourcesPage() {
 
         {/* Links Section */}
         <section className="mb-16">
-          <h2 className={`${playfair.className} text-2xl md:text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+          <h2 className={`font-serif text-2xl md:text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
             Nyttige lenker
           </h2>
           <div className="grid gap-6">
@@ -115,7 +104,7 @@ export default function ResourcesPage() {
                 key={category.category}
                 className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 p-6"
               >
-                <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4`}>
+                <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4`}>
                   {category.category}
                 </h3>
                 <div className="grid gap-4">
@@ -154,7 +143,7 @@ export default function ResourcesPage() {
 
         {/* Research Section */}
         <section>
-          <h2 className={`${playfair.className} text-2xl md:text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+          <h2 className={`font-serif text-2xl md:text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
             Forskning
           </h2>
           <div className="grid gap-6">
@@ -163,7 +152,7 @@ export default function ResourcesPage() {
                 key={category.category}
                 className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 p-6"
               >
-                <h3 className={`${playfair.className} text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4`}>
+                <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4`}>
                   {category.category}
                 </h3>
                 <div className="grid gap-6">

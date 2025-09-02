@@ -1,4 +1,3 @@
-import { Playfair_Display, Inter } from 'next/font/google';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -6,11 +5,6 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import Link from 'next/link';
 import Image from 'next/image';
-
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
-});
 
 interface PostData {
   id: string;
@@ -79,7 +73,7 @@ export default async function Page({ params }: Props) {
 
         {/* Article Header */}
         <header className="mb-16">
-          <h1 className={`${playfair.className} text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+          <h1 className={`font-serif text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
             {post.title}
           </h1>
           

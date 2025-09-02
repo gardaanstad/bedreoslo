@@ -1,25 +1,13 @@
 'use client';
 
-import { Playfair_Display, Inter } from 'next/font/google';
-
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
-});
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  weight: ['400', '500'],
-});
-
 export default function Member() {
   return (
     <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden`}
+      className={`relative min-h-screen overflow-x-hidden`}
     >
       <div className="max-w-5xl mx-auto px-4 pb-16">
         <header className="mb-16 md:flex md:flex-col md:items-center">
-          <h1 className={`${playfair.className} text-5xl sm:text-7xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] leading-[1.1] text-center`}>
+          <h1 className={`font-serif text-5xl sm:text-7xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] leading-[1.1] text-center`}>
             Bli med på laget
           </h1>
         </header>
@@ -29,7 +17,7 @@ export default function Member() {
           <div className="p-8 sm:p-12 bg-[#efece5] dark:bg-black/20 border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10">
             <form className="space-y-8">
               <div className="space-y-2">
-                <label htmlFor="name" className={`block ${playfair.className} text-lg text-[#2b2b2b] dark:text-[#f5f1e8]`}>
+                <label htmlFor="name" className={`block font-serif text-lg text-[#2b2b2b] dark:text-[#f5f1e8]`}>
                   Navn
                 </label>
                 <input
@@ -42,7 +30,7 @@ export default function Member() {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="email" className={`block ${playfair.className} text-lg text-[#2b2b2b] dark:text-[#f5f1e8]`}>
+                <label htmlFor="email" className={`block font-serif text-lg text-[#2b2b2b] dark:text-[#f5f1e8]`}>
                   E-post
                 </label>
                 <input
@@ -67,7 +55,7 @@ export default function Member() {
 
           <div className="flex gap-12 pt-12">
             <div className="flex-1">
-              <h3 className={`${playfair.className} text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
+              <h3 className={`font-serif text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
                 Som medlem får du
               </h3>
               <ul className="space-y-2 text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
@@ -77,7 +65,7 @@ export default function Member() {
               </ul>
             </div>
             <div className="flex-1">
-              <h3 className={`${playfair.className} text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
+              <h3 className={`font-serif text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
                 Viktig å vite
               </h3>
               <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
