@@ -2,12 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Remove custom scrollbar styling */
-
 :root {
-  --background: #f7f4ef;
+  --background: #f3f1ee;
   --foreground: #2b2b2b;
-  /* Add scrollbar-gutter property to prevent layout shifts */
   scrollbar-gutter: stable;
 }
 
@@ -19,27 +16,40 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-  /* Ensure the scrollbar-gutter property is applied to the body as well */
-  scrollbar-gutter: stable;
-  padding-top: 10rem; /* This is equivalent to pt-20 */
+  font-family: var(--font-inter);
+  /* Add padding to the top to account for a fixed navbar */
+  padding-top: 10rem; /* This is equivalent to pt-40 */
 }
 
 @layer components {
   .gradient-text {
     @apply bg-[length:200%_auto] bg-clip-text text-transparent relative pb-3;
-    background-image: linear-gradient(to right, #1a472a, #2c7a48, #1a472a, #2c7a48, #1a472a);
+    background-image: linear-gradient(
+      to right,
+      #1a472a,
+      #2c7a48,
+      #1a472a,
+      #2c7a48,
+      #1a472a
+    );
     animation: gradient-x 15s linear infinite;
   }
 
   .dark .gradient-text {
     @apply bg-[length:200%_auto] bg-clip-text text-transparent relative pb-3;
-    background-image: linear-gradient(to right, #1a472a, #2c7a48, #1a472a, #2c7a48, #1a472a);
+    background-image: linear-gradient(
+      to right,
+      #1a472a,
+      #2c7a48,
+      #1a472a,
+      #2c7a48,
+      #1a472a
+    );
     animation: gradient-x 15s linear infinite;
   }
 }
 
-/* Custom scrollbar-hiding utilities - keeping these for when you need to hide scrollbars */
+/* Custom scrollbar-hiding utilities */
 @layer utilities {
   .scrollbar-hide {
     -ms-overflow-style: none;
@@ -61,21 +71,21 @@ body {
 
 /* Selection styling */
 ::selection {
-  background-color: rgba(26, 71, 42, 0.2); /* #1a472a with 20% opacity for light mode */
+  background-color: rgba(26, 71, 42, 0.2);
   color: inherit;
 }
 
 ::-moz-selection {
-  background-color: rgba(26, 71, 42, 0.2); /* #1a472a with 20% opacity for light mode */
+  background-color: rgba(26, 71, 42, 0.2);
   color: inherit;
 }
 
 .dark ::selection {
-  background-color: rgba(92, 190, 128, 0.2); /* #2c7a48 (lighter green) with 50% opacity for dark mode */
+  background-color: rgba(92, 190, 128, 0.2);
   color: inherit;
 }
 
 .dark ::-moz-selection {
-  background-color: rgba(92, 190, 128, 0.2); /* #2c7a48 (lighter green) with 50% opacity for dark mode */
+  background-color: rgba(92, 190, 128, 0.2);
   color: inherit;
 }

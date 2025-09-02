@@ -5,15 +5,11 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const playfair = Playfair_Display({ 
   subsets: ['latin'],
   weight: ['400', '600', '700', '800'],
-});
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  weight: ['400', '500'],
 });
 
 interface PostData {
@@ -23,6 +19,7 @@ interface PostData {
   date: string;
   excerpt?: string;
   author?: string;
+  image?: string;
 }
 
 async function getPost(id: string): Promise<PostData> {
@@ -42,6 +39,7 @@ async function getPost(id: string): Promise<PostData> {
     date: data.date,
     excerpt: data.excerpt,
     author: data.author,
+    image: data.image,
   };
 }
 
@@ -64,7 +62,7 @@ export default async function Page({ params }: Props) {
   
   return (
     <main 
-      className={`relative ${inter.className} min-h-screen overflow-x-hidden`}
+      className={`relative min-h-screen overflow-x-hidden`}
     >
       <div 
         className="fixed inset-0 bg-gradient-to-b from-[#2b2b2b] to-transparent dark:from-black/40 dark:to-transparent opacity-[0.08] -z-10"
@@ -76,7 +74,7 @@ export default async function Page({ params }: Props) {
           href="/nyheter" 
           className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] mb-8 block hover:underline text-lg"
         >
-          ← Tilbake til nyheter
+          ← Tilbake
         </Link>
 
         {/* Article Header */}
@@ -84,8 +82,14 @@ export default async function Page({ params }: Props) {
           <h1 className={`${playfair.className} text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
             {post.title}
           </h1>
-          <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-6" />
-          <div className="flex items-center gap-3 text-xl text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
+          
+          {post.excerpt && (
+            <p className="text-xl sm:text-2xl text-[#2b2b2b]/80 dark:text-[#a3b8b0] max-w-3xl mb-8">
+              {post.excerpt}
+            </p>
+          )}
+
+          <div className="flex items-center gap-3 text-lg text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
             <time>
               {new Date(post.date).toLocaleDateString('nb-NO', {
                 year: 'numeric',
@@ -100,6 +104,15 @@ export default async function Page({ params }: Props) {
               </>
             )}
           </div>
+          {post.image && (
+          <Image
+            src={post.image} 
+            alt={post.title} 
+            width={1200}
+            height={800}
+            className="w-full h-auto max-h-[60vh] object-cover mt-8"
+          />
+        )}
         </header>
 
         {/* Article Content */}
