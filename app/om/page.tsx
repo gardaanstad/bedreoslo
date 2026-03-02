@@ -1,252 +1,152 @@
 import Link from 'next/link';
-import '../styles/gradients.css';
 
 export default function AboutPage() {
   return (
-    <main 
-      className={`relative min-h-screen overflow-x-hidden`}
-    >
-
-      <div className="max-w-5xl mx-auto px-4 pb-16">
-        {/* Page Header */}
-        <header className="mb-16">
-          <h1 className={`font-serif text-4xl sm:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+    <main>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-24">
+        <header className="mb-10 sm:mb-14">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight">
             Om Bedre Oslo
           </h1>
-          <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-6" />
-          <p className="text-xl text-[#2b2b2b]/80 dark:text-[#a3b8b0] max-w-1xl">
-            Dette er en kort beskrivelse av Bedre Oslo. Her kan det stå mer informasjon om hva 
-            vi jobber med og står for. Denne siden er ikke helt ferdig enda!
+          <div className="border-t border-foreground/15 my-4" />
+          <p className="text-xl text-foreground/60 max-w-3xl leading-relaxed">
+            Dette er en kort beskrivelse av Bedre Oslo. Her kan det stå mer
+            informasjon om hva vi jobber med og står for. Denne siden er ikke
+            helt ferdig enda!
           </p>
         </header>
-        
-        {/* Principles Section */}
-        <div className="mb-16">
-          <h2 className={`font-serif text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+
+        {/* Principles */}
+        <section className="mb-16 sm:mb-20">
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold mb-6">
             Våre prinsipper
           </h2>
-          
-          {/* Principles box */}
-          <div className="bg-[#1a472a] dark:bg-[#1a472a] p-8 relative overflow-hidden">
-            <div className="relative z-10">
-              <ul className="space-y-6 text-[#f7f4ef] dark:text-[#f5f1e8]/90">
-                <li className="flex items-start">
-                  <span className="w-8 h-8 bg-[#f7f4ef] text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-4">1</span>
+          <div className="border-2 border-foreground p-6 sm:p-8">
+            <ul className="space-y-6">
+              {[
+                {
+                  num: 1,
+                  title: 'Prinsipp #1',
+                  desc: 'Beskrivelse av det første prinsippet.',
+                },
+                {
+                  num: 2,
+                  title: 'Prinsipp #2',
+                  desc: 'Beskrivelse av det andre prinsippet.',
+                },
+                {
+                  num: 3,
+                  title: 'Prinsipp #3',
+                  desc: 'Beskrivelse av det tredje prinsippet.',
+                },
+              ].map((p) => (
+                <li key={p.num} className="flex items-start gap-4">
+                  <span className="font-serif text-2xl text-foreground/25 leading-none mt-0.5">
+                    {p.num}
+                  </span>
                   <div>
-                    <h4 className="text-lg text-[#f7f4ef] mb-2">Prinsipp #1</h4>
-                    <p className="text-[#f7f4ef]/95">Beskrivelse av det første prinsippet.</p>
+                    <h4 className="font-medium mb-1">{p.title}</h4>
+                    <p className="text-sm text-foreground/60 leading-relaxed">
+                      {p.desc}
+                    </p>
                   </div>
                 </li>
-                <li className="flex items-start">
-                  <span className="w-8 h-8 bg-[#f7f4ef] text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-4">2</span>
-                  <div>
-                    <h4 className="text-lg text-[#f7f4ef] mb-2">Prinsipp #2</h4>
-                    <p className="text-[#f7f4ef]/95">Beskrivelse av det andre prinsippet.</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-8 h-8 bg-[#f7f4ef] text-[#1a472a] flex-shrink-0 flex items-center justify-center mr-4">3</span>
-                  <div>
-                    <h4 className="text-lg text-[#f7f4ef] mb-2">Prinsipp #3</h4>
-                    <p className="text-[#f7f4ef]/95">Beskrivelse av det tredje prinsippet.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
+              ))}
+            </ul>
           </div>
-          
-          <Link 
-            href="/politikk" 
-            className="inline-block mt-6 text-[#1a472a] dark:text-[#a3b8b0] hover:underline"
-          >
-            Les mer om politikken vår →
-          </Link>
-        </div>
-        
-        {/* What We Do Section */}
-        <div className="mb-16">
-          <h2 className={`font-serif text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+        </section>
+
+        {/* What We Do */}
+        <section className="mb-16 sm:mb-20">
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold mb-6">
             Hva vi gjør
           </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-6 relative">
-              <div className="relative z-10">
-                <Link href="/aktiviteter/politisk" className="group block h-full">
-                  <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
-                    Aktivitet #1
-                  </h3>
-                  <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                    Beskrivelse av den første aktiviteten som Bedre Oslo driver med.
-                  </p>
-                </Link>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-foreground/10 border border-foreground/10">
+            {[
+              {
+                title: 'Aktivitet #1',
+                desc: 'Beskrivelse av den første aktiviteten som Bedre Oslo driver med.',
+              },
+              {
+                title: 'Aktivitet #2',
+                desc: 'Beskrivelse av den andre aktiviteten som Bedre Oslo driver med.',
+              },
+              {
+                title: 'Aktivitet #3',
+                desc: 'Beskrivelse av den tredje aktiviteten som Bedre Oslo driver med.',
+              },
+              {
+                title: 'Aktivitet #4',
+                desc: 'Beskrivelse av den fjerde aktiviteten som Bedre Oslo driver med.',
+              },
+            ].map((a) => (
+              <div
+                key={a.title}
+                className="p-6 sm:p-8 bg-background"
+              >
+                <h3 className="font-serif text-lg font-bold mb-2">
+                  {a.title}
+                </h3>
+                <p className="text-sm text-foreground/60 leading-relaxed">
+                  {a.desc}
+                </p>
               </div>
-            </div>
-            
-            <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-6 relative">
-              <div className="relative z-10">
-                <Link href="/aktiviteter/kunnskap" className="group block h-full">
-                  <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
-                    Aktivitet #2
-                  </h3>
-                  <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                    Beskrivelse av den andre aktiviteten som Bedre Oslo driver med.
-                  </p>
-                </Link>
-              </div>
-            </div>
-            
-            <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-6 relative">
-              <div className="relative z-10">
-                <Link href="/aktiviteter/fellesskap" className="group block h-full">
-                  <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
-                    Aktivitet #3
-                  </h3>
-                  <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                    Beskrivelse av den tredje aktiviteten som Bedre Oslo driver med.
-                  </p>
-                </Link>
-              </div>
-            </div>
-            
-            <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-6 relative">
-              <div className="relative z-10">
-                <Link href="/aktiviteter/media" className="group block h-full">
-                  <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3 group-hover:underline`}>
-                    Aktivitet #4
-                  </h3>
-                  <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                    Beskrivelse av den fjerde aktiviteten som Bedre Oslo driver med.
-                  </p>
-                </Link>
-              </div>
-            </div>
+            ))}
           </div>
-        </div>
-          
-        {/* FAQ Section */}
-        <div className="mb-16">
-          <h2 className={`font-serif text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-8`}>
+        </section>
+
+        {/* FAQ */}
+        <section className="mb-16 sm:mb-20">
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold mb-6">
             Ofte stilte spørsmål
           </h2>
-          
-          <div className="grid grid-cols-1 gap-6">
-            <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-8 relative">
-              <div className="relative z-10">
-                <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
-                  Spørsmål #1
+          <div className="divide-y divide-foreground/10 border-t border-b border-foreground/10">
+            {[
+              {
+                q: 'Spørsmål #1',
+                a: 'Svar på det første spørsmålet som ofte blir stilt om Bedre Oslo.',
+              },
+              {
+                q: 'Spørsmål #2',
+                a: 'Svar på det andre spørsmålet som ofte blir stilt om Bedre Oslo.',
+              },
+              {
+                q: 'Spørsmål #3',
+                a: 'Svar på det tredje spørsmålet som ofte blir stilt om Bedre Oslo.',
+              },
+            ].map((faq) => (
+              <div key={faq.q} className="py-6">
+                <h3 className="font-serif text-lg font-bold mb-2">
+                  {faq.q}
                 </h3>
-                <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                  Svar på det første spørsmålet som ofte blir stilt om Bedre Oslo.
-                </p>
+                <p className="text-foreground/60 leading-relaxed">{faq.a}</p>
               </div>
-            </div>
-            
-            <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-8 relative">
-              <div className="relative z-10">
-                <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
-                  Spørsmål #2
-                </h3>
-                <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                  Svar på det andre spørsmålet som ofte blir stilt om Bedre Oslo.
-                </p>
-              </div>
-            </div>
-            
-            <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-8 relative">
-              <div className="relative z-10">
-                <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
-                  Spørsmål #3
-                </h3>
-                <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                  Svar på det tredje spørsmålet som ofte blir stilt om Bedre Oslo.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
-        </div>
-        
-        {/* Our People Section */}
-        <div>
-          <h2 className={`font-serif text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+        </section>
+
+        {/* People */}
+        <section>
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold mb-3">
             Våre folk
           </h2>
-          
-          <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] mb-8 max-w-3xl">
+          <p className="text-foreground/60 mb-6 max-w-2xl">
             Kort beskrivelse av menneskene som er involvert i Bedre Oslo.
           </p>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {/* Board member examples - placeholder images */}
-            <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-5 relative">
-              <div className="relative z-10">
-                <div className="aspect-square w-full bg-gray-200 dark:bg-gray-800 mb-3 flex items-center justify-center">
-                  <span className="text-[#2b2b2b] dark:text-[#f5f1e8]/50">Bilde</span>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-foreground/10 border border-foreground/10">
+            {[1, 2, 3, 4].map((n) => (
+              <div key={n} className="p-5 bg-background">
+                <div className="aspect-square w-full bg-foreground/[0.03] mb-4 flex items-center justify-center">
+                  <span className="text-foreground/10 text-xs font-mono uppercase tracking-wider">
+                    Bilde
+                  </span>
                 </div>
-                <h3 className={`font-serif text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1`}>
-                  Person #1
-                </h3>
-                <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] text-sm mb-2">
-                  Rolle #1
-                </p>
-                <p className="text-[#2b2b2b]/60 dark:text-[#a3b8b0]/60 text-xs">
-                  Beskrivelse av person #1
-                </p>
+                <h3 className="font-serif font-bold mb-0.5">Person #{n}</h3>
+                <p className="text-foreground/50 text-sm">Rolle #{n}</p>
               </div>
-            </div>
-            
-            <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-5 relative">
-              <div className="relative z-10">
-                <div className="aspect-square w-full bg-gray-200 dark:bg-gray-800 mb-3 flex items-center justify-center">
-                  <span className="text-[#2b2b2b] dark:text-[#f5f1e8]/50">Bilde</span>
-                </div>
-                <h3 className={`font-serif text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1`}>
-                  Person #2
-                </h3>
-                <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] text-sm mb-2">
-                  Rolle #2
-                </p>
-                <p className="text-[#2b2b2b]/60 dark:text-[#a3b8b0]/60 text-xs">
-                  Beskrivelse av person #2
-                </p>
-              </div>
-            </div>
-            
-            <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-5 relative">
-              <div className="relative z-10">
-                <div className="aspect-square w-full bg-gray-200 dark:bg-gray-800 mb-3 flex items-center justify-center">
-                  <span className="text-[#2b2b2b] dark:text-[#f5f1e8]/50">Bilde</span>
-                </div>
-                <h3 className={`font-serif text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1`}>
-                  Person #3
-                </h3>
-                <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] text-sm mb-2">
-                  Rolle #3
-                </p>
-                <p className="text-[#2b2b2b]/60 dark:text-[#a3b8b0]/60 text-xs">
-                  Beskrivelse av person #3
-                </p>
-              </div>
-            </div>
-            
-            <div className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20  p-5 relative">
-              <div className="relative z-10">
-                <div className="aspect-square w-full bg-gray-200 dark:bg-gray-800 mb-3 flex items-center justify-center">
-                  <span className="text-[#2b2b2b] dark:text-[#f5f1e8]/50">Bilde</span>
-                </div>
-                <h3 className={`font-serif text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-1`}>
-                  Person #4
-                </h3>
-                <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0] text-sm mb-2">
-                  Rolle #4
-                </p>
-                <p className="text-[#2b2b2b]/60 dark:text-[#a3b8b0]/60 text-xs">
-                  Beskrivelse av person #4
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
-        </div>
+        </section>
       </div>
     </main>
   );

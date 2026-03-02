@@ -3,89 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --background: #f3f1ee;
-  --foreground: #2b2b2b;
+  --background: 244 241 236;
+  --foreground: 18 18 18;
+  --accent: 26 71 42;
   scrollbar-gutter: stable;
 }
 
-.dark {
-  --background: #141414;
-  --foreground: #f5f1e8;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
   font-family: var(--font-inter);
-  /* Add padding to the top to account for a fixed navbar */
-  padding-top: 10rem; /* This is equivalent to pt-40 */
 }
 
-@layer components {
-  .gradient-text {
-    @apply bg-[length:200%_auto] bg-clip-text text-transparent relative pb-3;
-    background-image: linear-gradient(
-      to right,
-      #1a472a,
-      #2c7a48,
-      #1a472a,
-      #2c7a48,
-      #1a472a
-    );
-    animation: gradient-x 15s linear infinite;
-  }
-
-  .dark .gradient-text {
-    @apply bg-[length:200%_auto] bg-clip-text text-transparent relative pb-3;
-    background-image: linear-gradient(
-      to right,
-      #1a472a,
-      #2c7a48,
-      #1a472a,
-      #2c7a48,
-      #1a472a
-    );
-    animation: gradient-x 15s linear infinite;
-  }
-}
-
-/* Custom scrollbar-hiding utilities */
-@layer utilities {
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .no-scrollbar::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-    display: none;
-  }
-}
-
-/* Selection styling */
 ::selection {
-  background-color: rgba(26, 71, 42, 0.2);
-  color: inherit;
-}
-
-::-moz-selection {
-  background-color: rgba(26, 71, 42, 0.2);
-  color: inherit;
-}
-
-.dark ::selection {
-  background-color: rgba(92, 190, 128, 0.2);
-  color: inherit;
-}
-
-.dark ::-moz-selection {
-  background-color: rgba(92, 190, 128, 0.2);
+  background-color: rgb(var(--accent) / 0.15);
   color: inherit;
 }

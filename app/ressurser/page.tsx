@@ -2,137 +2,126 @@ import Link from 'next/link';
 
 const links = [
   {
-    category: "Offentlige dokumenter",
+    category: 'Offentlige dokumenter',
     items: [
       {
-        title: "Oslo kommunes saksinnsyn",
-        url: "https://www.oslo.kommune.no/saksinnsyn",
-        description: "Søk i kommunens saker og dokumenter"
+        title: 'Oslo kommunes saksinnsyn',
+        url: 'https://www.oslo.kommune.no/saksinnsyn',
+        description: 'Søk i kommunens saker og dokumenter',
       },
       {
-        title: "Plan- og bygningsetaten",
-        url: "https://www.oslo.kommune.no/plan-bygg-og-eiendom",
-        description: "Informasjon om byggesaker og reguleringsplaner"
+        title: 'Plan- og bygningsetaten',
+        url: 'https://www.oslo.kommune.no/plan-bygg-og-eiendom',
+        description: 'Informasjon om byggesaker og reguleringsplaner',
       },
       {
-        title: "Høringer i Oslo kommune",
-        url: "https://www.oslo.kommune.no/horinger",
-        description: "Aktive høringer i Oslo kommune"
-      }
-    ]
+        title: 'Høringer i Oslo kommune',
+        url: 'https://www.oslo.kommune.no/horinger',
+        description: 'Aktive høringer i Oslo kommune',
+      },
+    ],
   },
   {
-    category: "Transport og byutvikling",
+    category: 'Transport og byutvikling',
     items: [
       {
-        title: "Ruter - Planlagte prosjekter",
-        url: "https://ruter.no/om-ruter/prosjekter",
-        description: "Oversikt over Ruters pågående prosjekter"
+        title: 'Ruter — Planlagte prosjekter',
+        url: 'https://ruter.no/om-ruter/prosjekter',
+        description: 'Oversikt over Ruters pågående prosjekter',
       },
       {
-        title: "Sporveien - Utbyggingsprosjekter",
-        url: "https://sporveien.com/inter/prosjekter",
-        description: "Sporveiens utbyggingsprosjekter"
+        title: 'Sporveien — Utbyggingsprosjekter',
+        url: 'https://sporveien.com/inter/prosjekter',
+        description: 'Sporveiens utbyggingsprosjekter',
       },
       {
-        title: "Bymiljøetaten",
-        url: "https://www.oslo.kommune.no/bymiljoetaten",
-        description: "Ansvarlig for byens uterom, parker og gater"
-      }
-    ]
-  }
+        title: 'Bymiljøetaten',
+        url: 'https://www.oslo.kommune.no/bymiljoetaten',
+        description: 'Ansvarlig for byens uterom, parker og gater',
+      },
+    ],
+  },
 ];
 
 const research = [
   {
-    category: "Boligmarked og byutvikling",
+    category: 'Boligmarked og byutvikling',
     items: [
       {
-        title: "Forskningsartikkel nr. 1",
-        authors: "Person, Sted",
-        year: "2023",
-        url: "example.com/1",
-        description: "Beskrivelse av artikkelen"
+        title: 'Forskningsartikkel nr. 1',
+        authors: 'Person, Sted',
+        year: '2023',
+        url: 'example.com/1',
+        description: 'Beskrivelse av artikkelen',
       },
       {
-        title: "Forskningsartikkel nr. 2",
-        authors: "Person, Sted",
-        year: "2021",
-        url: "example.com/2",
-        description: "Beskrivelse av artikkelen"
-      }
-    ]
+        title: 'Forskningsartikkel nr. 2',
+        authors: 'Person, Sted',
+        year: '2021',
+        url: 'example.com/2',
+        description: 'Beskrivelse av artikkelen',
+      },
+    ],
   },
   {
-    category: "Transport og mobilitet",
+    category: 'Transport og mobilitet',
     items: [
       {
-        title: "Artikkel nr. 3",
-        authors: "Person, Sted",
-        year: "2022",
-        url: "example.com/3",
-        description: "Beskrivelse av artikkelen"
-      }
-    ]
-  }
+        title: 'Artikkel nr. 3',
+        authors: 'Person, Sted',
+        year: '2022',
+        url: 'example.com/3',
+        description: 'Beskrivelse av artikkelen',
+      },
+    ],
+  },
 ];
 
 export default function ResourcesPage() {
   return (
-    <main className={`relative min-h-screen overflow-x-hidden`}>
-
-      <div className="max-w-5xl mx-auto px-4 pb-16">
-        {/* Page Header */}
-        <header className="mb-8 md:mb-16">
-          <h1 className={`font-serif text-3xl sm:text-4xl md:text-6xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4 md:mb-6`}>
+    <main>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-24">
+        <header className="mb-10 sm:mb-14">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Ressurser
           </h1>
-          <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full my-4 md:my-6" />
-          <p className="text-lg md:text-xl text-[#2b2b2b]/70 dark:text-[#a3b8b0] max-w-2xl">
+          <div className="border-t border-foreground/15 my-4" />
+          <p className="text-lg text-foreground/60 max-w-2xl">
             Utforsk våre samlinger av ressurser om byutvikling
           </p>
         </header>
 
-        {/* Links Section */}
-        <section className="mb-16">
-          <h2 className={`font-serif text-2xl md:text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+        {/* Links */}
+        <section className="mb-14 sm:mb-16">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold mb-6">
             Nyttige lenker
           </h2>
-          <div className="grid gap-6">
+          <div className="space-y-8">
             {links.map((category) => (
-              <div 
-                key={category.category}
-                className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 p-6"
-              >
-                <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4`}>
+              <div key={category.category}>
+                <h3 className="text-[10px] font-mono tracking-[0.2em] uppercase text-foreground/50 mb-3">
                   {category.category}
                 </h3>
-                <div className="grid gap-4">
+                <div className="divide-y divide-foreground/10 border-t border-b border-foreground/10">
                   {category.items.map((link) => (
                     <Link
                       key={link.url}
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-start"
+                      className="group flex items-center justify-between py-4"
                     >
-                      <div className="flex-grow">
-                        <h4 className="text-[#2b2b2b] dark:text-[#f5f1e8] font-medium group-hover:underline">
+                      <div>
+                        <h4 className="text-sm font-medium group-hover:underline underline-offset-2 decoration-1">
                           {link.title}
                         </h4>
-                        <p className="text-sm text-[#2b2b2b]/70 dark:text-[#a3b8b0] mt-1">
+                        <p className="text-xs text-foreground/50 mt-0.5">
                           {link.description}
                         </p>
                       </div>
-                      <svg 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        className="h-5 w-5 text-[#2b2b2b]/40 dark:text-[#f5f1e8]/40 mt-1 ml-4" 
-                        fill="none" 
-                        viewBox="0 0 24 24" 
-                        stroke="currentColor"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
+                      <span className="text-foreground/25 ml-4 flex-shrink-0 text-sm">
+                        ↗
+                      </span>
                     </Link>
                   ))}
                 </div>
@@ -141,57 +130,48 @@ export default function ResourcesPage() {
           </div>
         </section>
 
-        {/* Research Section */}
+        {/* Research */}
         <section>
-          <h2 className={`font-serif text-2xl md:text-3xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-6`}>
+          <h2 className="font-serif text-2xl md:text-3xl font-bold mb-6">
             Forskning
           </h2>
-          <div className="grid gap-6">
+          <div className="space-y-8">
             {research.map((category) => (
-              <div 
-                key={category.category}
-                className="border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 bg-white/5 dark:bg-black/20 p-6"
-              >
-                <h3 className={`font-serif text-xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-4`}>
+              <div key={category.category}>
+                <h3 className="text-[10px] font-mono tracking-[0.2em] uppercase text-foreground/50 mb-3">
                   {category.category}
                 </h3>
-                <div className="grid gap-6">
+                <div className="divide-y divide-foreground/10 border-t border-b border-foreground/10">
                   {category.items.map((paper) => (
                     <Link
                       key={paper.url}
                       href={paper.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-start"
+                      className="group flex items-center justify-between py-4"
                     >
-                      <div className="flex-grow">
-                        <h4 className="text-[#2b2b2b] dark:text-[#f5f1e8] font-medium group-hover:underline">
+                      <div>
+                        <h4 className="text-sm font-medium group-hover:underline underline-offset-2 decoration-1">
                           {paper.title}
                         </h4>
-                        <div className="flex items-center gap-2 mt-1">
-                          <span className="text-sm text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
+                        <div className="flex items-center gap-1.5 mt-0.5">
+                          <span className="text-xs text-foreground/50">
                             {paper.authors}
                           </span>
-                          <span className="text-sm text-[#2b2b2b]/50 dark:text-[#a3b8b0]/50">
-                            •
+                          <span className="text-xs text-foreground/25">
+                            &middot;
                           </span>
-                          <span className="text-sm text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
+                          <span className="text-xs text-foreground/50">
                             {paper.year}
                           </span>
                         </div>
-                        <p className="text-sm text-[#2b2b2b]/70 dark:text-[#a3b8b0] mt-2">
+                        <p className="text-xs text-foreground/50 mt-1">
                           {paper.description}
                         </p>
                       </div>
-                      <svg 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        className="h-5 w-5 text-[#2b2b2b]/40 dark:text-[#f5f1e8]/40 mt-1 ml-4" 
-                        fill="none" 
-                        viewBox="0 0 24 24" 
-                        stroke="currentColor"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
+                      <span className="text-foreground/25 ml-4 flex-shrink-0 text-sm">
+                        ↗
+                      </span>
                     </Link>
                   ))}
                 </div>

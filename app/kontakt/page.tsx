@@ -1,90 +1,94 @@
-'use client';
-
 export default function Contact() {
   return (
-    <main 
-      className={`relative min-h-screen overflow-x-hidden`}
-    >
-      <div className="max-w-5xl mx-auto px-4 pb-16">
-        <header className="mb-16 md:flex md:flex-col md:items-center">
-          <h1 className={`font-serif text-5xl sm:text-7xl font-bold text-[#2b2b2b] dark:text-[#f5f1e8] leading-[1.1] text-center`}>
+    <main>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-24">
+        <header className="mb-10 sm:mb-14 text-center">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
             Kontakt oss
           </h1>
-          <p className="mt-6 text-xl text-[#2b2b2b]/70 dark:text-[#a3b8b0] text-center max-w-2xl">
-            Har du spørsmål eller innspill? Send oss en melding, så svarer vi så fort vi kan.
+          <p className="mt-4 text-lg text-foreground/60 max-w-xl mx-auto leading-relaxed">
+            Har du spørsmål eller innspill? Send oss en melding.
           </p>
         </header>
 
-        {/* Form Section */}
         <div className="max-w-2xl mx-auto">
-          <div className="p-8 sm:p-12 bg-[#efece5] dark:bg-black/20 border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10">
-            <form className="space-y-8">
-              <div className="space-y-2">
-                <label htmlFor="name" className={`block font-serif text-lg text-[#2b2b2b] dark:text-[#f5f1e8]`}>
-                  Navn
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full p-3 bg-white/80 dark:bg-[#1a1a1a] border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 text-[#2b2b2b] dark:text-[#f5f1e8] focus:border-[#1a472a] dark:focus:border-[#1a472a] focus:outline-none text-lg"
-                  required
-                />
-              </div>
+          <form className="space-y-6">
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-[11px] font-mono tracking-[0.15em] uppercase text-foreground/50 mb-2"
+              >
+                Navn
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className="w-full px-4 py-3 bg-transparent border border-foreground/10 text-foreground focus:border-foreground/40 focus:outline-none"
+                required
+              />
+            </div>
 
-              <div className="space-y-2">
-                <label htmlFor="email" className={`block font-serif text-lg text-[#2b2b2b] dark:text-[#f5f1e8]`}>
-                  E-post
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full p-3 bg-white/80 dark:bg-[#1a1a1a] border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 text-[#2b2b2b] dark:text-[#f5f1e8] focus:border-[#1a472a] dark:focus:border-[#1a472a] focus:outline-none text-lg"
-                  required
-                />
-              </div>
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-[11px] font-mono tracking-[0.15em] uppercase text-foreground/50 mb-2"
+              >
+                E-post
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className="w-full px-4 py-3 bg-transparent border border-foreground/10 text-foreground focus:border-foreground/40 focus:outline-none"
+                required
+              />
+            </div>
 
-              <div className="space-y-2">
-                <label htmlFor="message" className={`block font-serif text-lg text-[#2b2b2b] dark:text-[#f5f1e8]`}>
-                  Melding
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={6}
-                  className="w-full p-3 bg-white/80 dark:bg-[#1a1a1a] border border-[#2b2b2b]/20 dark:border-[#f5f1e8]/10 text-[#2b2b2b] dark:text-[#f5f1e8] focus:border-[#1a472a] dark:focus:border-[#1a472a] focus:outline-none text-lg resize-none"
-                  required
-                ></textarea>
-              </div>
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-[11px] font-mono tracking-[0.15em] uppercase text-foreground/50 mb-2"
+              >
+                Melding
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={6}
+                className="w-full px-4 py-3 bg-transparent border border-foreground/10 text-foreground focus:border-foreground/40 focus:outline-none resize-none"
+                required
+              />
+            </div>
 
-              <div className="flex justify-end pt-4">
-                <button
-                  type="submit"
-                  className="px-12 py-3 bg-[#1a472a] text-white font-medium hover:bg-[#1a472a]/90 transition-colors text-lg"
-                >
-                  Send melding
-                </button>
-              </div>
-            </form>
-          </div>
+            <div className="pt-2">
+              <button
+                type="submit"
+                className="w-full sm:w-auto px-10 py-3 bg-foreground text-background text-sm tracking-wide hover:bg-foreground/85"
+              >
+                Send melding
+              </button>
+            </div>
+          </form>
 
-          <div className="flex gap-12 pt-12">
-            <div className="flex-1">
-              <h3 className={`font-serif text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
+          <div className="mt-14 pt-8 border-t border-foreground/10 grid sm:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-[10px] font-mono tracking-[0.2em] uppercase text-foreground/50 mb-3">
                 Besøksadresse
               </h3>
-              <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                Akerselva<br />
+              <p className="text-foreground/70 text-sm leading-relaxed">
+                Akerselva
+                <br />
                 0001 Oslo
               </p>
             </div>
-            <div className="flex-1">
-              <h3 className={`font-serif text-lg font-bold text-[#2b2b2b] dark:text-[#f5f1e8] mb-3`}>
+            <div>
+              <h3 className="text-[10px] font-mono tracking-[0.2em] uppercase text-foreground/50 mb-3">
                 Andre henvendelser
               </h3>
-              <p className="text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                Telefon: 23 45 67 89<br />
+              <p className="text-foreground/70 text-sm leading-relaxed">
+                Telefon: 23 45 67 89
+                <br />
                 E-post: post@bedreoslo.no
               </p>
             </div>

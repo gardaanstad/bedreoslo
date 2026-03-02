@@ -2,10 +2,6 @@ import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import Carousel from '@/components/carousel';
-import CarouselNavigation from '@/components/carousel-navigation';
-import SeriffHeader from '@/components/SeriffHeader';
-import HeroHeader from '@/components/HeroHeader';
 
 interface PostData {
   id: string;
@@ -36,301 +32,241 @@ async function getRecentPosts(): Promise<PostData[]> {
       };
     });
 
-  // Sort posts by date and take the 5 most recent for the mobile carousel
   return allPostsData
     .sort((a, b) => (a.date < b.date ? 1 : -1))
-    .slice(0, 5);
+    .slice(0, 3);
 }
+
+const policies = [
+  {
+    title: 'Boligpolitikk',
+    subtitle: 'Oslo trenger drastiske tiltak for å løse boligkrisen.',
+    href: '/boligkrisen',
+    points: [
+      {
+        title: 'Bygg tettere og høyere',
+        desc: 'Opphev småhusplanen og la utbyggere bygge tettere i hele byen.',
+      },
+      {
+        title: 'Forenkle reguleringsprosessen',
+        desc: 'Dagens prosess tar 7–10 år. Det må forenkles drastisk.',
+      },
+      {
+        title: 'Fortett rundt kollektivknutepunkter',
+        desc: 'Hver t-banestasjon bør ha høy tetthet av boliger.',
+      },
+    ],
+  },
+  {
+    title: 'Samferdsel',
+    subtitle: 'Gater for mennesker, ikke bare biler.',
+    href: '/byrom',
+    points: [
+      {
+        title: 'Prioriter gående og syklende',
+        desc: 'Utvid fortau og sykkelfelt på bekostning av parkeringsplasser.',
+      },
+      {
+        title: 'Bedre kollektivtilbud',
+        desc: 'Øk frekvensen på t-bane, trikk og buss.',
+      },
+      {
+        title: 'Reduser gjennomkjøring',
+        desc: 'Steng boliggater for gjennomkjøring og gjør sentrum bilfritt.',
+      },
+    ],
+  },
+  {
+    title: 'Byutvikling',
+    subtitle: 'God byutvikling handler om mer enn bygninger.',
+    href: '/byrom',
+    points: [
+      {
+        title: 'Aktive førsteetasjer',
+        desc: 'Krav om næringslokaler i sentrale strøk for levende gater.',
+      },
+      {
+        title: 'Flere møteplasser',
+        desc: 'Utvid og oppgrader parker, torg og offentlige rom.',
+      },
+      {
+        title: 'Grønnere by',
+        desc: 'Plant flere gatetrær og lag grønne korridorer gjennom byen.',
+      },
+    ],
+  },
+];
 
 export default async function Home() {
   const recentPosts = await getRecentPosts();
 
   return (
-    <main className="relative min-h-screen">
-      {/* Hero Section */}
-      <section className="relative w-full px-4 pb-24">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative md:pb-8">
-            <div className="md:flex md:flex-col md:items-center">
-              <div className="w-full">
-                <HeroHeader>
-                  For en by med plass til alle
-                </HeroHeader>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Politikk */}
-      <section className="relative w-full px-4 pb-24 md:pb-32">
-        <div className="max-w-6xl mx-auto">
-          <div className="space-y-24 md:space-y-32">
-            {/* Boligpolitikk - Left aligned */}
-            <div className="md:flex md:items-start md:gap-12">
-              <div className="md:w-1/3 mb-6 md:mb-0">
-                <h2
-                  className={`text-3xl sm:text-4xl text-[#2b2b2b] dark:text-[#f5f1e8] font-serif`}
-                >
-                  Boligpolitikk
-                </h2>
-                <p className="mt-4 text-lg text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                  Oslo trenger drastiske tiltak for å løse boligkrisen.
-                </p>
-              </div>
-              <div className="md:w-2/3 space-y-8">
-                <div className="p-8 bg-transparent dark:bg-black/20 backdrop-blur-sm border border-[#1a472a]/20 dark:border-[#f5f1e8]/10">
-                  <div className="text-lg text-[#2b2b2b]/90 dark:text-[#a3b8b0] leading-relaxed space-y-6">
-                    <div className="space-y-4">
-                      <div className="flex items-start">
-                        <span className="w-6 h-6 bg-[#1a472a] font-mono text-white flex-shrink-0 flex items-center justify-center mr-3 mt-0.5">
-                          1
-                        </span>
-                        <div>
-                          <h3 className="text-[#2b2b2b] dark:text-[#f5f1e8]">
-                            Bygg tettere og høyere
-                          </h3>
-                          <p className="text-[#2b2b2b]/90 dark:text-[#a3b8b0] mt-1">
-                            Opphev småhusplanen og la utbyggere bygge tettere og
-                            høyere i hele byen. Dette vil gi flere boliger der
-                            folk vil bo.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start">
-                        <span className="w-6 h-6 bg-[#1a472a] font-mono text-white flex-shrink-0 flex items-center justify-center mr-3 mt-0.5">
-                          2
-                        </span>
-                        <div>
-                          <h3 className="text-[#2b2b2b] dark:text-[#f5f1e8]">
-                            Forenkle reguleringsprosessen
-                          </h3>
-                          <p className="text-[#2b2b2b]/90 dark:text-[#a3b8b0] mt-1">
-                            Dagens reguleringsprosess tar ofte 7-10 år. Dette
-                            må forenkles for å øke byggetakten.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start">
-                        <span className="w-6 h-6 bg-[#1a472a] font-mono text-white flex-shrink-0 flex items-center justify-center mr-3 mt-0.5">
-                          3
-                        </span>
-                        <div>
-                          <h3 className="text-[#2b2b2b] dark:text-[#f5f1e8]">
-                            Fortett rundt kollektivknutepunkter
-                          </h3>
-                          <p className="text-[#2b2b2b]/90 dark:text-[#a3b8b0] mt-1">
-                            Hver t-banestasjon bør ha høy tetthet av boliger.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Samferdselspolitikk - Right aligned */}
-            <div className="md:flex md:flex-row-reverse md:items-start md:gap-12">
-              <div className="md:w-1/3 mb-6 md:mb-0">
-                <h2
-                  className={`text-3xl sm:text-4xl text-[#2b2b2b] dark:text-[#f5f1e8] font-serif`}
-                >
-                  Samferdselspolitikk
-                </h2>
-                <p className="mt-4 text-lg text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                  Vi trenger en omlegging av hvordan vi bruker gatene
-                  våre, fra å prioritere biler til å prioritere mennesker.
-                </p>
-              </div>
-              <div className="md:w-2/3 space-y-8">
-                <div className="p-8 bg-transparent dark:bg-black/20 backdrop-blur-sm border border-[#1a472a]/20 dark:border-[#f5f1e8]/10">
-                  <div className="text-lg text-[#2b2b2b]/90 dark:text-[#a3b8b0] leading-relaxed space-y-6">
-                    <div className="space-y-4">
-                      <div className="flex items-start">
-                        <span className="w-6 h-6 bg-[#1a472a] font-mono text-white flex-shrink-0 flex items-center justify-center mr-3 mt-0.5">
-                          1
-                        </span>
-                        <div>
-                          <h3 className="text-[#2b2b2b] dark:text-[#f5f1e8]">
-                            Prioriter gående og syklende
-                          </h3>
-                          <p className="text-[#2b2b2b]/90 dark:text-[#a3b8b0] mt-1">
-                            Utvid fortau og sykkelfelt på bekostning av
-                            parkeringsplasser og kjørefelt.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start">
-                        <span className="w-6 h-6 bg-[#1a472a] font-mono text-white flex-shrink-0 flex items-center justify-center mr-3 mt-0.5">
-                          2
-                        </span>
-                        <div>
-                          <h3 className="text-[#2b2b2b] dark:text-[#f5f1e8]">
-                            Bedre kollektivtilbud
-                          </h3>
-                          <p className="text-[#2b2b2b]/90 dark:text-[#a3b8b0] mt-1">
-                            Øk frekvensen på t-bane, trikk og buss. Invester i ny infrastruktur.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start">
-                        <span className="w-6 h-6 bg-[#1a472a] font-mono text-white flex-shrink-0 flex items-center justify-center mr-3 mt-0.5">
-                          3
-                        </span>
-                        <div>
-                          <h3 className="text-[#2b2b2b] dark:text-[#f5f1e8]">
-                            Reduser gjennomkjøring
-                          </h3>
-                          <p className="text-[#2b2b2b]/90 dark:text-[#a3b8b0] mt-1">
-                            Steng boliggater for gjennomkjøring og gjør sentrum bilfritt.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Byutvikling - Left aligned */}
-            <div className="md:flex md:items-start md:gap-12">
-              <div className="md:w-1/3 mb-6 md:mb-0">
-                <h2
-                  className={`text-3xl sm:text-4xl text-[#2b2b2b] dark:text-[#f5f1e8] font-serif`}
-                >
-                  Byutvikling
-                </h2>
-                <p className="mt-4 text-lg text-[#2b2b2b]/70 dark:text-[#a3b8b0]">
-                  God byutvikling handler om mer enn bare bygninger.
-                </p>
-              </div>
-              <div className="md:w-2/3 space-y-8">
-                <div className="p-8 bg-transparent dark:bg-black/20 backdrop-blur-sm border border-[#1a472a]/20 dark:border-[#f5f1e8]/10">
-                  <div className="text-lg text-[#2b2b2b]/90 dark:text-[#a3b8b0] leading-relaxed space-y-6">
-                    <div className="space-y-4">
-                      <div className="flex items-start">
-                        <span className="w-6 h-6 bg-[#1a472a] font-mono text-white flex-shrink-0 flex items-center justify-center mr-3 mt-0.5">
-                          1
-                        </span>
-                        <div>
-                          <h3 className="text-[#2b2b2b] dark:text-[#f5f1e8]">
-                            Aktive førsteetasjer
-                          </h3>
-                          <p className="text-[#2b2b2b]/90 dark:text-[#a3b8b0] mt-1">
-                            Krav om næringslokaler i førsteetasje i sentrale
-                            strøk for å skape levende gater.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start">
-                        <span className="w-6 h-6 bg-[#1a472a] font-mono text-white flex-shrink-0 flex items-center justify-center mr-3 mt-0.5">
-                          2
-                        </span>
-                        <div>
-                          <h3 className="text-[#2b2b2b] dark:text-[#f5f1e8]">
-                            Flere møteplasser
-                          </h3>
-                          <p className="text-[#2b2b2b]/90 dark:text-[#a3b8b0] mt-1">
-                            Utvid og oppgrader parker, torg og andre offentlige
-                            rom.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start">
-                        <span className="w-6 h-6 bg-[#1a472a] font-mono text-white flex-shrink-0 flex items-center justify-center mr-3 mt-0.5">
-                          3
-                        </span>
-                        <div>
-                          <h3 className="text-[#2b2b2b] dark:text-[#f5f1e8]">
-                            Grønnere by
-                          </h3>
-                          <p className="text-[#2b2b2b]/90 dark:text-[#a3b8b0] mt-1">
-                            Plant flere gatetrær og lag grønne korridorer gjennom
-                            byen.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* News Section */}
-      <section className="relative w-full px-4 pb-24">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-8">
-            <Link
-              href="/nyheter"
-              className="flex items-center group"
-            >
-              <SeriffHeader size="lg" className="group-hover:underline">
-                Nyheter og innlegg
-              </SeriffHeader>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 ml-4 opacity-70 mt-1.5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1.5}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </Link>
-            <div className="h-px bg-[#2b2b2b]/20 dark:bg-[#f5f1e8]/20 w-full mt-4" />
-          </div>
-
-          {/* Desktop News Grid */}
-          <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
-            {recentPosts.slice(0, 3).map((post) => (
+    <main>
+      {/* Lead */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-12 sm:pb-16">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-0">
+          <div className="md:col-span-6 md:pr-10 md:border-r md:border-foreground/10">
+            <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl font-black leading-[0.95] tracking-tight mb-12">
+              For en by med
+              <br />
+              plass til alle
+            </h1>
+            <div className="flex gap-3">
               <Link
-                key={post.id}
-                href={`/nyheter/${post.id}`}
-                className="block group p-6 bg-transparent dark:bg-black/20 backdrop-blur-sm border border-[#1a472a]/20 dark:border-[#f5f1e8]/10"
+                href="/medlem"
+                className="px-6 py-2.5 bg-foreground text-background text-sm tracking-wide hover:bg-foreground/85"
               >
-                <article>
-                  <time className="text-xs text-[#2b2b2b]/80 dark:text-[#a3b8b0] font-medium uppercase tracking-wider">
-                    {new Date(post.date).toLocaleDateString('nb-NO', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric',
-                    })}
-                  </time>
-                  <h3
-                    className={`font-serif text-xl mt-2 mb-2 text-[#2b2b2b] dark:text-[#f5f1e8] group-hover:underline`}
-                  >
-                    {post.title}
-                  </h3>
-                  <p className="text-[#2b2b2b]/80 dark:text-[#a3b8b0] text-sm line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                </article>
+                Bli medlem
+              </Link>
+              <Link
+                href="/om"
+                className="px-6 py-2.5 border border-foreground/15 text-sm tracking-wide text-foreground/70 hover:border-foreground/50 hover:text-foreground"
+              >
+                Om oss
+              </Link>
+            </div>
+          </div>
+
+          <div className="md:col-span-4 md:pl-10">
+            <div className="space-y-4 text-foreground/70 leading-relaxed">
+              <p>
+                Vi tror at byen tilhører alle, ikke bare de som allerede har
+                kommet inn på boligmarkedet. Oslo har potensial til å bli en av
+                Europas mest levende og inkluderende byer, men det krever
+                politisk vilje og modige valg.
+              </p>
+              <p>
+                Bedre Oslo jobber for en bypolitikk basert på forskning, sunn
+                fornuft og respekt for mennesker som ønsker å bo i byen sin.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Policy Pillars */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-16 sm:pb-24">
+        <div className="border-t-2 border-foreground/80 pt-6 sm:pt-8">
+          <div className="grid md:grid-cols-3">
+            {policies.map((policy, idx) => (
+              <Link
+                key={policy.title}
+                href={policy.href}
+                className={`group flex flex-col py-6 md:py-0 ${idx > 0 ? 'border-t md:border-t-0 md:border-l border-foreground/10 md:pl-8' : ''} ${idx < policies.length - 1 ? 'md:pr-8' : ''}`}
+              >
+                <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-foreground/50">
+                  {String(idx + 1).padStart(2, '0')}
+                </span>
+                <h3 className="font-serif text-xl sm:text-2xl font-bold mt-1 mb-2 group-hover:underline underline-offset-2 decoration-1">
+                  {policy.title}
+                </h3>
+                <p className="text-sm text-foreground/60 mb-5 leading-relaxed">
+                  {policy.subtitle}
+                </p>
+                <div className="space-y-3 flex-1">
+                  {policy.points.map((point, i) => (
+                    <div key={point.title} className="flex items-start gap-2">
+                      <span className="text-foreground/50 font-serif text-sm mt-px">
+                        {i + 1}.
+                      </span>
+                      <div>
+                        <h4 className="text-sm font-medium">{point.title}</h4>
+                        <p className="text-xs text-foreground/60 mt-0.5 leading-relaxed">
+                          {point.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <span className="inline-block mt-5 text-sm text-foreground/60 group-hover:text-foreground/70">
+                  Les mer →
+                </span>
               </Link>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Mobile News Carousel */}
-          <div className="md:hidden">
-            <Carousel posts={recentPosts} />
-            <div className="mt-4 flex justify-center items-center">
-              <CarouselNavigation totalSlides={recentPosts.length} />
-            </div>
+      {/* Pullquote */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="border-t border-b border-foreground/15 py-10 sm:py-14 text-center">
+            <blockquote className="font-serif text-2xl sm:text-3xl md:text-[2.5rem] md:leading-[1.25] leading-snug">
+              &ldquo;Gode byer bygges ikke ved å si nei til
+              utvikling, men ved å si ja til
+              mennesker.&rdquo;
+            </blockquote>
           </div>
+        </div>
+      </section>
+
+      {/* News */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-16 sm:pb-24">
+        <div className="flex items-end justify-between mb-4">
+          <div>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold mt-1">
+              Siste nytt
+            </h2>
+          </div>
+          <Link
+            href="/nyheter"
+            className="hidden sm:block text-sm text-foreground/50 hover:text-foreground/75"
+          >
+            Se alle →
+          </Link>
+        </div>
+
+        <div className="border-t-2 border-foreground/80" />
+
+        <div className="grid md:grid-cols-3">
+          {recentPosts.map((post, i) => (
+            <Link
+              key={post.id}
+              href={`/nyheter/${post.id}`}
+              className={`group block py-6 ${i > 0 ? 'border-t md:border-t-0 md:border-l border-foreground/10 md:pl-8' : ''} ${i < recentPosts.length - 1 ? 'md:pr-8' : ''}`}
+            >
+              <time className="font-mono text-[10px] text-foreground/50 tracking-wider uppercase">
+                {new Date(post.date).toLocaleDateString('nb-NO', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </time>
+              <h3 className="font-serif text-lg font-bold mt-2 mb-2 group-hover:underline underline-offset-2 decoration-1">
+                {post.title}
+              </h3>
+              <p className="text-sm text-foreground/60 line-clamp-3 leading-relaxed">
+                {post.excerpt}
+              </p>
+            </Link>
+          ))}
+        </div>
+
+        <div className="sm:hidden mt-4 text-center">
+          <Link
+            href="/nyheter"
+            className="text-sm text-foreground/50"
+          >
+            Se alle nyheter →
+          </Link>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 pb-24 sm:pb-32 text-center">
+        <div className="border-t border-foreground/15 pt-12 sm:pt-16">
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-4">
+            Bli en del av bevegelsen
+          </h2>
+          <p className="text-lg text-foreground/60 mb-8 max-w-lg mx-auto leading-relaxed">
+            Sammen kan vi gjøre Oslo til en by som fungerer for alle.
+          </p>
+          <Link
+            href="/medlem"
+            className="inline-block px-8 py-3 bg-foreground text-background text-sm tracking-wide hover:bg-foreground/85"
+          >
+            Meld deg inn
+          </Link>
         </div>
       </section>
     </main>
