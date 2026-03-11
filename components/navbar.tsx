@@ -17,7 +17,6 @@ export default function Navbar() {
   const oldNavRef = useRef<HTMLElement>(null);
   const newNavRef = useRef<HTMLElement>(null);
   const wipeLineRef = useRef<HTMLDivElement>(null);
-  const topBorderRef = useRef<HTMLDivElement>(null);
   const brandRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -26,32 +25,15 @@ export default function Navbar() {
     const oldNav = oldNavRef.current;
     const newNav = newNavRef.current;
     const wipeLine = wipeLineRef.current;
-    const topBorder = topBorderRef.current;
     const brand = brandRef.current;
 
-    if (
-      !sticky ||
-      !wipeArea ||
-      !oldNav ||
-      !newNav ||
-      !wipeLine ||
-      !topBorder ||
-      !brand
-    )
+    if (!sticky || !wipeArea || !oldNav || !newNav || !wipeLine || !brand)
       return;
-
-    const fg = getComputedStyle(document.documentElement)
-      .getPropertyValue('--foreground')
-      .trim();
 
     let ticking = false;
 
     const update = () => {
       ticking = false;
-
-      // Top border: darken as soon as the user scrolls (completes over ~50px)
-      const scrollDarken = Math.min(1, window.scrollY / 50);
-      topBorder.style.borderColor = `rgb(${fg} / ${0.1 + scrollDarken * 0.7})`;
 
       // Wipe progress: mapped to the Bedre Oslo brand section height
       const stickyRect = sticky.getBoundingClientRect();
@@ -70,7 +52,6 @@ export default function Navbar() {
         p < 1 ? `inset(${(1 - p) * 100}% 0 0 0)` : 'none';
 
       wipeLine.style.top = `${(1 - p) * 100}%`;
-      wipeLine.style.opacity = p < 1 ? '1' : '0';
 
       if (p > 0.5) {
         oldNav.setAttribute('inert', '');
@@ -109,7 +90,7 @@ export default function Navbar() {
     <>
       <div ref={stickyRef} className="sticky top-0 z-50 bg-background pt-3 sm:pt-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div ref={topBorderRef} className="border-t border-foreground/10" />
+          <div className="border-t border-transparent" />
 
           <div ref={wipeAreaRef} className="relative">
             <nav
