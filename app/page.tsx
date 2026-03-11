@@ -114,13 +114,13 @@ export default async function Home() {
             <div className="flex gap-3">
               <Link
                 href="/medlem"
-                className="px-6 py-2.5 bg-foreground text-background text-sm tracking-wide hover:bg-foreground/85"
+                className="px-6 py-2.5 bg-foreground text-background text-sm tracking-wide border border-foreground hover:underline"
               >
                 Bli medlem
               </Link>
               <Link
                 href="/om"
-                className="px-6 py-2.5 border border-foreground/15 text-sm tracking-wide text-foreground/70 hover:border-foreground/50 hover:text-foreground"
+                className="px-6 py-2.5 border border-foreground/50 text-sm tracking-wide text-foreground/80 hover:underline"
               >
                 Om oss
               </Link>
@@ -145,7 +145,7 @@ export default async function Home() {
       </section>
 
       {/* Policy Pillars */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-16 sm:pb-24">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-0 sm:pb-8">
         <div className="border-t-2 border-foreground/80 pt-6 sm:pt-8">
           <div className="grid md:grid-cols-3">
             {policies.map((policy, idx) => (
@@ -178,7 +178,7 @@ export default async function Home() {
                     </div>
                   ))}
                 </div>
-                <span className="inline-block mt-5 text-sm text-foreground/60 group-hover:text-foreground/70">
+                <span className="inline-block mt-5 text-sm text-foreground/60 group-hover:text-foreground transition-colors duration-150">
                   Les mer →
                 </span>
               </Link>
@@ -201,20 +201,15 @@ export default async function Home() {
       </section>
 
       {/* News */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-16 sm:pb-24">
-        <div className="flex items-end justify-between mb-4">
-          <div>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold mt-1">
-              Siste nytt
-            </h2>
-          </div>
-          <Link
-            href="/nyheter"
-            className="hidden sm:block text-sm text-foreground/50 hover:text-foreground/75"
-          >
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-16 sm:pb-24 pt-0 sm:pt-8">
+        <Link href="/nyheter" className="group flex items-end justify-between mb-4">
+          <h3 className="font-serif text-xl sm:text-2xl font-bold mt-1 group-hover:underline underline-offset-4 decoration-1">
+            Siste nytt
+          </h3>
+          <span className="hidden sm:block text-sm text-foreground/50 group-hover:text-foreground/75 transition-colors duration-150">
             Se alle →
-          </Link>
-        </div>
+          </span>
+        </Link>
 
         <div className="border-t-2 border-foreground/80" />
 
@@ -245,7 +240,7 @@ export default async function Home() {
         <div className="sm:hidden mt-4 text-center">
           <Link
             href="/nyheter"
-            className="text-sm text-foreground/50"
+            className="text-sm text-foreground/50 hover:text-foreground/75 transition-colors duration-150"
           >
             Se alle nyheter →
           </Link>
@@ -263,7 +258,7 @@ export default async function Home() {
           </p>
           <Link
             href="/medlem"
-            className="inline-block px-8 py-3 bg-foreground text-background text-sm tracking-wide hover:bg-foreground/85"
+            className="inline-block px-8 py-3 bg-foreground text-background text-sm tracking-wide border border-foreground hover:underline"
           >
             Meld deg inn
           </Link>

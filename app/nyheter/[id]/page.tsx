@@ -57,12 +57,22 @@ export default async function Page({ params }: Props) {
   return (
     <main>
       <article className="max-w-3xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-24">
-        <Link
-          href="/nyheter"
-          className="inline-block text-sm text-foreground/50 mb-10 hover:text-foreground/75"
-        >
-          ← Tilbake
-        </Link>
+        <nav className="flex items-center gap-1.5 text-[10px] sm:text-[11px] tracking-[0.2em] uppercase font-mono mb-4">
+          <Link
+            href="/"
+            className="text-foreground/40 hover:text-foreground/70 transition-colors duration-150"
+          >
+            Bedre Oslo
+          </Link>
+          <span className="text-foreground/25">/</span>
+          <Link
+            href="/nyheter"
+            className="text-foreground/40 hover:text-foreground/70 transition-colors duration-150"
+          >
+            Nyheter
+          </Link>
+          <span className="text-foreground/25">/</span>
+        </nav>
 
         <header className="mb-10">
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">

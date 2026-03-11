@@ -29,7 +29,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/om"
-                  className="text-sm text-foreground/60 hover:text-foreground"
+                  className="text-sm text-foreground/60 hover:text-foreground transition-colors duration-150"
                 >
                   Om oss
                 </Link>
@@ -37,7 +37,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/kontakt"
-                  className="text-sm text-foreground/60 hover:text-foreground"
+                  className="text-sm text-foreground/60 hover:text-foreground transition-colors duration-150"
                 >
                   Kontakt
                 </Link>
@@ -45,7 +45,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/medlem"
-                  className="text-sm text-foreground/60 hover:text-foreground"
+                  className="text-sm text-foreground/60 hover:text-foreground transition-colors duration-150"
                 >
                   Bli medlem
                 </Link>
@@ -61,7 +61,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/nyheter"
-                  className="text-sm text-foreground/60 hover:text-foreground"
+                  className="text-sm text-foreground/60 hover:text-foreground transition-colors duration-150"
                 >
                   Nyheter
                 </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/ressurser"
-                  className="text-sm text-foreground/60 hover:text-foreground"
+                  className="text-sm text-foreground/60 hover:text-foreground transition-colors duration-150"
                 >
                   Ressurser
                 </Link>
@@ -85,7 +85,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="https://twitter.com/bedreoslo"
-                  className="text-sm text-foreground/60 hover:text-foreground"
+                  className="text-sm text-foreground/60 hover:text-foreground transition-colors duration-150"
                 >
                   Twitter
                 </Link>
@@ -93,7 +93,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="https://facebook.com/bedreoslo"
-                  className="text-sm text-foreground/60 hover:text-foreground"
+                  className="text-sm text-foreground/60 hover:text-foreground transition-colors duration-150"
                 >
                   Facebook
                 </Link>
@@ -101,7 +101,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="https://instagram.com/bedreoslo"
-                  className="text-sm text-foreground/60 hover:text-foreground"
+                  className="text-sm text-foreground/60 hover:text-foreground transition-colors duration-150"
                 >
                   Instagram
                 </Link>
@@ -114,7 +114,7 @@ export default function Footer() {
           <span>&copy; {currentYear} Bedre Oslo</span>
           <Link
             href="https://github.com/gardaanstad/bedreoslo"
-            className="hover:text-foreground/60"
+            className="hover:text-foreground/60 transition-colors duration-150"
           >
             Kildekode ↗
           </Link>

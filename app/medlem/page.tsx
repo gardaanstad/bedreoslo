@@ -48,7 +48,7 @@ export default function Member() {
             <div className="pt-2">
               <button
                 type="submit"
-                className="w-full sm:w-auto px-10 py-3 bg-foreground text-background text-sm tracking-wide hover:bg-foreground/85"
+                className="w-full sm:w-auto px-10 py-3 bg-foreground text-background text-sm tracking-wide border border-foreground hover:bg-transparent hover:text-foreground transition-colors duration-150"
               >
                 Bli medlem
               </button>

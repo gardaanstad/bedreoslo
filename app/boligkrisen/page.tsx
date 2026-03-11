@@ -223,7 +223,7 @@ export default function Argument() {
                 <div className="text-center mt-8 pt-8 border-t border-foreground/10">
                   <Link
                     href="/medlem"
-                    className="inline-block px-8 py-3 bg-foreground text-background text-sm tracking-wide hover:bg-foreground/85"
+                    className="inline-block px-8 py-3 bg-foreground text-background text-sm tracking-wide border border-foreground hover:bg-transparent hover:text-foreground transition-colors duration-150"
                   >
                     Bli medlem
                   </Link>
