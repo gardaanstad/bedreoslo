@@ -1,14 +1,15 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-16 sm:mt-24">
+    <footer className="">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="border-t-2 border-foreground/80" />
+        <div className="border-t border-foreground/80" />
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 py-10 sm:py-14">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 py-8 sm:py-14">
           <div className="col-span-2 md:col-span-1">
             <Link
               href="/"
@@ -22,7 +23,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-[10px] tracking-[0.2em] uppercase text-foreground/50 font-mono mb-4">
+            <h3 className="text-[10px] tracking-[0.2em] uppercase text-foreground/50 font-mono mb-2">
               Organisasjon
             </h3>
             <ul className="space-y-2">
@@ -54,7 +55,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-[10px] tracking-[0.2em] uppercase text-foreground/50 font-mono mb-4">
+            <h3 className="text-[10px] tracking-[0.2em] uppercase text-foreground/50 font-mono mb-2">
               Innhold
             </h3>
             <ul className="space-y-2">
@@ -78,7 +79,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-[10px] tracking-[0.2em] uppercase text-foreground/50 font-mono mb-4">
+            <h3 className="text-[10px] tracking-[0.2em] uppercase text-foreground/50 font-mono mb-2">
               Følg oss
             </h3>
             <ul className="space-y-2">
@@ -110,13 +111,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-foreground/10 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-[11px] text-foreground/35">
+        <div className="border-t border-foreground/10 py-4 flex sm:flex-row justify-between items-center gap-2 text-[11px] text-foreground/35">
           <span>&copy; {currentYear} Bedre Oslo</span>
           <Link
             href="https://github.com/gardaanstad/bedreoslo"
             className="hover:text-foreground/60 transition-colors duration-150"
           >
-            Kildekode ↗
+            Kildekode
+            <Image src="/GitHub.svg" alt="GitHub" width={14} height={14} className="inline-block opacity-50 ml-1.5" />
           </Link>
         </div>
 

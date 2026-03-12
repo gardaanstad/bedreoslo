@@ -3,6 +3,7 @@ import { Geist_Mono, Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
+import ScrollManager from '@/components/scroll-manager';
 import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({
@@ -41,8 +42,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        {children}
+        <ScrollManager />
+        <div className="min-h-screen">
+          <Navbar />
+          <main>{children}</main>
+        </div>
         <Footer />
         <Analytics />
       </body>

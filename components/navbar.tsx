@@ -88,14 +88,14 @@ export default function Navbar() {
 
   return (
     <>
-      <div ref={stickyRef} className="sticky top-0 z-50 bg-background pt-3 sm:pt-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div ref={stickyRef} data-navbar-sticky className="sticky top-0 z-50 bg-background pt-3 sm:pt-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 border-t border-transparent">
           <div className="border-t border-transparent" />
 
           <div ref={wipeAreaRef} className="relative">
             <nav
               ref={oldNavRef}
-              className="flex items-center justify-center gap-4 sm:gap-8 py-2.5 sm:py-3"
+              className="flex items-center justify-center gap-5 sm:gap-8 py-2.5 sm:py-3"
             >
               {navLinks.map((link) => (
                 <Link
@@ -110,7 +110,7 @@ export default function Navbar() {
 
             <nav
               ref={newNavRef}
-              className="absolute inset-0 flex items-center justify-center gap-4 sm:gap-8 py-2.5 sm:py-3"
+              className="absolute inset-0 flex items-center justify-between sm:justify-center gap-4 sm:gap-16 py-2.5 sm:py-3"
               style={{ clipPath: 'inset(100% 0 0 0)' }}
             >
               <Link
@@ -123,15 +123,17 @@ export default function Navbar() {
               >
                 Bedre Oslo
               </Link>
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={linkClass(link.href)}
-                >
-                  {link.name}
-                </Link>
-              ))}
+              <div className="flex items-center gap-5 sm:gap-8">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`${linkClass(link.href)} mt-0.5`}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
             </nav>
 
             <div
@@ -147,8 +149,8 @@ export default function Navbar() {
 
       <header>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div ref={brandRef} className="text-center">
-            <Link href="/" className="block w-fit mx-auto py-4 sm:py-6">
+          <div ref={brandRef} data-navbar-brand className="text-center">
+            <Link href="/" className="block w-fit mx-auto py-1 sm:py-2">
               <span className="font-serif text-[2.25rem] sm:text-5xl md:text-6xl font-black tracking-tight leading-none">
                 Bedre Oslo
               </span>
@@ -158,7 +160,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="border-t border-foreground/15" />
+          {/* <div className="border-t border-foreground/15" /> */}
         </div>
       </header>
     </>

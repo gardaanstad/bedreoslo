@@ -44,41 +44,36 @@ export default async function NewsPage() {
     <main>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-24">
         <header className="mb-8">
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
+          <h1 className="font-serif text-3xl md:text-4xl font-bold mb-4">
             Nyheter og innlegg
           </h1>
         </header>
 
-        <div className="border-t-2 border-foreground/80 pt-5 divide-y divide-foreground/10">
+        <div className="border-t border-foreground/80 divide-y divide-foreground/10">
           {allPosts.map((post) => (
             <Link
               key={post.id}
               href={`/nyheter/${post.id}`}
-              className="group block py-3"
+              className="group block py-6"
             >
-                <h2 className="font-serif text-[15px] sm:text-base font-bold leading-snug group-hover:underline underline-offset-2 decoration-1">
+                <time className="font-mono text-[10px] text-foreground/50 tracking-wider uppercase">
+                  {new Date(post.date).toLocaleDateString('nb-NO', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                  {post.author && (
+                    <> · {post.author}</>
+                  )}
+                </time>
+                <h2 className="font-serif text-lg font-bold mt-1 mb-1 group-hover:underline underline-offset-2 decoration-1">
                   {post.title}
                 </h2>
                 {post.excerpt && (
-                  <p className="text-sm text-foreground/50 mt-1 line-clamp-1">
+                  <p className="text-sm text-foreground/60 line-clamp-3 leading-relaxed">
                     {post.excerpt}
                   </p>
                 )}
-                <div className="flex items-center gap-1.5 mt-1 font-mono text-[10px] text-foreground/40 tracking-wider">
-                  <time>
-                    {new Date(post.date).toLocaleDateString('nb-NO', {
-                      day: 'numeric',
-                      month: 'short',
-                      year: 'numeric',
-                    })}
-                  </time>
-                  {post.author && (
-                    <>
-                      <span className="text-foreground/20">&middot;</span>
-                      <span>{post.author}</span>
-                    </>
-                  )}
-                </div>
             </Link>
           ))}
         </div>

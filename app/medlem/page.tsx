@@ -3,7 +3,7 @@ export default function Member() {
     <main>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-24">
         <header className="mb-10 sm:mb-14 text-center">
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
             Bli med på laget
           </h1>
           <p className="mt-4 text-lg text-foreground/60 max-w-lg mx-auto leading-relaxed">
